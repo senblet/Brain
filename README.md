@@ -21,7 +21,7 @@ against its recheck window (a year by default; files can say six months).*
 | SEO | [seo/ai-search.md](seo/ai-search.md) | Google's AI features; AI search and training crawlers; how assistants pick sources |
 | SEO | [seo/local.md](seo/local.md) | Local businesses: map ranking factors, Business Profile, reviews, the page it points to |
 | Marketing | [marketing/agents.md](marketing/agents.md) | Running marketing with AI agents: context folder, data, build order, guardrails, weekly loop |
-| Marketing | [marketing/content.md](marketing/content.md) | Brand and content: positioning, original insight, packaging, channels, testing creative, building a content team |
+| Marketing | [marketing/content.md](marketing/content.md) | Brand and content: positioning, founder vs brand accounts, original insight, packaging, funnel and pillars, channels, community, content team |
 | Marketing | [marketing/outbound.md](marketing/outbound.md) | Cold email reply-rate data; warm leads from competitor engagement |
 | AI | [ai/agent-workflows.md](ai/agent-workflows.md) | Multi-agent workflows: graph design, contracts, barriers vs pipelines, verification, convergence, cost |
 | Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: context file, single-job prompts on real records, the ten jobs, rollout |

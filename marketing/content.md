@@ -1,7 +1,8 @@
 # Marketing — content and brand
 
 What to make, how to frame it, where to put it, and who makes it: brand
-positioning, original insight, packaging, channels, and building a content
+positioning, founder and brand accounts, original insight, packaging, the
+funnel and content pillars, channels, community, and building a content
 team. For writing pages that rank, see [seo/content.md](../seo/content.md);
 for running content work with agents, see [agents.md](agents.md).
 
@@ -13,17 +14,50 @@ it is concrete and consistent with the rest of the brain.
 
 ## Positioning comes first
 
-A brand needs product-market fit the way a product does. Before any content,
-SHOULD answer in writing:
+A brand needs market fit the way a product does: a specific audience
+instantly understands what you stand for, wants more of it, and can't easily
+get it elsewhere. Most brands stand next to fifty similar competitors and
+wonder why nobody notices. Before any content, SHOULD answer in writing:
 
-- Who exactly are we talking to?
-- Why would they care — which problem do we solve for them?
-- What can we say that no other brand can?
-- How do they like to consume content (format, platform, length)?
+- **What do we stand for?** The idea, belief or promise the brand is built on.
+- **Who exactly is it for?** One specific person, not a market.
+- **Why would they care?** What they get from us that they can't get
+  elsewhere — the specific problem we solve.
+- **What should they feel** when they see the brand? Pick one or two: smart
+  ("I learn something every time"), early, belonging, confident, inspired,
+  rebellious.
+- **How do they like to consume content** (format, platform, length)?
+
+Then:
+
+- **Own a narrow category.** The strongest brands are the only one in their
+  category, not the best in a crowded one. Common routes: combine two worlds,
+  be first and execute, or build around one specific pain point. If no
+  difference comes to mind, the problem is the product, not the branding.
+- **Make the audience the hero.** Every piece answers: what does the reader
+  get for their attention?
+- **Same story everywhere.** Format changes per channel; the story, the
+  product's use and the feeling don't.
 
 The answers belong in the context file agents read
 ([agents.md](agents.md#the-context-folder-comes-before-any-agent)). Grow the
 audience that buys, not views: reach on the wrong people is a vanity metric.
+
+## Founder account and brand account
+
+A company SHOULD run both, with different jobs:
+
+| | Founder account | Brand account |
+|---|---|---|
+| Voice | First person: opinions, stories, personality | Third person |
+| Content | Why we're building this, what I believe, what I'm learning, behind the scenes | Launches, updates, campaigns, community |
+| Strength | Builds trust fastest — people follow people | Scales; better product distribution; worth more if the business is sold |
+| Risk | The brand depends on one person; a bad personal take hurts it | Harder to feel relatable |
+
+- Show the real journey, not only wins: honest takes, what you're
+  struggling with, what you're building. A brand that only wins reads as
+  scripted. Showing your face widens the formats you can use and builds
+  trust faster; faceless brands are harder to grow.
 
 ## Original insight is the moat
 
@@ -60,6 +94,25 @@ Keep a swipe file of pieces that worked, with a line on *why*, and use it to
 train taste — your own and your agents' (voice examples in
 [agents.md](agents.md#the-context-folder-comes-before-any-agent)).
 
+## Funnel and pillars
+
+Every piece of organic content has **one job**: reach new people, build
+trust, or convert.
+
+| Stage | Job | Formats |
+|---|---|---|
+| Top | Get discovered | Broad, shareable: takes, trends, short clips |
+| Middle | Turn followers into people who trust you | How-tos, long form, tutorials, case studies, behind the scenes |
+| Bottom | Turn trust into customers | Demos, customer results, offers and launches, free resources that lead to paid ones, answers to objections |
+
+- The mix depends on the business: a news account is almost all top of
+  funnel, a product page almost all bottom. Decide the split; don't let it
+  happen. DON'T neglect the top — it is what keeps a brand growing.
+- **Content pillars:** the 3–5 topics the brand is known for. A good pillar
+  sits where three things overlap: what the audience cares about, what you
+  are credible on, and what leads naturally to what you sell. Each pillar
+  gets top, middle and bottom pieces, packaged per platform.
+
 ## Channels
 
 - **Few platforms, done properly.** A good idea on the wrong platform still
@@ -67,14 +120,36 @@ train taste — your own and your agents' (voice examples in
   one decides what to show. Long-form video skills transfer well to short
   form.
 - **One channel, one job:** search answers questions, social starts
-  conversations, email arrives at a specific moment. The same message on five
-  channels pays five times for one impression.
-- **Own a channel.** Collect contact details (newsletter, webinar sign-ups)
-  so reach doesn't depend on one platform's algorithm.
+  conversations, email arrives at a specific moment. The story stays the same
+  (positioning above); posting the identical message on five channels pays
+  five times for one impression.
+- **Hold a cadence**: fixed times to write, film and batch. Consistency beats
+  bursts.
+- **Rent to find, own to keep.** Social platforms rent you an audience;
+  algorithms change and accounts get restricted overnight. Use them to find
+  people, and move people to owned channels (newsletter, email list,
+  community) to keep them. SHOULD start the newsletter on day one, even
+  before publishing regularly.
 - **Organic is the free test lab.** Post several hooks; put money only behind
   what already travelled.
-- **Repurpose.** Repackage one strong idea across formats and platforms
-  instead of starting every piece from zero.
+- **Repurpose.** Study what worked and repackage it across formats and
+  platforms instead of starting every piece from zero.
+
+## Community
+
+An audience follows you; a community belongs to something. To build one:
+
+- **Make membership mean something:** a name, shared language and beliefs,
+  a visual identity, public recognition, and a way in that takes some
+  qualifying.
+- **Give it a home** that fits the audience: a real-time chat for active
+  groups, an announcements channel for fast updates, a course platform for
+  education brands, a simple private group for a low barrier. A newsletter is
+  the best entry point but not a community by itself.
+- **Stay close:** the founder answers questions and shares behind-the-scenes
+  updates there, in person.
+- **Create rituals:** weekly events, challenges, member spotlights, an
+  annual event or meetup.
 
 ## Testing creative
 
@@ -113,8 +188,12 @@ train taste — your own and your agents' (voice examples in
 ## Sources
 
 Ryan (@ryangrowthh), "How to Be a World-Class Head of Content",
-`https://x.com/ryangrowthh/status/2108566836866613323` (read 2026-10-12).
-Personal experience, no data; budget figures and tool lists left out.
+`https://x.com/ryangrowthh/status/2108566836866613323` (read 2026-10-12), and
+"How to Grow a Massive Brand (Full 2026 Masterclass)",
+`https://x.com/ryangrowthh/status/2109644746465726929` (read 2026-10-12) —
+positioning, founder and brand accounts, funnel and pillars, owned channels,
+community. Personal experience with organic content, no data; budget
+figures, tool lists and company examples left out.
 
 Greg Isenberg, "Marketing Engineers: 100x More Experiments with AI agents",
 `https://x.com/gregisenberg/status/2108188646973313195` (read 2026-10-12) —
