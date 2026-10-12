@@ -16,6 +16,8 @@ when starting a new project.
 | SEO | [seo/local.md](seo/local.md) | Local businesses: map ranking factors, Business Profile, reviews, the page it points to |
 | Marketing | [marketing/agents.md](marketing/agents.md) | Running marketing with AI agents: context folder, data, build order, guardrails, weekly loop |
 | Marketing | [marketing/outbound.md](marketing/outbound.md) | Cold email reply-rate data; warm leads from competitor engagement |
+| AI | [ai/agent-workflows.md](ai/agent-workflows.md) | Multi-agent workflows: graph design, contracts, barriers vs pipelines, verification, convergence, cost |
+| Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: context file, single-job prompts on real records, the ten jobs, rollout |
 | Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project, distilled from the topic files |
 
 ## Structure
@@ -24,7 +26,7 @@ when starting a new project.
 brain/
 ├── README.md              ← this index
 ├── CLAUDE.md              ← how new articles get folded in
-├── <topic>/               ← one folder per domain (seo, marketing…)
+├── <topic>/               ← one folder per domain (seo, marketing, ai, operations…)
 │   └── <subtopic>.md      ← split a topic only when one file gets too long
 └── checklists/
     └── new-project.md     ← the "starting something" file

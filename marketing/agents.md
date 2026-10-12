@@ -3,7 +3,9 @@
 How to set up agents that research customers, draft content and outreach,
 run tests and report — without them inventing facts, sending things or
 quietly degrading. Sits next to `claude-code-loop` in the workspace, which
-solves the same problem for code.
+solves the same problem for code. For orchestrating many agents in one
+run, see [ai/agent-workflows.md](../ai/agent-workflows.md); for the same
+setup applied to studio operations, [operations/agency.md](../operations/agency.md).
 
 **Tags:** **MUST** / **SHOULD** / **DON'T** / **Skip** as in the SEO files.
 Most of this is practitioner consensus (read 2026-10-12), not vendor
