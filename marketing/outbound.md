@@ -3,7 +3,7 @@
 Cold email and warm lead sourcing. Small file; grows when there is more
 evidence.
 
-**Tags:** **MUST** / **SHOULD** / **DON'T** / **Skip** as in the SEO files.
+**Tags:** as in the [README](../README.md#how-notes-are-written).
 
 ---
 

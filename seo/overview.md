@@ -6,15 +6,20 @@ To use them in a project, copy the `seo/` folder in (for example as `docs/seo/`)
 and reference `overview.md` from `AGENTS.md` / `CLAUDE.md`; project-specific
 facts belong there, not here.
 
-*Folded in from [senblet/seo-md](https://github.com/senblet/seo-md), the
-public version of these notes.*
+**Where it comes from.** The rules are drawn from Google Search Central
+documentation (read in full on 2026-09-22; the SEO Starter Guide itself was
+last updated 2025-12-10), Google's AI-features and crawler pages and OpenAI's
+crawler documentation (read 2026-10-05), Google's Trends and Search Console
+pages (read 2026-10-06), and Google Business Profile help (read 2026-10-12).
+On top of that, sections marked *practitioner* hold methods from SEO
+consultants (read 2026-10-12); they never override Google's documentation and
+their numbers stay theirs. Where Google says something is optional or not
+worth worrying about, these files say so too — do not upgrade a "nice to
+have" into a rule.
 
-Everything here is drawn from Google Search Central documentation (read in full
-on 2026-09-22; the SEO Starter Guide itself was last updated 2025-12-10), plus
-Google's AI-features and crawler pages and OpenAI's crawler documentation
-(read 2026-10-05) and Google's Trends and Search Console pages (read
-2026-10-06). Where Google says something is optional or not worth worrying
-about, these files say so too — do not upgrade a "nice to have" into a rule.
+*Started from [senblet/seo-md](https://github.com/senblet/seo-md), which
+stays the Google-only public version; these files add the practitioner
+sections and `local.md`.*
 
 **How to read it.** **MUST** = required for eligibility or a spam-policy line;
 breaking it can keep pages out of Search. **SHOULD** = best practice with real
@@ -47,6 +52,9 @@ effect. **DON'T** = actively harmful. **Skip** = effort Google says is wasted.
   Google may choose differently.
 - Changes take hours to months to show. Wait **a few weeks** before judging an
   SEO change; iterate if needed. Not every change has a visible effect.
+  *(practitioner)* A dip right after a change is normal — give it up to ~2
+  months before reverting; a new domain takes roughly 6 months before
+  anything compounds.
 - The single biggest lever is **content people find compelling and useful**.
   Technical SEO removes obstacles; it does not create demand.
 
@@ -161,8 +169,8 @@ Violations can demote a page or remove a whole site. **MUST NOT:**
   Security Issues, rich result reports, Core Web Vitals. Monthly checks plus
   after significant changes are enough; Google emails new issues.
 - **Tools:** Rich Results Test, PageSpeed Insights, URL Inspection.
-- **Measure changes:** compare before/after on stable pages over months;
-  wait weeks before concluding anything.
+- **Measure changes:** compare before/after on stable pages over months
+  ([how long to wait](#ground-truth)).
 - **AI traffic:** AI Overviews and AI Mode are counted in the Performance
   report under the "Web" search type, not reported separately. ChatGPT search
   adds `utm_source=chatgpt.com` to the links it sends, so analytics can

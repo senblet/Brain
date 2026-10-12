@@ -3,12 +3,10 @@
 How to shape work that spans many agents: what runs in parallel, what waits,
 what verifies, what merges. Written against Claude Code's Workflow tool
 (orchestration scripts that spawn subagents), but the design rules hold for
-any orchestrator. For agents doing business work (marketing, ops) and their
-guardrails, see [marketing/agents.md](../marketing/agents.md).
+any orchestrator. For working with a single agent — context, task shape,
+guardrails — see [agents.md](agents.md).
 
-**Tags:** **MUST** = breaks the run or its results if ignored. **SHOULD** =
-best practice with real effect. **DON'T** = actively harmful. **Skip** =
-effort not worth it.
+**Tags:** as in the [README](../README.md#how-notes-are-written).
 
 ---
 

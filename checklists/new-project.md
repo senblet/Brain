@@ -47,13 +47,6 @@ entirely behind a login.
       missing.
 - [ ] A publishing cadence, written down, held.
 
-**If an agent publishes or edits pages**
-- [ ] Permission list in the repo: ALLOW (read, draft) / REQUIRE APPROVAL
-      (publish, edit live, titles on pages with clicks, redirects) / BLOCK
-      (delete, robots.txt, canonicals, external email, spending). Hard limits
-      in code, not prompts — see [marketing/agents.md](../marketing/agents.md).
-- [ ] A standards file where every rejected draft leaves a one-line reason.
-
 **Local business** — see [seo/local.md](../seo/local.md)
 - [ ] Business Profile: real name, precise address, local phone, as few
       categories as truly fit, every real service, description without links
@@ -67,4 +60,31 @@ entirely behind a login.
 - [ ] Monthly: repoint pages to the queries Google already shows them for.
 - [ ] Monthly, if AI referrals matter: ~10 buyer questions by hand, logged
       out; note which pages get cited and whether you're in them.
-- [ ] Wait a few weeks before judging any SEO change; ~2 months for a dip.
+- [ ] Don't judge a change too early — see "Ground truth" in
+      [seo/overview.md](../seo/overview.md#ground-truth).
+
+## Agents
+
+From [ai/agents.md](../ai/agents.md). Skip if no agent does work on the
+project beyond writing code.
+
+- [ ] A context file every task reads first; agents write to `evidence/`,
+      only a human edits the context file.
+- [ ] A permission list in the repo — ALLOW (read, draft) / REQUIRE APPROVAL
+      (publish, edit live, redirects) / BLOCK (delete, config such as
+      `robots.txt` and canonicals, external email, spending) — with the hard
+      limits enforced in code, not prompts.
+- [ ] Every task can answer "not in the data"; outputs cite their source.
+- [ ] A standards file where every rejected draft leaves a one-line reason.
+- [ ] Client data: training on chats switched off before any client file
+      goes in.
+
+## Brand
+
+From [marketing/content.md](../marketing/content.md). For projects with
+their own audience (products, the studio itself), not client sites.
+
+- [ ] Positioning written down: what it stands for, who it's for, why they'd
+      care, what they should feel — and copied into the context file.
+- [ ] Decided: founder account, brand account, or both, and each one's job.
+- [ ] An owned channel (newsletter or email list) collecting from day one.

@@ -60,24 +60,23 @@ substantial changes**; adding or deleting content in bulk to seem "fresh"
   text**.
 - Generating many pages without adding value is **scaled content abuse**
   ([spam policies](overview.md#spam-policies--never-do-these)).
-- **Agent rule:** never invent figures, dates, quotes, studies or credentials.
-  Take numbers from a verifiable source (the product's own data, a cited
-  study). If something is an estimate, say so in the text.
-- **Agent traps seen in practice** (practitioner reports, 2026-10):
-  - An agent told to duplicate a page for new variants can silently drop the
-    one original element (a quiz, a data table) — the exact thing that keeps
-    the page out of scaled-content territory. After any duplication, diff the
-    new page against the source for what is *missing*, not only what changed.
-  - Once an agent publishes outside the CMS, plugins stop updating the
-    sitemap. Put "update the sitemap and request indexing" in the process
-    file the agent reads before every publish.
-  - Asked for a blank field (search volume, a contact email, a Business
-    Profile category) the model fills it with something plausible. Give it
-    the real list or the real export, and tell it to say "unknown" otherwise.
-  - Never let the model make an irreversible call. Deletes, redirects and
-    robots/canonical edits go through a human; one practitioner blocks page
-    removal in code for anything over a few hundred words, whatever the
-    model suggests.
+- **Agent rules for SEO work:**
+  - MUST NOT invent figures, dates, quotes, studies, credentials, search
+    volumes, difficulty scores, rankings or trends. Take numbers from a
+    source the user can see (the product's own data, a cited study, Search
+    Console, Trends, an export they provide); label anything else as an
+    estimate, in the text. Given a field it can't know (a volume, a contact
+    email, a Business Profile category), a model fills it with something
+    plausible — supply the real list and let it answer "unknown".
+  - *(practitioner)* An agent told to duplicate a page for new variants can
+    silently drop the one original element (a quiz, a data table) — the
+    thing that keeps the page out of scaled-content territory. After any
+    duplication, diff for what is *missing*, not only what changed.
+  - *(practitioner)* Once an agent publishes outside the CMS, plugins stop
+    updating the sitemap. Put "update the sitemap and request indexing" in
+    the process file the agent reads before every publish.
+  - Deletes, redirects, `robots.txt` and canonical changes go through a
+    human, or are blocked in code.
 - E-commerce: AI images need IPTC `DigitalSourceType` =
   `TrainedAlgorithmicMedia`; AI product titles/descriptions must be labelled as
   AI-generated (Merchant Center policy).
@@ -101,10 +100,8 @@ substantial changes**; adding or deleting content in bulk to seem "fresh"
      trending (warning signs above).
   4. **Check each market separately.** Interest and seasonality differ by
      country; publish seasonal content a little before searches peak.
-- **Agent rule:** never invent search volumes, difficulty scores, rankings or
-  trends. Use data the user can see (Search Console, Trends, or an export
-  they provide) and label anything else as an estimate. Trends is a sample of
-  searches showing interest over time, not exact volume.
+- Trends is a sample of searches showing interest over time, not exact
+  volume; never present it as a search count.
 - **One page per topic, not per keyword variant.** Substantially similar pages
   aimed at similar queries (one per city, one per synonym) are doorway abuse
   ([spam policies](overview.md#spam-policies--never-do-these)). Cover close
@@ -156,8 +153,6 @@ with Google's guidance but not from it.
   then silence looks like generated content. Practitioners cap a new site at
   roughly one page a day. The ranking effect of volatility itself is their
   guess, not documented.
-- **Wait.** A dip after a change is normal; judge after ~2 months. A new
-  domain takes roughly 6 months before anything compounds.
 
 ### Ads and interstitials
 - Ads must not become distracting or stop users from reading.
@@ -271,7 +266,8 @@ Keyword research adds Google's Trends and Search Console pages (read
 2026-10-06): `monitor-debug/trends-start` · `monitor-debug/search-console-start`
 · `monitor-debug/google-analytics-search-console`.
 
-Practitioner sections (choosing what to write, agent traps, earning links),
+Practitioner sections (choosing what to write, agent rules marked
+*(practitioner)*, earning links),
 read 2026-10-12 — vendor-affiliated, one-company evidence, kept where they
 operationalise Google's guidance:
 - Nicholas Dulait (ChatSEO), "How to use Claude Opus 5.5 for SEO",

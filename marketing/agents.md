@@ -1,54 +1,32 @@
 # Marketing — running it with AI agents
 
-How to set up agents that research customers, draft content and outreach,
-run tests and report — without them inventing facts, sending things or
-quietly degrading. Sits next to `claude-code-loop` in the workspace, which
-solves the same problem for code. For orchestrating many agents in one
-run, see [ai/agent-workflows.md](../ai/agent-workflows.md); for the same
-setup applied to studio operations, [operations/agency.md](../operations/agency.md). What to make and how to
-test creative is in [content.md](content.md).
+What is specific to marketing agents: the data they need, how to measure
+campaigns, which agents to build in what order, and the weekly loop. The
+general setup — context file, task shape, guardrails, rollout — is in
+[ai/agents.md](../ai/agents.md). What to make and how to test creative is in
+[content.md](content.md).
 
-**Tags:** **MUST** / **SHOULD** / **DON'T** / **Skip** as in the SEO files.
-Most of this is practitioner consensus (read 2026-10-12), not vendor
-documentation; it is kept because it matches what the loop templates in this
-workspace already learned.
+**Tags:** as in the [README](../README.md#how-notes-are-written). Practitioner
+consensus (read 2026-10-12), not vendor documentation.
 
 ---
 
-## The context folder comes before any agent
+## Context file additions
 
-Generic output means thin context, not a weak model. Before the first agent,
-write the business down the way you would for a sharp new hire. One folder,
-a few files, plain Markdown:
+On top of the general context file ([ai/agents.md](../ai/agents.md#context-before-agents)):
 
-- **Start-here** — what the company does, for whom, this quarter's
-  priorities, where everything else lives. Every agent reads it first.
-- **Customer fit** — who buys, who stays, who you can serve profitably.
-  Painfully specific ("Shopify stores at $1–10M where the founder still
-  does the books") beats "SMBs".
-- **Offers** — what you sell, prices, what you may promise, what needs
-  approval before anyone says it.
-- **Voice** — not adjectives. Three pieces you loved with one line on why,
-  two you rejected with the reason. Agents learn from examples.
-- **Founder opinions** — strong takes on the category, customer and
-  competition. The one input competitors cannot generate.
-- **Failed campaigns / decisions** — one line per lesson that cost money.
-- **Evidence/** — where agents write what they find (call summaries, customer
-  language reports, guesses).
-
-**Rule:** agents write to `evidence/`; only a human moves something into the
-company files. Otherwise one agent's hunch becomes policy.
-
-Every rejection becomes a line in a standards file the agent reads before
-every draft. That file ends up being the editorial line, and it outlives
-the tool.
+- the brand's positioning answers ([content.md](content.md#positioning-comes-first));
+- failed campaigns, one line each with why ("the free audit attracted
+  companies too small to afford us");
+- the latest customer-language report, so every agent writes in the
+  customers' words.
 
 ## Data and measurement
 
-- Connect where customer truth lives (calls, tickets, CRM, analytics,
-  revenue). **Read-only everywhere to start**; write access is earned.
+- Connect where customer truth lives: calls, tickets, CRM, analytics,
+  revenue. Read-only first.
 - **One campaign ID carried everywhere**: UTM tags, ad names, email
-  sequence names, a field on each deal. One table (spreadsheet is fine) with
+  sequence names, a field on each deal. One table (a spreadsheet is fine) with
   a row per campaign: spend, leads, qualified, deals, revenue, churn. Most
   companies know clicks per campaign and revenue per customer and cannot join
   them; this is the join.
@@ -61,62 +39,36 @@ the tool.
 - Wire results through to retention and refunds; cheap customers who churn
   in 60 days look great on an acquisition dashboard.
 
-## Build order
+## Which agents, in what order
 
-1. **One agent, made reliable, before a second.** Six agents on day one is a
-   weekend debugging a group chat.
-2. First: the **customer language** agent — reads call transcripts and
-   tickets, extracts the exact phrases customers use for their problems.
-   Everything else feeds off it. First run is ~70% right; fix the
-   instruction, save the fix, repeat three or four times.
-3. Then one at a time, each with its own folder, instructions and schedule:
-   buying-trigger (watches for events that create demand, drafts one email
-   only if it can finish "this event creates this problem, we solve it by
-   ..." sharply), search (the questions people ask before buying, from
-   Search Console, calls and what AI assistants answer — see
-   [seo/ai-search.md](../seo/ai-search.md)), creative, closed-lost (rereads
-   lost deals for the real reason and a reopen condition, then watches for
-   it), performance (Monday memo, every line ending in keep / kill / change /
-   test).
-4. Keep **ten example inputs with expected output per agent** and re-run
-   them after every instruction change, so regressions show up immediately.
-5. If you spend all day fixing output, the problem is upstream: the context
-   folder or the agent's contract.
+One at a time, each made reliable before the next
+([ai/agents.md](../ai/agents.md#rollout-and-review)), each with its own folder,
+instructions and schedule:
 
-## Guardrails live in the tools, not the prompt
-
-"Always ask me before sending" is a suggestion to a model. Real limits:
-
-- Smallest permissions that do the job. Outreach agent: draft-only email.
-  Ads agent: creates paused, budgets stay human.
-- Approval steps inside the code (a message with an approve button that the
-  action waits on).
-- Plain code for exact rules — spend caps, suppression lists, dedupe,
-  "never delete a page over N words". The model handles judgement calls
-  only.
-- A written contract per agent: sources, limits, what "done" means. An agent
-  that reports "this source failed today" beats one that silently skips it.
-- A permission list written before the first task, for example:
-
-  ```
-  ALLOW            read analytics / Search Console / CRM; create drafts; write the log
-  REQUIRE APPROVAL publish or edit a live page; change a title that gets clicks; redirects
-  BLOCK            delete pages; edit robots.txt or canonicals; send external email; spend
-  ```
-
-- Agents never hit send, publish, or pay. A human on the button, always, and
-  label AI-generated people and scenes where a platform requires it.
+1. **Customer language** — reads call transcripts and tickets, extracts the
+   exact phrases customers use for their problems. Everything else feeds off
+   it.
+2. **Buying trigger** — watches for events that create demand (new location,
+   funding, a new integration). Drafts one email only if it can finish "this
+   event creates this problem, and we solve it by …" sharply; otherwise the
+   account waits.
+3. **Search** — the questions people ask before buying, from Search Console,
+   sales calls and what AI assistants answer
+   ([seo/ai-search.md](../seo/ai-search.md)); builds the most useful page for
+   each.
+4. **Creative** — makes genuinely different concepts from the
+   customer-language report and approved claims; uploads ads paused.
+5. **Closed-lost** — rereads lost deals for the real reason and a reopen
+   condition ("needed SSO", "renews in March"), then watches for it.
+6. **Performance** — a Monday memo from the campaign table; every line ends
+   in keep, kill, change or test.
 
 ## The weekly loop
 
-Monday: read the performance memo, make keep/kill/change calls. Midweek:
-fix the workflows that produced weak work, launch new tests. Talk to sales
-and support weekly — next week's ideas are there. Friday: review what agents
+Monday: read the performance memo, make keep/kill/change calls. Midweek: fix
+the workflows that produced weak work, launch new tests. Talk to sales and
+support weekly — next week's ideas are there. Friday: review what agents
 made, update the files.
-
-The review queue is the heart. Every item should take under a minute: show
-the change, what it touches, the evidence. If reviewing takes longer, the
-agent's output format is wrong.
 
 ## What a marketing engineer needs to know
 
@@ -130,9 +82,6 @@ basic SQL, shipping a page, git, test cases, knowing what a run costs.
 
 Greg Isenberg, "Marketing Engineers: 100x More Experiments with AI agents",
 `https://x.com/gregisenberg/status/2108188646973313195` (read 2026-10-12).
-Nicholas Dulait (ChatSEO), "How to use Claude Opus 5.5 for SEO", Part 5
-(permission list, standards file),
-`https://x.com/nicholasdulait/status/2108212094214529135` (read 2026-10-12).
 
-All practitioner opinion; the tools named in the sources change monthly and
+All practitioner opinion; the tools named in the source change monthly and
 are deliberately left out.

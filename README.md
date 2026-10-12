@@ -20,12 +20,13 @@ against its recheck window (a year by default; files can say six months).*
 | SEO | [seo/appearance.md](seo/appearance.md) | How pages look in results: titles, snippets, video, structured data |
 | SEO | [seo/ai-search.md](seo/ai-search.md) | Google's AI features; AI search and training crawlers; how assistants pick sources |
 | SEO | [seo/local.md](seo/local.md) | Local businesses: map ranking factors, Business Profile, reviews, the page it points to |
-| Marketing | [marketing/agents.md](marketing/agents.md) | Running marketing with AI agents: context folder, data, build order, guardrails, weekly loop |
+| Marketing | [marketing/agents.md](marketing/agents.md) | Marketing agents: context additions, campaign measurement, which agents in what order, weekly loop |
 | Marketing | [marketing/content.md](marketing/content.md) | Brand and content: positioning, founder vs brand accounts, original insight, packaging, funnel and pillars, channels, community, content team |
 | Marketing | [marketing/outbound.md](marketing/outbound.md) | Cold email reply-rate data; warm leads from competitor engagement |
+| AI | [ai/agents.md](ai/agents.md) | Working with agents: context file, task shape, guardrails, failure modes, rollout and review |
 | AI | [ai/agent-workflows.md](ai/agent-workflows.md) | Multi-agent workflows: graph design, contracts, barriers vs pipelines, verification, convergence, cost |
-| Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: context file, single-job prompts on real records, the ten jobs, rollout |
-| Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project, distilled from the topic files |
+| Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: context additions, the ten jobs on real records, audit lens, rollout |
+| Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project: SEO, agents, brand |
 
 ## Structure
 
@@ -46,6 +47,11 @@ brain/
 - **Merged, not appended.** A new article updates the existing file: new points
   are added where they belong, contradictions are flagged, superseded points
   are removed. No file is a stack of article summaries.
+- **One home per rule.** A rule is written once, in the most general file it
+  applies to, and linked from the others. General agent practice lives in
+  `ai/agents.md`; domain files add only what is specific to them. The `seo/`
+  folder is the exception: it is copied into projects, so it stays
+  self-contained and never links outside itself.
 - **Tagged by strength:**
 
   | Tag | Meaning |
@@ -61,7 +67,7 @@ brain/
   section that says so, with the source's commercial interest noted. Their
   numbers are reported as theirs, never promoted to rules.
 - **Sourced and dated.** Every file ends with a Sources list, with the date
-  each source was read. Fast-moving topics (SEO, AI tooling) get rechecked
-  when a file is more than a year old.
+  each source was read, and says when to recheck it: after a year by
+  default, six months for fast-moving AI tooling.
 - **Checklists follow the topics.** When a topic file changes, the matching
   section of `checklists/new-project.md` is updated too.

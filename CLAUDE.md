@@ -25,10 +25,23 @@ links; your job is to fold what's worth keeping into the right file. Read
 7. **Update `checklists/new-project.md`** if the change affects what to do when
    starting a project.
 8. **Update the README index** if you created a file or the file's scope changed.
-9. **Run `python3 build.py`** to regenerate `brain-map.svg`. It reads the
+9. **Leave the brain organised.** Before committing, re-read every file you
+   touched, end to end, and check:
+   - **One home per rule.** If the point already exists elsewhere, link to
+     it instead of restating it. Rules that apply beyond one domain go in
+     the most general file (agent practice → `ai/agents.md`).
+   - **Right file, right section.** Each section sits where a reader would
+     look for it; no stub sections, no "misc" piles.
+   - **Intros and index are true.** Each file's opening paragraph, the
+     README index and `seo/overview.md`'s file table describe what is
+     actually in the files now.
+   - **`seo/` stays self-contained** — no links out of it.
+   - **Links resolve**, including `#anchors`.
+   If the answer to any of these is no, fix it in the same commit.
+10. **Run `python3 build.py`** to regenerate `brain-map.svg`. It reads the
    `read YYYY-MM-DD` dates and `**Conflict:**` markers, so keep those
    formats.
-10. **Commit** with a message naming the source and what changed
+11. **Commit** with a message naming the source and what changed
    (e.g. `seo: add INP guidance from web.dev article; supersedes FID notes`).
 
 ## Splitting files

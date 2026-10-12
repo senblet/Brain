@@ -4,9 +4,10 @@ What to make, how to frame it, where to put it, and who makes it: brand
 positioning, founder and brand accounts, original insight, packaging, the
 funnel and content pillars, channels, community, and building a content
 team. For writing pages that rank, see [seo/content.md](../seo/content.md);
-for running content work with agents, see [agents.md](agents.md).
+for running content work with agents, see [agents.md](agents.md) and
+[ai/agents.md](../ai/agents.md).
 
-**Tags:** **MUST** / **SHOULD** / **DON'T** / **Skip** as in the SEO files.
+**Tags:** as in the [README](../README.md#how-notes-are-written).
 All practitioner experience (read 2026-10-12), no data behind it; kept where
 it is concrete and consistent with the rest of the brain.
 
@@ -40,7 +41,7 @@ Then:
   product's use and the feeling don't.
 
 The answers belong in the context file agents read
-([agents.md](agents.md#the-context-folder-comes-before-any-agent)). Grow the
+([ai/agents.md](../ai/agents.md#context-before-agents)). Grow the
 audience that buys, not views: reach on the wrong people is a vanity metric.
 
 ## Founder account and brand account
@@ -92,7 +93,7 @@ social posts, videos and newsletters, never a reason to bend a search title.
 Copy that works is concise, easy to understand, and carries one strong idea.
 Keep a swipe file of pieces that worked, with a line on *why*, and use it to
 train taste — your own and your agents' (voice examples in
-[agents.md](agents.md#the-context-folder-comes-before-any-agent)).
+[ai/agents.md](../ai/agents.md#context-before-agents)).
 
 ## Funnel and pillars
 
