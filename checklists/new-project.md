@@ -6,12 +6,12 @@ brain grows.
 
 ## SEO — public pages
 
-From [seo/google-search.md](../seo/google-search.md). Skip this section for apps
-that live entirely behind a login.
+From the [seo/](../seo/overview.md) notes. Skip this section for apps that live
+entirely behind a login.
 
 **At setup**
-- [ ] Copy `seo/google-search.md` into the repo as `SEO.md` and reference it
-      from `AGENTS.md` / `CLAUDE.md`.
+- [ ] Copy the `seo/` folder into the repo (e.g. as `docs/seo/`) and reference
+      `overview.md` from `AGENTS.md` / `CLAUDE.md`.
 - [ ] HTTPS everywhere; HTTP → HTTPS 301; pick `www` or apex and 301 the other.
 - [ ] Server-side rendering or prerendering for public pages.
 - [ ] Routing uses the History API (no `#/` URLs); links are real `<a href>`.
