@@ -8,7 +8,11 @@ when starting a new project.
 
 | Topic | File | What it covers |
 |---|---|---|
-| SEO | [seo/google-search.md](seo/google-search.md) | Google's crawling, indexing, content, structured data and spam rules; AI search crawlers |
+| SEO | [seo/overview.md](seo/overview.md) | Start here: ground truth, eligibility, spam policies, page experience, what to skip, monitoring, pre-ship checklist |
+| SEO | [seo/crawling-indexing.md](seo/crawling-indexing.md) | robots.txt, `noindex`, sitemaps, canonicals, redirects, JavaScript sites, URLs, international sites |
+| SEO | [seo/content.md](seo/content.md) | Helpful content, E-E-A-T, AI content, keyword research, links, images |
+| SEO | [seo/appearance.md](seo/appearance.md) | How pages look in results: titles, snippets, video, structured data |
+| SEO | [seo/ai-search.md](seo/ai-search.md) | Google's AI features; AI search and training crawlers |
 | Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project, distilled from the topic files |
 
 ## Structure
