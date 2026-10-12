@@ -5,7 +5,8 @@ run tests and report — without them inventing facts, sending things or
 quietly degrading. Sits next to `claude-code-loop` in the workspace, which
 solves the same problem for code. For orchestrating many agents in one
 run, see [ai/agent-workflows.md](../ai/agent-workflows.md); for the same
-setup applied to studio operations, [operations/agency.md](../operations/agency.md).
+setup applied to studio operations, [operations/agency.md](../operations/agency.md). What to make and how to
+test creative is in [content.md](content.md).
 
 **Tags:** **MUST** / **SHOULD** / **DON'T** / **Skip** as in the SEO files.
 Most of this is practitioner consensus (read 2026-10-12), not vendor
@@ -117,24 +118,6 @@ The review queue is the heart. Every item should take under a minute: show
 the change, what it touches, the evidence. If reviewing takes longer, the
 agent's output format is wrong.
 
-## Creative and social (brief)
-
-- Organic posts are the free test lab: post ten hooks, put money only behind
-  what the algorithm already picked up.
-- Ask for genuinely different concepts (a worked example, a customer story,
-  a raw demo, a founder take), not fifty headlines on one idea. Claimed
-  mechanics of ad platforms (e.g. grouping look-alike ads) are from a
-  practitioner and unverified; the practice is sound regardless.
-- Use AI actors to test scripts, pay a real person to run the winner — it
-  performs better and keeps platform labelling rules simple.
-- UGC creators: pick by views ÷ followers on recent videos, not follower
-  count; small creators whose videos travel 20–50× past their audience are
-  the ones to brief. Vet by watching, then brief with what the data found.
-  (Cost and ARR claims in the source are unverified.)
-- One channel, one job: search answers questions, social starts
-  conversations, email arrives at a moment. The same message on five
-  channels pays five times for one impression.
-
 ## What a marketing engineer needs to know
 
 Marketer half: customer interviews, positioning, an offer that is a reason
@@ -150,10 +133,6 @@ Greg Isenberg, "Marketing Engineers: 100x More Experiments with AI agents",
 Nicholas Dulait (ChatSEO), "How to use Claude Opus 5.5 for SEO", Part 5
 (permission list, standards file),
 `https://x.com/nicholasdulait/status/2108212094214529135` (read 2026-10-12).
-Shawn (Composio/treg), "How to Copy CalAI's UGC Playbook",
-`https://x.com/shawnbuilds/status/2108125367370486060` (read 2026-10-12;
-creator-selection ratio only — the post sells treg and its figures are
-unsourced).
 
 All practitioner opinion; the tools named in the sources change monthly and
 are deliberately left out.
