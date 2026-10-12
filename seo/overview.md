@@ -26,9 +26,10 @@ effect. **DON'T** = actively harmful. **Skip** = effort Google says is wasted.
 |---|---|
 | [overview.md](overview.md) | Ground truth, eligibility, spam policies, page experience, promotion, what to skip, monitoring, pre-ship checklist |
 | [crawling-indexing.md](crawling-indexing.md) | Discovery, robots.txt and `noindex`, sitemaps, canonicals, redirects, status codes, JavaScript sites, URLs, international sites |
-| [content.md](content.md) | Helpful content, E-E-A-T, AI-generated content, keyword research, ads and interstitials, links, images |
+| [content.md](content.md) | Helpful content, E-E-A-T, AI-generated content, keyword research and choosing pages, ads and interstitials, links and earning them, images |
 | [appearance.md](appearance.md) | How pages look in results: titles, snippets, video, structured data |
-| [ai-search.md](ai-search.md) | Google's AI features and AI crawler tokens (Google, OpenAI) |
+| [ai-search.md](ai-search.md) | Google's AI features, AI crawler tokens (Google, OpenAI), how assistants pick sources |
+| [local.md](local.md) | Local businesses: map ranking factors, Business Profile, reviews, the page it points to |
 
 ---
 
@@ -132,7 +133,10 @@ Violations can demote a page or remove a whole site. **MUST NOT:**
 - **Meta keywords** — Google doesn't use them.
 - **Keywords in the domain or URL path** — hardly any ranking effect beyond
   breadcrumbs. Name the site for the business.
-- **TLD choice** — only matters for country targeting, and weakly.
+- **TLD choice for ranking** — no effect, with one real exception: a
+  country-code TLD (`.cl`, `.fr`) is a strong signal that the site is for that
+  country only and cannot target another
+  ([crawling-indexing.md](crawling-indexing.md#international-and-multilingual-sites)).
 - **Content length** — no minimum or maximum word count.
 - **Subdomains vs subdirectories** — do what suits the business.
 - **PageRank obsession** — links are one signal among many.

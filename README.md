@@ -10,9 +10,12 @@ when starting a new project.
 |---|---|---|
 | SEO | [seo/overview.md](seo/overview.md) | Start here: ground truth, eligibility, spam policies, page experience, what to skip, monitoring, pre-ship checklist |
 | SEO | [seo/crawling-indexing.md](seo/crawling-indexing.md) | robots.txt, `noindex`, sitemaps, canonicals, redirects, JavaScript sites, URLs, international sites |
-| SEO | [seo/content.md](seo/content.md) | Helpful content, E-E-A-T, AI content, keyword research, links, images |
+| SEO | [seo/content.md](seo/content.md) | Helpful content, E-E-A-T, AI content, keyword research and choosing pages, links and earning them, images |
 | SEO | [seo/appearance.md](seo/appearance.md) | How pages look in results: titles, snippets, video, structured data |
-| SEO | [seo/ai-search.md](seo/ai-search.md) | Google's AI features; AI search and training crawlers |
+| SEO | [seo/ai-search.md](seo/ai-search.md) | Google's AI features; AI search and training crawlers; how assistants pick sources |
+| SEO | [seo/local.md](seo/local.md) | Local businesses: map ranking factors, Business Profile, reviews, the page it points to |
+| Marketing | [marketing/agents.md](marketing/agents.md) | Running marketing with AI agents: context folder, data, build order, guardrails, weekly loop |
+| Marketing | [marketing/outbound.md](marketing/outbound.md) | Cold email reply-rate data; warm leads from competitor engagement |
 | Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project, distilled from the topic files |
 
 ## Structure
@@ -21,7 +24,7 @@ when starting a new project.
 brain/
 ├── README.md              ← this index
 ├── CLAUDE.md              ← how new articles get folded in
-├── <topic>/               ← one folder per domain (seo, development, ai…)
+├── <topic>/               ← one folder per domain (seo, marketing…)
 │   └── <subtopic>.md      ← split a topic only when one file gets too long
 └── checklists/
     └── new-project.md     ← the "starting something" file
@@ -41,6 +44,11 @@ brain/
   | **DON'T** | Actively harmful |
   | **Skip** | Effort that isn't worth it |
 
+- **Documentation first, practice second.** Rules from the platform's own
+  documentation are the default. Practitioner methods are kept where they
+  operationalise those rules, and are marked *(practitioner)* or placed in a
+  section that says so, with the source's commercial interest noted. Their
+  numbers are reported as theirs, never promoted to rules.
 - **Sourced and dated.** Every file ends with a Sources list, with the date
   each source was read. Fast-moving topics (SEO, AI tooling) get rechecked
   when a file is more than a year old.

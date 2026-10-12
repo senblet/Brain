@@ -1,7 +1,8 @@
 # SEO — content
 
 What to write and how: helpful content, E-E-A-T, AI-generated content,
-keyword research, ads and interstitials, links and images.
+keyword research and choosing pages, ads and interstitials, links (including
+earning them) and images.
 
 **Tags:** **MUST** = required for eligibility or a spam-policy line.
 **SHOULD** = best practice with real effect. **DON'T** = actively harmful.
@@ -62,6 +63,21 @@ substantial changes**; adding or deleting content in bulk to seem "fresh"
 - **Agent rule:** never invent figures, dates, quotes, studies or credentials.
   Take numbers from a verifiable source (the product's own data, a cited
   study). If something is an estimate, say so in the text.
+- **Agent traps seen in practice** (practitioner reports, 2026-10):
+  - An agent told to duplicate a page for new variants can silently drop the
+    one original element (a quiz, a data table) — the exact thing that keeps
+    the page out of scaled-content territory. After any duplication, diff the
+    new page against the source for what is *missing*, not only what changed.
+  - Once an agent publishes outside the CMS, plugins stop updating the
+    sitemap. Put "update the sitemap and request indexing" in the process
+    file the agent reads before every publish.
+  - Asked for a blank field (search volume, a contact email, a Business
+    Profile category) the model fills it with something plausible. Give it
+    the real list or the real export, and tell it to say "unknown" otherwise.
+  - Never let the model make an irreversible call. Deletes, redirects and
+    robots/canonical edits go through a human; one practitioner blocks page
+    removal in code for anything over a few hundred words, whatever the
+    model suggests.
 - E-commerce: AI images need IPTC `DigitalSourceType` =
   `TrainedAlgorithmicMedia`; AI product titles/descriptions must be labelled as
   AI-generated (Merchant Center policy).
@@ -94,6 +110,55 @@ substantial changes**; adding or deleting content in bulk to seem "fresh"
   ([spam policies](overview.md#spam-policies--never-do-these)). Cover close
   variations on one page.
 
+### Choosing what to write (practitioner method)
+From SEO consultants running AI-assisted blogs (read 2026-10-12); consistent
+with Google's guidance but not from it.
+
+- **Read intent off the results page.** Search the keyword and look at what
+  ranks: blog posts and a definition box mean informational; service,
+  category and landing pages mean commercial. A young site SHOULD start on
+  commercial, specific, low-volume queries ("[competitor] alternative",
+  "[service] [suburb]") — the searcher already wants to buy, and the results
+  page is thinner.
+- **Think in patterns, not keywords.** A pattern is a set of queries with the
+  same intent where one word changes ("X vs Y", "best X for [segment]",
+  "[service] [city]"). One pattern is a plan for dozens of pages. Every
+  variant MUST have something only that variant can say (local facts, prices,
+  examples); otherwise it is the doorway pattern above.
+- **Cannibalisation check before writing.** Search Console → Performance →
+  filter on the exact query → Pages tab. A page already gets clicks: improve
+  it. Impressions but few clicks: it is in the top 10, improve it. Nothing:
+  create the page. Two pages on one query split the clicks and both lose.
+- **Secondary keywords.** Take the page ranking first and list every other
+  query that URL ranks for — Google already treats those as one page. Cover
+  them on one URL, and let the title cover the main two.
+- **Build what the top 3 almost build, plus one thing they don't have.**
+  Match the questions they answer, in the order the results answer them, then
+  add one element the other results lack: a calculator, your own data or
+  numbers, real photos, a short quiz that routes the reader. This is the
+  practical form of Google's "original information" self-check above.
+- **Fix existing pages before publishing more**, in this order:
+  1. **Repoint** pages to the queries Google already shows them for (Search
+     Console, Pages → Queries). Rewrite the H1, meta description and first
+     100 words around that query, then check the body actually answers it.
+     Works for pages at positions ~8–15. At positions 1–3 with falling
+     clicks, an AI Overview is probably answering above you and a rewrite
+     won't help.
+  2. **Regroup** into topic clusters with a hub page and in-body links
+     between members. Slow; compounds.
+  3. **Conflict:** one consultant reports cutting 15–20% of zero-click pages
+     (no clicks, negligible impressions over 90 days, nothing newer than 3
+     months) and seeing traffic rise. Google says bulk deletion to look
+     "fresh" doesn't help (warning signs above). The motive differs (quality
+     vs freshness) and the evidence is one site. Prune only pages that are
+     genuinely thin or wrong, never for the count.
+- **Hold a cadence.** Pick a publishing rate and keep it; a burst of 30 pages
+  then silence looks like generated content. Practitioners cap a new site at
+  roughly one page a day. The ranking effect of volatility itself is their
+  guess, not documented.
+- **Wait.** A dip after a change is normal; judge after ~2 months. A new
+  domain takes roughly 6 months before anything compounds.
+
 ### Ads and interstitials
 - Ads must not become distracting or stop users from reading.
 - **Avoid intrusive interstitials:** prefer small **banners** over full-page
@@ -118,6 +183,61 @@ substantial changes**; adding or deleting content in bulk to seem "fresh"
   - `rel="nofollow"` — sources you don't trust or don't want associated with.
   Don't `nofollow` every external link. For links within your own site, use
   robots.txt `Disallow` instead.
+
+### Earning links (practitioner method)
+Google's position: links happen naturally, don't manufacture them, and
+buying or exchanging links for ranking is spam
+([overview.md](overview.md#spam-policies--never-do-these)). Within that, the
+methods below are what link-building consultants report working (read
+2026-10-12). Authority scores (DR, Authority Score, Trust Flow) are vendor
+estimates, not Google; the scoreboard is Search Console clicks on queries that
+matter, judged over months.
+
+**Collect what is already yours, first.**
+- **Lost links:** inbound links to pages that now 404. Restore the page or
+  301 it to the real replacement — not the homepage, which risks a soft 404
+  ([crawling-indexing.md](crawling-indexing.md)).
+- **Unlinked mentions:** search `"brand" -site:yoursite` and ask writers to
+  add the link so readers can check the source.
+- **Link rot elsewhere:** pages in your niche still linking to dead sites;
+  offer the page that replaces the dead one.
+- **Vendors you pay:** SaaS companies publish customer stories and link to
+  the business featured. Write one up with real screenshots and send it.
+
+**Ask only where the ask is reasonable.**
+- Sites already ranking where you want to be linked from; roundups that
+  rank top 20 for a query you care about, updated in the last year, that
+  already include a competitor. Pitch one specific reader need the list
+  doesn't cover, with proof. If the publisher asks for money, it is a paid
+  placement and MUST carry `rel="sponsored"`.
+- **Give before asking:** a correction sheet for their page (old sentence,
+  what changed, source, replacement sentence in their voice), reshot
+  screenshots for an outdated tutorial, a diagram of a process they
+  describe in text. Send it without a link request. **Every claim on it MUST
+  be verified** — one wrong "correction" ends the relationship, and an agent
+  will confidently write one it never checked.
+- Pace outreach: a handful a day, from a separate sending domain, with one
+  or two follow-ups. Volume kills the thing that makes it work.
+
+**Make something citable.** A homepage is not. Your own data beats a free
+tool (cloned in a week) beats an infographic. Profiles on authority domains
+(one review platform, Reddit, YouTube, LinkedIn articles) rank where your
+site can't.
+
+**Trades.** A few swaps between businesses that belong together are an
+editorial decision; a ring of reciprocal links is a footprint. Test: would
+you include them if they had nothing to offer back?
+
+**DON'T buy.** A paid link that passes ranking credit is a policy violation
+on both sides; a compliant one carries `sponsored`/`nofollow` and passes
+nothing. "€7 placements for AI citations" and "safe dofollow" are the same
+violation with a nicer name.
+
+**Anchor footprint** (practitioner observation): from other sites, anchors
+are mostly the brand, the URL or plain words ("this study"). Exact-match
+keyword anchors on most inbound links, a single TLD, zero `nofollow` links
+and all-WordPress sources are what a built profile looks like. Roughly two
+thirds of earned links disappear over time; plan for that.
 
 ## Images
 
@@ -150,5 +270,14 @@ Google Search Central, `https://developers.google.com/search/docs/`:
 Keyword research adds Google's Trends and Search Console pages (read
 2026-10-06): `monitor-debug/trends-start` · `monitor-debug/search-console-start`
 · `monitor-debug/google-analytics-search-console`.
+
+Practitioner sections (choosing what to write, agent traps, earning links),
+read 2026-10-12 — vendor-affiliated, one-company evidence, kept where they
+operationalise Google's guidance:
+- Nicholas Dulait (ChatSEO), "How to use Claude Opus 5.5 for SEO",
+  `https://x.com/nicholasdulait/status/2108212094214529135`, and "0 to 3,000
+  organic visits a month", `https://x.com/NicholasDulait/status/2107767940971991254`.
+- Borja (Distribb), "My Chief of SEO Backlinks",
+  `https://x.com/borjafat/status/2106860317481525608`.
 
 Google updates these pages; re-read them when this file is more than a year old.

@@ -1,7 +1,8 @@
 # SEO — AI search features and AI crawlers
 
-How Google's AI Overviews and AI Mode pick pages, and which robots.txt
-tokens control AI search and AI training crawlers.
+How Google's AI Overviews and AI Mode pick pages, which robots.txt tokens
+control AI search and AI training crawlers, and what practitioners observe
+about how assistants choose sources.
 
 **Tags:** **MUST** = required for eligibility or a spam-policy line.
 **SHOULD** = best practice with real effect. **DON'T** = actively harmful.
@@ -37,6 +38,41 @@ pre-ship checklist are in [overview.md](overview.md).
   crawlers (`GPTBot`, `Google-Extended`) is a business decision for the site
   owner, not an SEO fix — ask before adding it.
 
+## How AI assistants pick sources (practitioner observations)
+
+Not documented by any vendor. From people who log ChatGPT answers at scale
+(French data, 2026; read 2026-10-12). Expect it to age within months.
+
+- **Two kinds of answer.** With citations, the assistant searched the web.
+  Without, it answered from training data, which lags the web by roughly a
+  year or more — a brand launched this year is only reachable through search.
+  So **GEO depends on SEO**: if nothing ranks, there is nothing to cite.
+- **Query fan-out.** When it searches, ChatGPT rewrites the conversation into
+  2–5 short search-engine queries, and they converge regardless of how the
+  prompt was phrased: "best [category] [year] [country]", "[brand] reviews",
+  "[competitor] alternative", sometimes `site:` on authority domains, and in
+  both the user's language and English. The pages ranking for those queries
+  — mostly roundups and comparisons — are what gets read.
+- So the lever is being **named in the pages the engines already cite**:
+  third-party "best of" lists, comparison pages, review platforms, Reddit
+  threads. A list on your own site with yourself first has been observed to
+  stop being cited; a ranking on someone else's site counts more.
+- **Sources rotate** — one prompt draws on tens of sources over time, a
+  different subset each month. A citation is a rotation you stay in, not a
+  rank you hold. Refresh the lists you appear in yearly (year in the title).
+- Authority is not the filter: small sites get cited, large ones get skipped,
+  when the small site is on the right page.
+- **Reddit's share varies by engine** and has moved by several times within
+  a year; check which engine and which threads your buyers' questions
+  actually surface before investing. On Reddit, say who you are in the
+  first line and include where your product is the wrong choice.
+- **Measure by hand.** Run ~10 buyer questions logged out, once a month, and
+  note whether you are cited and from which page. The ChatGPT API returns
+  different sources than the web app, so a dashboard built on it measures
+  something else.
+- Nothing above changes Google's position: no `llms.txt`, no special markup
+  ([overview.md](overview.md#things-not-to-spend-time-on-skip)).
+
 ## Sources
 
 Google Search Central, `https://developers.google.com/search/docs/`:
@@ -49,5 +85,11 @@ Google crawlers:
 OpenAI: `https://developers.openai.com/api/docs/bots` ·
 `https://help.openai.com/en/articles/12627856-publishers-and-developers-faq`
 (read 2026-10-05).
+
+Practitioner observations: Nicholas Dulait (ChatSEO), "How to use Claude
+Opus 5.5 for SEO", Part 4,
+`https://x.com/nicholasdulait/status/2108212094214529135` (read 2026-10-12),
+relaying data from Links Garden's monthly ChatGPT prompt logs. One source,
+French market; treat as hypotheses to test, not rules.
 
 AI tooling moves fast; re-read these pages when this file is more than a year old.

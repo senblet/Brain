@@ -165,6 +165,10 @@ recommended** — it is faster for users and crawlers alike.
   subdirectory (`example.com/de/`); avoid URL parameters (`?loc=de`). Google
   ignores `geo.position` and similar meta tags. Some ccTLDs (`.io`, `.co`,
   `.me`, `.tv`, `.ai`…) and `.eu`/`.asia` are treated as generic.
+- **A ccTLD is a strong signal and can only target one country.** A second
+  language on a `.fr` or `.cl` still targets France or Chile; practitioners
+  confirm it stays stuck there. If the site may serve other markets later,
+  SHOULD use a generic TLD with subdirectories per market.
 
 ## Sources
 
@@ -177,6 +181,8 @@ Google Search Central, `https://developers.google.com/search/docs/` (read 2026-0
 `crawling-indexing/301-redirects` · `crawling-indexing/url-structure` ·
 `crawling-indexing/links-crawlable` ·
 `crawling-indexing/javascript/javascript-seo-basics` ·
-`specialty/international/managing-multi-regional-sites`.
+`specialty/international/managing-multi-regional-sites` (ccTLD point re-read
+2026-10-12; practitioner confirmation from Nicholas Dulait, ChatSEO,
+`https://x.com/nicholasdulait/status/2108212094214529135`).
 
 Google updates these pages; re-read them when this file is more than a year old.
