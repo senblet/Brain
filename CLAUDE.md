@@ -25,7 +25,10 @@ links; your job is to fold what's worth keeping into the right file. Read
 7. **Update `checklists/new-project.md`** if the change affects what to do when
    starting a project.
 8. **Update the README index** if you created a file or the file's scope changed.
-9. **Commit** with a message naming the source and what changed
+9. **Run `python3 build.py`** to regenerate `brain-map.svg`. It reads the
+   `read YYYY-MM-DD` dates and `**Conflict:**` markers, so keep those
+   formats.
+10. **Commit** with a message naming the source and what changed
    (e.g. `seo: add INP guidance from web.dev article; supersedes FID notes`).
 
 ## Splitting files

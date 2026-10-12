@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="620" viewBox="0 0 880 620" role="img" aria-label="Brain map: 10 files · 4 topics · 1 open conflict · next recheck 2027-04-12">
+<style>
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .h1 { font-size: 22px; font-weight: 700; }
+    .topic { font-size: 14px; font-weight: 600; }
+    .name { font-size: 14px; font-weight: 600; }
+    .small { font-size: 12px; fill: #59636e; }
+    .muted { font-size: 13px; fill: #59636e; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .badge { font-size: 11px; font-weight: 600; fill: #9a6700; }
+    .bg { fill: #ffffff; }
+    .card { fill: #f6f8fa; stroke: #d1d9e0; }
+    .rule { stroke: #d1d9e0; }
+    .s-fresh { fill: #1a7f37; } .s-soon { fill: #bf8700; } .s-due { fill: #cf222e; } .s-none { fill: #818b98; }
+    .t-soon { fill: #9a6700; } .t-due { fill: #cf222e; font-weight: 600; }
+    a:hover .card { stroke: #0969da; }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #f0f6fc; }
+      .small, .muted { fill: #9198a1; }
+      .badge, .t-soon { fill: #d29922; }
+      .t-due { fill: #f85149; }
+      .bg { fill: #0d1117; }
+      .card { fill: #151b23; stroke: #3d444d; }
+      .rule { stroke: #3d444d; }
+      .s-fresh { fill: #3fb950; } .s-soon { fill: #d29922; } .s-due { fill: #f85149; }
+      a:hover .card { stroke: #4493f8; }
+    }
+</style>
+<rect width="880" height="620" rx="12" class="bg"/>
+<text x="24" y="44" class="h1">brain</text>
+<text x="94" y="44" class="muted">10 files · 4 topics · 1 open conflict · next recheck 2027-04-12</text>
+<text x="24" y="90" class="topic">SEO</text>
+<a href="seo/ai-search.md"><g>
+<rect x="144" y="68" width="228" height="64" rx="8" class="card"/>
+<rect x="144" y="68" width="5" height="64" rx="2" class="s-fresh"/>
+<text x="160" y="90" class="name">ai-search</text>
+<text x="160" y="108" class="small">5 cited · read 2026-10-05</text>
+<text x="160" y="123" class="small t-fresh">recheck by 2027-10-05</text>
+</g></a>
+<a href="seo/appearance.md"><g>
+<rect x="382" y="68" width="228" height="64" rx="8" class="card"/>
+<rect x="382" y="68" width="5" height="64" rx="2" class="s-fresh"/>
+<text x="398" y="90" class="name">appearance</text>
+<text x="398" y="108" class="small">9 cited · read 2026-09-22</text>
+<text x="398" y="123" class="small t-fresh">recheck by 2027-09-22</text>
+</g></a>
+<a href="seo/content.md"><g>
+<rect x="620" y="68" width="228" height="64" rx="8" class="card"/>
+<rect x="620" y="68" width="5" height="64" rx="2" class="s-fresh"/>
+<text x="636" y="90" class="name">content</text>
+<text x="836" y="90" class="badge" text-anchor="end">1 conflict</text>
+<text x="636" y="108" class="small">13 cited · read 2026-09-22</text>
+<text x="636" y="123" class="small t-fresh">recheck by 2027-09-22</text>
+</g></a>
+<a href="seo/crawling-indexing.md"><g>
+<rect x="144" y="142" width="228" height="64" rx="8" class="card"/>
+<rect x="144" y="142" width="5" height="64" rx="2" class="s-fresh"/>
+<text x="160" y="164" class="name">crawling-indexing</text>
+<text x="160" y="182" class="small">14 cited · read 2026-09-22</text>
+<text x="160" y="197" class="small t-fresh">recheck by 2027-09-22</text>
+</g></a>
+<a href="seo/local.md"><g>
+<rect x="382" y="142" width="228" height="64" rx="8" class="card"/>
+<rect x="382" y="142" width="5" height="64" rx="2" class="s-fresh"/>
+<text x="398" y="164" class="name">local</text>
+<text x="398" y="182" class="small">5 cited · read 2026-10-12</text>
+<text x="398" y="197" class="small t-fresh">recheck by 2027-10-12</text>
+</g></a>
+<a href="seo/overview.md"><g>
+<rect x="620" y="142" width="228" height="64" rx="8" class="card"/>
+<rect x="620" y="142" width="5" height="64" rx="2" class="s-fresh"/>
+<text x="636" y="164" class="name">overview</text>
+<text x="636" y="182" class="small">12 cited · read 2026-09-22</text>
+<text x="636" y="197" class="small t-fresh">recheck by 2027-09-22</text>
+</g></a>
+<text x="24" y="246" class="topic">Marketing</text>
+<a href="marketing/agents.md"><g>
+<rect x="144" y="224" width="228" height="64" rx="8" class="card"/>
+<rect x="144" y="224" width="5" height="64" rx="2" class="s-fresh"/>
+<text x="160" y="246" class="name">agents</text>
+<text x="160" y="264" class="small">3 cited · read 2026-10-12</text>
+<text x="160" y="279" class="small t-fresh">recheck by 2027-10-12</text>
+</g></a>
+<a href="marketing/outbound.md"><g>
+<rect x="382" y="224" width="228" height="64" rx="8" class="card"/>
+<rect x="382" y="224" width="5" height="64" rx="2" class="s-fresh"/>
+<text x="398" y="246" class="name">outbound</text>
+<text x="398" y="264" class="small">2 cited · read 2026-10-12</text>
+<text x="398" y="279" class="small t-fresh">recheck by 2027-10-12</text>
+</g></a>
+<text x="24" y="328" class="topic">AI</text>
+<a href="ai/agent-workflows.md"><g>
+<rect x="144" y="306" width="228" height="64" rx="8" class="card"/>
+<rect x="144" y="306" width="5" height="64" rx="2" class="s-fresh"/>
+<text x="160" y="328" class="name">agent-workflows</text>
+<text x="160" y="346" class="small">1 cited · read 2026-10-12</text>
+<text x="160" y="361" class="small t-fresh">recheck by 2027-04-12</text>
+</g></a>
+<text x="24" y="410" class="topic">Operations</text>
+<a href="operations/agency.md"><g>
+<rect x="144" y="388" width="228" height="64" rx="8" class="card"/>
+<rect x="144" y="388" width="5" height="64" rx="2" class="s-fresh"/>
+<text x="160" y="410" class="name">agency</text>
+<text x="160" y="428" class="small">1 cited · read 2026-10-12</text>
+<text x="160" y="443" class="small t-fresh">recheck by 2027-10-12</text>
+</g></a>
+<line x1="24" y1="476" x2="856" y2="476" class="rule"/>
+<text x="24" y="500" class="topic">Latest reads</text>
+<text x="144" y="500" class="small mono">2026-10-12</text>
+<text x="226" y="500" class="small">ai/agent-workflows · marketing/agents · marketing/outbound · operations/agency</text>
+<text x="226" y="518" class="small">seo/ai-search · seo/content · seo/crawling-indexing · seo/local</text>
+<text x="144" y="540" class="small mono">2026-10-06</text>
+<text x="226" y="540" class="small">seo/content</text>
+<text x="144" y="562" class="small mono">2026-10-05</text>
+<text x="226" y="562" class="small">seo/ai-search · seo/overview</text>
+<rect x="144" y="587" width="10" height="10" rx="2" class="s-fresh"/>
+<text x="160" y="596" class="small">fresh</text>
+<rect x="205.0" y="587" width="10" height="10" rx="2" class="s-soon"/>
+<text x="221.0" y="596" class="small">past half its recheck window</text>
+<rect x="399.4" y="587" width="10" height="10" rx="2" class="s-due"/>
+<text x="415.4" y="596" class="small">recheck due</text>
+</svg>
