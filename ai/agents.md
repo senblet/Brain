@@ -1,8 +1,9 @@
 # AI — working with agents
 
 The general rules for putting an AI agent on real work: what it reads, how a
-task is written, what it may do on its own, how you check it, and the ways
-it reliably fails. Domain files add only what is specific to them:
+task is written (including classifying at volume), what it may do on its
+own, how you check it, the ways it reliably fails, and how to let it run
+long on one goal. Domain files add only what is specific to them:
 [marketing/agents.md](../marketing/agents.md) (marketing agents),
 [operations/agency.md](../operations/agency.md) (studio operations),
 `seo/` (SEO publishing). For orchestrating many agents in one run, see
@@ -74,6 +75,35 @@ TERMINATION: stop when every item is covered or marked "not in the data";
 - High-volume, simple jobs run fine on a small model; judgement-heavy ones
   (audits, synthesis) get the strongest.
 
+### Classifying at volume
+
+When an agent scores or qualifies thousands of records (leads, pages,
+tickets), most failures are in the prompt, not the pipeline.
+
+- **Write the disqualifiers as carefully as the criteria.** Without a
+  definition of what doesn't qualify, the model invents reasons things do.
+- **Specific tests, not categories:** "headcount above 2,000 or a
+  procurement department mentioned on the site", not "enterprise".
+- **A written reason on every verdict.** Reading the reasons in bulk is how
+  you find where the definition is wrong.
+- **Forbid invention explicitly.** A model asked to find a signal finds one
+  whether it exists or not. Tell it to return "none", and to return no data
+  when a page can't be reached.
+- **Test on ~50 records before running at volume:** about 10 you would
+  definitely take, 10 you would definitely reject, 30 you're unsure of.
+  Compare its verdicts with yours.
+- **Fix by symptom:**
+
+  | Symptom | Cause |
+  |---|---|
+  | Keeps records you'd drop | Disqualifiers too vague |
+  | Drops records you'd keep | One criterion too narrow — read 20 rejection reasons to find it |
+  | Reasons are generic | It isn't reading the source; require it to cite a specific page |
+  | Scores bunch around one number | The bands aren't differentiated |
+
+- **Cheap model first.** A small model removes the obvious misses at cents
+  per thousand; the strong model scores what survives.
+
 ## Guardrails live in the tools, not the prompt
 
 "Always ask me before sending" is a suggestion to a model. Real limits:
@@ -119,6 +149,29 @@ TERMINATION: stop when every item is covered or marked "not in the data";
   context that sees only the output (see
   [agent-workflows.md](agent-workflows.md#verification-is-the-point)).
 
+## Long-running goals
+
+An agent can work on one measurable target for hours or days unattended if
+the task gives it three things: **the goal, how to measure it, and how hard
+to try**. It is the loop pattern — verify gate, persistent state, stop
+condition — applied to one number.
+
+- **Goal:** one measurable outcome ("the homepage's LCP under 2 s on a phone",
+  "no page scrolls sideways at phone width", "build under a minute").
+- **Measure:** the exact procedure, repeated after every change, with noise
+  handled (e.g. median of three runs). It only counts as met when the
+  measured number meets the goal.
+- **Work on a branch.** Change one thing at a time; keep a change only if it
+  beats the best result by a set margin (one practitioner uses 5%),
+  otherwise revert it. Log every measurement to a file the agent reads first
+  on resume, and keep a simple chart so progress is visible at a glance.
+- **Hard limits, written into the goal:** never delete features or tests,
+  or skip tests, to hit the number — left long enough, it will try. No
+  deploys, no data deletion, no secrets. Doubts go into a questions file
+  while it works on something else.
+- **A stop condition:** a turn or time cap after which it stops and writes
+  down where it is stuck.
+
 ## Rollout and review
 
 - **One agent, made reliable, before a second.** Several on day one is a
@@ -127,7 +180,8 @@ TERMINATION: stop when every item is covered or marked "not in the data";
 - **Automate a process that exists.** If a task needs a step the team doesn't
   do yet, build the step first.
 - **Ten example inputs per agent**, with the expected output, re-run after
-  every instruction change so regressions show at once.
+  every instruction change so regressions show at once. For classifiers, use
+  the larger test set above.
 - **A new schedule runs two weeks untouched** before you trust it. Fix the
   instruction, not the outputs. Cut any part of the output you always skip.
 - **If someone has to remember to run it, it will stop.** Recurring work goes
@@ -152,5 +206,14 @@ client data, rollout.
 Nicholas Dulait (ChatSEO), "How to use Claude Opus 5.5 for SEO",
 `https://x.com/nicholasdulait/status/2108212094214529135` (read 2026-10-12) —
 permission list, standards file, dropped elements, irreversible calls.
+
+Christian (@coldemailchris), "How To Master GTM Engineering (FULL COURSE)",
+`https://x.com/coldemailchris/status/2101014272021008735` (read 2026-10-14) —
+classifying at volume.
+
+Voxyz (@Voxyz_ai), goal-loop template quoted in
+`https://x.com/voxyz_ai/status/2110083153930920113` (read 2026-10-14) —
+long-running goals. The post names a Claude Code `/goal` command; not
+verified here, so the pattern is written tool-neutral.
 
 All practitioner opinion; re-read when this file is more than six months old.

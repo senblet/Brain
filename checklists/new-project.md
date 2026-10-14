@@ -32,7 +32,7 @@ entirely behind a login.
 **At launch**
 - [ ] Verify the site in Search Console and submit the sitemap.
 - [ ] Check key pages with URL Inspection and the Rich Results Test.
-- [ ] Run PageSpeed Insights on the main templates.
+- [ ] Performance pass — see the Performance section below.
 
 **Content, if the site will publish pages for search**
 - [ ] First pages target commercial, specific queries; intent read off the
@@ -52,8 +52,15 @@ entirely behind a login.
       categories as truly fit, every real service, description without links
       or prices, photos.
 - [ ] Homepage `<title>`/`<h1>` = primary category + city; address and phone
-      character-for-character as on the profile; `LocalBusiness` data.
+      character-for-character as on the profile; the most specific
+      `LocalBusiness` type. No FAQ markup, no stars from your own reviews.
+- [ ] One page per service and per location served, each with content
+      specific to it.
+- [ ] Mobile: tappable phone number at the top, form or booking above the
+      fold.
 - [ ] Review request + reply routine, no case details in replies.
+- [ ] Regulated business (legal, medical, health products): claims checked
+      against the local rules before publishing.
 
 **Ongoing**
 - [ ] Monthly look at Search Console (indexing, performance, Core Web Vitals).
@@ -62,6 +69,20 @@ entirely behind a login.
       out; note which pages get cited and whether you're in them.
 - [ ] Don't judge a change too early — see "Ground truth" in
       [seo/overview.md](../seo/overview.md#ground-truth).
+
+## Performance
+
+From [development/web-performance.md](../development/web-performance.md).
+
+- [ ] Measured on a production build: Lighthouse mobile, median of three
+      runs, home page and the slowest pages. Before and after numbers kept.
+- [ ] Images in WebP/AVIF at display size; below-the-fold media lazy; main
+      image first; one or two fonts; unused third-party scripts removed.
+- [ ] First screen rendered on the server; heavy components loaded on
+      demand.
+- [ ] Filtered and sorted columns indexed; no N+1 queries; long lists
+      paginated; heavy work in background jobs; server next to the database.
+- [ ] Main flows clicked through on a throttled low-end phone.
 
 ## Agents
 

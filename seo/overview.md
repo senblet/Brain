@@ -10,7 +10,9 @@ facts belong there, not here.
 documentation (read in full on 2026-09-22; the SEO Starter Guide itself was
 last updated 2025-12-10), Google's AI-features and crawler pages and OpenAI's
 crawler documentation (read 2026-10-05), Google's Trends and Search Console
-pages (read 2026-10-06), and Google Business Profile help (read 2026-10-12).
+pages (read 2026-10-06), Google Business Profile help (read 2026-10-12), and
+web.dev's Core Web Vitals page and a Pew Research study of AI-summary clicks
+(read 2026-10-14).
 On top of that, sections marked *practitioner* hold methods from SEO
 consultants (read 2026-10-12); they never override Google's documentation and
 their numbers stay theirs. Where Google says something is optional or not
@@ -31,10 +33,10 @@ effect. **DON'T** = actively harmful. **Skip** = effort Google says is wasted.
 |---|---|
 | [overview.md](overview.md) | Ground truth, eligibility, spam policies, page experience, promotion, what to skip, monitoring, pre-ship checklist |
 | [crawling-indexing.md](crawling-indexing.md) | Discovery, robots.txt and `noindex`, sitemaps, canonicals, redirects, status codes, JavaScript sites, URLs, international sites |
-| [content.md](content.md) | Helpful content, E-E-A-T, AI-generated content, keyword research and choosing pages, ads and interstitials, links and earning them, images |
-| [appearance.md](appearance.md) | How pages look in results: titles, snippets, video, structured data |
+| [content.md](content.md) | Helpful content, E-E-A-T, AI-generated content, keyword research and choosing pages (incl. comparison pages), ads and interstitials, links and earning them, images |
+| [appearance.md](appearance.md) | How pages look in results: titles, snippets, video, structured data (incl. FAQ and review markup) |
 | [ai-search.md](ai-search.md) | Google's AI features, AI crawler tokens (Google, OpenAI), how assistants pick sources |
-| [local.md](local.md) | Local businesses: map ranking factors, Business Profile, reviews, the page it points to |
+| [local.md](local.md) | Local businesses: map pack vs results vs AI, profile, reviews, citations, site structure, regulated industries, measuring |
 
 ---
 
@@ -119,7 +121,10 @@ Violations can demote a page or remove a whole site. **MUST NOT:**
 
 - **Core Web Vitals are used by ranking**; aim for good scores, but chasing a
   perfect score purely for SEO is rarely worth it. There is no single "page
-  experience signal".
+  experience signal". "Good" means, at the 75th percentile of page loads,
+  split by mobile and desktop: **LCP ≤ 2.5 s** (main content shown), **INP ≤
+  200 ms** (response to a tap or click), **CLS ≤ 0.1** (layout doesn't
+  jump).
 - Serve over **HTTPS**; migrate from HTTP.
 - **Mobile-friendly** — Google crawls with a mobile crawler by default.
 - No excessive or distracting ads; no intrusive interstitials; make the main
@@ -210,6 +215,9 @@ Google Search Central, `https://developers.google.com/search/docs/`:
 `appearance/ranking-systems-guide` · `appearance/ai-features` ·
 `monitor-debug/search-console-start` (read 2026-09-22; `ai-features` read
 2026-10-05).
+
+web.dev, Core Web Vitals thresholds: `https://web.dev/articles/vitals`
+(read 2026-10-14).
 
 OpenAI: `https://help.openai.com/en/articles/12627856-publishers-and-developers-faq`
 (read 2026-10-05).

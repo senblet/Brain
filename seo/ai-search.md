@@ -11,6 +11,11 @@ pre-ship checklist are in [overview.md](overview.md).
 
 ---
 
+- **AI summaries take clicks.** Pew Research tracked 68,879 Google searches
+  by 900 US adults in 2025: when an AI summary appeared, people clicked a
+  regular result in 8% of visits, against 15% without one, and clicked a link
+  inside the summary in 1%. Expect fewer clicks on question searches;
+  buying and local searches are less affected.
 - **Google's AI Overviews and AI Mode have no extra requirements.** A page is
   eligible as a supporting link if it is indexed and can be shown in Search
   with a snippet. Everything in the other SEO files applies; no special
@@ -66,6 +71,15 @@ Not documented by any vendor. From people who log ChatGPT answers at scale
   a year; check which engine and which threads your buyers' questions
   actually surface before investing. On Reddit, say who you are in the
   first line and include where your product is the wrong choice.
+- **What feeds the answers** (practitioner): pages that answer each
+  question in the first one or two sentences of a section, then go deeper;
+  identical facts (hours, services, address) everywhere the business
+  appears; reviews on more than Google — Yelp and industry platforms show up
+  often in ChatGPT's local recommendations.
+- **Bing matters for ChatGPT** (practitioner, not confirmed by OpenAI's
+  documentation): its search is reported to lean on Bing's index. Claim the
+  Bing Places listing and verify the site in Bing Webmaster Tools — cheap
+  insurance.
 - **Measure by hand.** Run ~10 buyer questions logged out, once a month, and
   note whether you are cited and from which page. The ChatGPT API returns
   different sources than the web app, so a dashboard built on it measures
@@ -86,10 +100,18 @@ OpenAI: `https://developers.openai.com/api/docs/bots` ·
 `https://help.openai.com/en/articles/12627856-publishers-and-developers-faq`
 (read 2026-10-05).
 
+Pew Research Center, "Google users are less likely to click on links when
+an AI summary appears in the results",
+`https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/`
+(read 2026-10-14).
+
 Practitioner observations: Nicholas Dulait (ChatSEO), "How to use Claude
 Opus 5.5 for SEO", Part 4,
 `https://x.com/nicholasdulait/status/2108212094214529135` (read 2026-10-12),
 relaying data from Links Garden's monthly ChatGPT prompt logs. One source,
-French market; treat as hypotheses to test, not rules.
+French market; treat as hypotheses to test, not rules. BowTiedBills, "The
+Most Valuable SEO Article Ever Written",
+`https://x.com/bowtiedbills/status/2109881300890816850` (read 2026-10-14) —
+what feeds the answers, Bing.
 
 AI tooling moves fast; re-read these pages when this file is more than a year old.

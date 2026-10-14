@@ -19,14 +19,15 @@ against its recheck window (a year by default; files can say six months).*
 | SEO | [seo/content.md](seo/content.md) | Helpful content, E-E-A-T, AI content, keyword research and choosing pages, links and earning them, images |
 | SEO | [seo/appearance.md](seo/appearance.md) | How pages look in results: titles, snippets, video, structured data |
 | SEO | [seo/ai-search.md](seo/ai-search.md) | Google's AI features; AI search and training crawlers; how assistants pick sources |
-| SEO | [seo/local.md](seo/local.md) | Local businesses: map ranking factors, Business Profile, reviews, the page it points to |
+| SEO | [seo/local.md](seo/local.md) | Local businesses: map pack vs results vs AI, profile, reviews, citations, site structure, regulated industries, measuring |
 | Marketing | [marketing/agents.md](marketing/agents.md) | Marketing agents: context additions, campaign measurement, which agents in what order, weekly loop |
 | Marketing | [marketing/content.md](marketing/content.md) | Brand and content: positioning, founder vs brand accounts, original insight, packaging, funnel and pillars, channels, community, content team |
-| Marketing | [marketing/outbound.md](marketing/outbound.md) | Cold email reply-rate data; warm leads from competitor engagement |
-| AI | [ai/agents.md](ai/agents.md) | Working with agents: context file, task shape, guardrails, failure modes, rollout and review |
+| Marketing | [marketing/outbound.md](marketing/outbound.md) | Outbound as a system: ICP and market, signals, qualify before enriching, deliverability, the email, replies, weekly tests |
+| AI | [ai/agents.md](ai/agents.md) | Working with agents: context file, task shape, classifying at volume, guardrails, failure modes, long-running goals, rollout |
 | AI | [ai/agent-workflows.md](ai/agent-workflows.md) | Multi-agent workflows: graph design, contracts, barriers vs pipelines, verification, convergence, cost |
+| Development | [development/web-performance.md](development/web-performance.md) | Web performance: how to measure, what to check (images, code, database, network), running it with agents |
 | Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: context additions, the ten jobs on real records, audit lens, rollout |
-| Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project: SEO, agents, brand |
+| Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project: SEO, performance, agents, brand |
 
 ## Structure
 
@@ -36,7 +37,7 @@ brain/
 ├── CLAUDE.md              ← how new articles get folded in
 ├── build.py               ← regenerates brain-map.svg (standard library only)
 ├── brain-map.svg          ← generated; shown above
-├── <topic>/               ← one folder per domain (seo, marketing, ai, operations…)
+├── <topic>/               ← one folder per domain (seo, marketing, ai, development, operations…)
 │   └── <subtopic>.md      ← split a topic only when one file gets too long
 └── checklists/
     └── new-project.md     ← the "starting something" file

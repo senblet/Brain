@@ -43,6 +43,11 @@ substantial changes**; adding or deleting content in bulk to seem "fresh"
   shows it — especially on **YMYL** topics (health, finance, safety, societal
   welfare), where the bar is higher.
 - Show first-hand experience and clear sourcing; cite and link sources.
+- *(practitioner)* On YMYL sites, show the qualified person: author name,
+  credentials and photo on each article; "reviewed by" with the reviewer's
+  name and licence on medical content; a full bio page per professional
+  (education, admissions or certifications, years in practice); citations
+  to primary sources (laws, court rules, studies, regulators).
 
 ### Who / How / Why
 - **Who:** make authorship self-evident. Bylines where readers expect them,
@@ -149,6 +154,31 @@ with Google's guidance but not from it.
      "fresh" doesn't help (warning signs above). The motive differs (quality
      vs freshness) and the evidence is one site. Prune only pages that are
      genuinely thin or wrong, never for the count.
+- **Comparison and "best of" pages.** These are what AI search engines
+  read for buying questions ([ai-search.md](ai-search.md)). One agency's
+  structure *(practitioner; reported to get a client into AI Overviews in
+  about six weeks — one case)*:
+  1. Author byline (name, photo, profile link), published date, and an
+     "updated" date only when the content really changed.
+  2. Title and `<h1>`: "Best [category] in [year]: …". A short intro that
+     names the top pick.
+  3. Key takeaways (a few bullets), then what the category is and is not.
+  4. **Methodology:** at least four objective, measurable criteria used to
+     rank — this is what makes the list credible to readers and engines.
+  5. The ranked list, one `<h3>` per option ("1. X, best for Y"), each with
+     specific facts (price, ratings and review counts, results, customers
+     served) and who it suits.
+  6. A side-by-side comparison **as an HTML table, never an image**, and a
+     table mapping options to use cases or industries.
+  7. Evidence (case results with numbers), an FAQ of the questions buyers
+     ask before deciding, short answers, then one call to action.
+  Be honest about the rows where you lose — it is what makes the rest
+  believable. **Conflict:** this source puts its own client first on its
+  own list and reports being cited; another observed ChatGPT dropping
+  self-ranked lists in favour of third-party ones
+  ([ai-search.md](ai-search.md#how-ai-assistants-pick-sources-practitioner-observations)).
+  The engines may differ (Google AI Overviews vs ChatGPT); being named on
+  other people's lists remains the safer bet.
 - **Hold a cadence.** Pick a publishing rate and keep it; a burst of 30 pages
   then silence looks like generated content. Practitioners cap a new site at
   roughly one page a day. The ranking effect of volatility itself is their
@@ -275,5 +305,11 @@ operationalise Google's guidance:
   organic visits a month", `https://x.com/NicholasDulait/status/2107767940971991254`.
 - Borja (Distribb), "My Chief of SEO Backlinks",
   `https://x.com/borjafat/status/2106860317481525608`.
+- Rob Hoffman, "Best [product]" page structure,
+  `https://x.com/RobHoffman_/status/2110083165306155141` (read 2026-10-14;
+  agency post, one client case). Conversion-widget tips left out.
+- BowTiedBills, "The Most Valuable SEO Article Ever Written",
+  `https://x.com/bowtiedbills/status/2109881300890816850` (read 2026-10-14)
+  — YMYL author and reviewer details.
 
 Google updates these pages; re-read them when this file is more than a year old.

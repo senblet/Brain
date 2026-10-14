@@ -76,6 +76,13 @@ text-result image, rich attributes. Most are automatic; favicon, site name
 - Duplicate pages carry the same markup as their canonical. Link related items
   with `@id`; include the type that represents the page's main purpose.
 - Don't block marked-up pages with robots.txt or `noindex`.
+- **FAQ markup: Skip.** Google limited FAQ rich results to well-known
+  government and health sites in 2023 and stopped showing them entirely in
+  2026. An FAQ section is still useful to readers; the markup earns nothing.
+- **Review stars: DON'T mark up reviews of yourself.** A business that
+  controls the reviews about itself — on its own site, in its markup or via
+  an embedded widget — is ineligible for star snippets with `LocalBusiness`
+  or `Organization` markup.
 - **Markup enables a rich result; it never guarantees one.** Violations can
   bring a manual action that removes rich-result eligibility (ranking itself is
   unaffected).
@@ -100,6 +107,8 @@ Google Search Central, `https://developers.google.com/search/docs/` (read 2026-0
 `appearance/structured-data/intro-structured-data` ·
 `appearance/structured-data/sd-policies` ·
 `appearance/structured-data/breadcrumb` ·
-`appearance/structured-data/organization`.
+`appearance/structured-data/organization`. FAQ and review-snippet pages:
+`appearance/structured-data/faqpage` · `appearance/structured-data/review-snippet`
+(read 2026-10-14).
 
 Google updates these pages; re-read them when this file is more than a year old.
