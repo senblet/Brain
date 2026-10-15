@@ -42,10 +42,12 @@ Then:
 - **Name the real alternative** — often a spreadsheet, a manual process or
   doing nothing — and the "foil" you replace; open with the shift in the
   world, the old game and the new (April Dunford, Andy Raskin).
-- **Dissent worth knowing:** Byron Sharp's research on (mostly consumer)
-  brands argues tight targeting caps growth and that being distinctive
-  matters more than being differentiated. For a small studio and niche
-  products, narrow still wins early; revisit at scale.
+- **Decided: narrow.** Byron Sharp's research on (mostly consumer) brands
+  argues tight targeting caps growth and that being distinctive matters
+  more than being differentiated. His evidence is better than the
+  practitioners' but comes from mass-market brands with ad budgets; a
+  three-person studio with niche products grows by being the obvious choice
+  for one kind of buyer. Revisit if a product reaches a mass market.
 - **Make the audience the hero.** Every piece answers: what does the reader
   get for their attention?
 - **Same story everywhere.** Format changes per channel; the story, the
@@ -180,11 +182,12 @@ trust, or convert.
   people, and move people to owned channels (newsletter, email list,
   community) to keep them. SHOULD start the newsletter on day one, even
   before publishing regularly.
-- **Organic is the free test lab.** Post several hooks; put money only behind
-  what already travelled. **Conflict:** other operators test a channel with a
-  little paid spend first ("see if there's a sign of life" — Timothy Davis).
-  Read it as two different tests: organic tests the creative, a small budget
-  tests the channel.
+- **Two tests, two tools.** Test *creative* organically: post several
+  hooks, put money only behind what already travelled. Test a *channel* with
+  a small paid budget, because organic reach says nothing about whether a
+  paid audience exists there. **Decided:** operators split between
+  "organic first" and "a little paid spend first" (Timothy Davis); they are
+  answering different questions, so both are kept with their jobs named.
 - **X specifically:** its ranking (published code) scores replies, shares by
   DM, follows and profile clicks separately and subtracts predicted mutes and
   blocks — write for those; space original posts apart (reported).

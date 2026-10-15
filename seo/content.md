@@ -165,12 +165,14 @@ applies to the three sections after it.
      the most impressions in that band is enough.
   2. **Regroup** into topic clusters with a hub page and in-body links
      between members. Slow; compounds.
-  3. **Conflict:** one consultant reports cutting 15–20% of zero-click pages
-     (no clicks, negligible impressions over 90 days, nothing newer than 3
-     months) and seeing traffic rise. Google says bulk deletion to look
-     "fresh" doesn't help (warning signs above). The motive differs (quality
-     vs freshness) and the evidence is one site. Prune only pages that are
-     genuinely thin or wrong, never for the count.
+  3. **Prune on quality, never on count.** Delete or merge pages that have
+     nothing to say — no clicks and negligible impressions over 90 days,
+     older than three months, and thin or wrong when you reread them.
+     **Decided:** one consultant cut 15–20% of such pages and saw traffic
+     rise; Google warns that bulk deletion *to look fresh* doesn't help.
+     Google's own "revise, or delete what is no longer relevant" (above)
+     allows the first; the motive is what differs. Deleting for the count
+     is rejected.
 - **Know when to stop editing.** If you can't name a concrete reason a
   higher result beats you, the gap is probably authority, not the page —
   stop after two rounds of edits that move nothing.
@@ -212,12 +214,14 @@ applies to the three sections after it.
      ask before deciding, short answers, then one call to action.
 
   Be honest about the rows where you lose — it is what makes the rest
-  believable. **Conflict:** this source puts its own client first on its
-  own list and reports being cited; another observed ChatGPT dropping
-  self-ranked lists in favour of third-party ones
+  believable. **Include yourself at the position the methodology gives
+  you, not automatically first.** **Decided:** one agency ranks its client
+  first and reports Google AI Overview citations; another observed ChatGPT
+  dropping self-ranked lists for third-party ones
   ([ai-search.md](ai-search.md#how-ai-assistants-pick-sources-practitioner-observations)).
-  The engines may differ (Google AI Overviews vs ChatGPT); being named on
-  other people's lists remains the safer bet.
+  Both are single observations on different engines; honest placement
+  satisfies both and the reader. Spend the effort on being named in other
+  people's lists.
 ### Cadence (practitioner)
 
 - **Hold a cadence.** Pick a publishing rate and keep it; a burst of 30 pages

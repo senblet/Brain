@@ -1,7 +1,7 @@
 """Regenerate brain-map.svg, the map shown at the top of the README.
 
 Reads every topic file, then draws: topics and their files, how fresh each
-file's sources are, open conflicts, and the most recent reads (taken from the
+file's sources are, decisions where sources disagreed, and the most recent reads (taken from the
 Sources dates, so the map is current the moment a source is added).
 Standard library only. Run after every change: python3 build.py
 """
@@ -60,7 +60,7 @@ def read_file(path):
         "reads": set(reads),
         "recheck": oldest + timedelta(days=window) if oldest else None,
         "window": window,
-        "conflicts": len(re.findall(r"\*\*Conflict", text)),
+        "conflicts": len(re.findall(r"\*\*Decided:", text)),
     }
 
 
@@ -102,7 +102,7 @@ def build():
     rechecks = [f["recheck"] for f in files if f["recheck"]]
     summary = (
         f"{len(files)} files · {len(topics)} topics · "
-        f"{conflicts} open conflict{'s' if conflicts != 1 else ''}"
+        f"{conflicts} decision{'s' if conflicts != 1 else ''} where sources disagreed"
         + (f" · next recheck {min(rechecks).isoformat()}" if rechecks else "")
     )
 
@@ -127,7 +127,7 @@ def build():
             if f["conflicts"]:
                 body.append(
                     f'<text x="{cx + CARD_W - 12}" y="{cy + 22}" class="badge" text-anchor="end">'
-                    f'{f["conflicts"]} conflict{"s" if f["conflicts"] > 1 else ""}</text>'
+                    f'{f["conflicts"]} decided</text>'
                 )
             line2 = f'{f["cited"]} cited' + (f' · read {f["oldest"].isoformat()}' if f["oldest"] else "")
             line3 = f'recheck by {f["recheck"].isoformat()}' if f["recheck"] else "no sources"

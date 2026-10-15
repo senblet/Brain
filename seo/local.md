@@ -93,9 +93,11 @@ once and never returned; completeness alone moves a profile.
   photos and one to three posts a week about the services you want more of.
   AI can draft a month of posts from real news and services; a human checks
   them.
-- **Conflict:** posting frequency. Practitioners here recommend one to three
-  posts a week; another practitioner source warns not to claim a ranking
-  benefit from posting frequency. Post when there is something real to say.
+- **Post when there is something real to say; no frequency target.**
+  **Decided:** practitioners recommend one to three posts a week; Google
+  documents no ranking benefit from posting frequency, and one practitioner
+  source says so too. Posts help customers who open the profile; they are
+  not a ranking lever, so the schedule follows the news.
 - **Questions:** Google retired the profile's Q&A (API shut down
   2025-11-03; the public section replaced by an AI "Ask" feature from
   December 2025, per trade reports). Answer the questions customers ask on

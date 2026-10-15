@@ -256,10 +256,11 @@ Rules that follow (and agree with the gift approach):
   −47%). Some practitioner sequences put a case study in follow-up 2 or 3;
   the data says otherwise.
 
-**Conflict:** sequence length and the breakup email. Gong's data associates a
-breakup email with +89% replies. One outbound agency runs two emails in
-total and no breakup email, without giving data. Test both; the Gong figure
-is the better evidence but is correlational.
+**Sequence: short, and it ends with a breakup email.** Two or three emails,
+the last one closing the thread. **Decided:** Gong's 85-million-email data
+associates a breakup email with +89% replies; one agency sends two emails
+and no breakup, with no data. Correlational data beats an unsupported
+claim; change this only if the studio's own campaigns show otherwise.
 
 Keep each campaign to ~1,500–2,000 contacts so its result is readable.
 
@@ -289,10 +290,11 @@ verified first" — see
 - *(practitioner)* A short qualifying phone call before booking — fit,
   objections — raises the share of booked calls that close.
 - An agent may draft replies from the company's context; a human approves
-  them ([ai/agents.md](../ai/agents.md#guardrails-live-in-the-tools-not-the-prompt)).
-  Some practitioner setups let agents send low-tier first touches alone,
-  within caps and an approved-claims list; this brain doesn't, until a
-  deliberate decision says otherwise.
+  every send ([ai/agents.md](../ai/agents.md#guardrails-live-in-the-tools-not-the-prompt)).
+  **Decided:** some agencies let agents send low-tier first touches alone
+  within caps; rejected here — one wrong email to a stranger costs more
+  than the minutes saved, and the review queue is where the next angle is
+  learned. A project may override this in its own `CLAUDE.md`, in writing.
 
 ## Measure and test weekly
 

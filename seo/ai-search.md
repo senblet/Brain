@@ -68,14 +68,17 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
   "[competitor] alternative", sometimes `site:` on authority domains, and in
   both the user's language and English. The pages ranking for those queries
   — mostly roundups and comparisons — are what gets read.
-- **Conflict:** after a ChatGPT model update in August 2026, one vendor's
-  data (Peec AI) shows listicles falling from about 16% to 8% of ChatGPT
-  citations, comparison pages from about 9% to 6%, and fan-out queries
-  shifting towards `site:` and "official" searches. The roundup-centred
-  picture above may already be dated — re-check before investing in it.
-- So the lever is being **named in the pages the engines already cite**:
-  third-party "best of" lists, comparison pages, review platforms, Reddit
-  threads. A list on your own site with yourself first has been observed to
+- **The page types rotate; the method doesn't.** After a ChatGPT model
+  update in August 2026, one vendor's data (Peec AI) shows listicles
+  falling from about 16% to 8% of ChatGPT citations, comparison pages from
+  9% to 6%, and fan-out queries shifting towards `site:` and "official"
+  searches. **Decided:** the durable rule is to be named in whatever pages
+  the engines cite *this quarter*, found by the monthly check below —
+  not to bet on roundups as such. Treat any list of "cited page types" as
+  dated the day it is written.
+- So the lever is being **named in the pages the engines already cite**
+  — at the time of writing: third-party "best of" lists, comparison pages,
+  review platforms, Reddit threads. A list on your own site with yourself first has been observed to
   stop being cited; a ranking on someone else's site counts more.
 - **Sources rotate** — one prompt draws on tens of sources over time, a
   different subset each month. A citation is a rotation you stay in, not a
