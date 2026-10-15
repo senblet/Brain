@@ -40,6 +40,52 @@ Badges count the decisions a file records where sources disagreed.*
 | Operations | [operations/product-process.md](operations/product-process.md) | Specs, scope and time budgets, prototypes, decisions, writing so others can act |
 | Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project: SEO, performance, design, product, measurement, AI features, agents, brand |
 
+## Using the brain from another project
+
+Paste this into a Claude Code session inside the other repository. It
+works with the brain as a sibling folder (`../Brain`) or from GitHub.
+
+```
+Apply the brain to this project.
+
+The brain is my knowledge base of rules, at ../Brain (or
+https://github.com/senblet/Brain). Read its README.md first: the index
+table says what each file covers.
+
+1. Work out what this project is from its README, CLAUDE.md/AGENTS.md
+   and code: public site or app behind a login, own product or client
+   work, marketplace or not, local business or not, does it send email,
+   does it contain an LLM feature, do agents publish or edit anything.
+2. Pick the brain files that apply to that profile and read each one in
+   full. seo/overview.md if it has public pages; design/frontend.md and
+   development/web-performance.md for any frontend; marketing/conversion.md
+   if people sign up or pay; product/ for our own products;
+   product/marketplaces.md for two-sided ones; ai/evals.md if a model
+   answers users; ai/agents.md if agents do work here; marketing/outbound.md
+   if it sends cold email; seo/local.md for a local business.
+3. Audit the project against those files. For every MUST and DON'T,
+   check whether the project complies and say where. For SHOULD, judge
+   whether it is worth doing here.
+4. Produce a short plan: what to change, in which files, ordered by
+   impact. Do not start changing anything yet; wait for my go.
+5. When I say go: implement the plan in small commits, one concern per
+   commit, naming the brain file the rule came from in each commit
+   message. Follow this project's own CLAUDE.md where the two disagree
+   and tell me where that happened. If the project has public pages,
+   copy the brain's seo/ folder into docs/seo/ and reference overview.md
+   from CLAUDE.md, as that folder's intro says.
+6. Add the applicable items from Brain/checklists/new-project.md to this
+   project's own checklist or CLAUDE.md, ticked or not, so the next
+   person sees what was done and what was skipped.
+7. Finish with a list of brain rules you deliberately did not apply and
+   why. If a rule turned out to be wrong for a real project, say so
+   plainly: that is feedback for the brain, not for the project.
+```
+
+The brain's rules are generic; the project's own `CLAUDE.md` wins on
+anything project-specific. Lessons that come back from step 7 go into the
+brain through the usual ingest steps.
+
 ## Structure
 
 ```
