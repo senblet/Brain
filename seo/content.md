@@ -135,17 +135,27 @@ with Google's guidance but not from it.
   query that URL ranks for — Google already treats those as one page. Cover
   them on one URL, and let the title cover the main two.
 - **Build what the top 3 almost build, plus one thing they don't have.**
-  Match the questions they answer, in the order the results answer them, then
-  add one element the other results lack: a calculator, your own data or
-  numbers, real photos, a short quiz that routes the reader. This is the
-  practical form of Google's "original information" self-check above.
+  Read the top three: every section all three have, your page needs; what
+  only one has, decide if it's worth it; then add one element none of them
+  have — a calculator, your own data or numbers, real photos, a short quiz
+  that routes the reader — using only what the business can genuinely
+  show. Match the order in which the results answer the questions. This is
+  the practical form of Google's "original information" self-check above.
+  An agent drafting the page marks every fact it couldn't verify `[CHECK]`;
+  a person clears every one before publishing.
+- **Skip results pages you can't win yet.** If the top 10 are all big
+  brands, mark the keyword "later" and pick one where sites your size
+  rank.
 - **Fix existing pages before publishing more**, in this order:
   1. **Repoint** pages to the queries Google already shows them for (Search
      Console, Pages → Queries). Rewrite the H1, meta description and first
      100 words around that query, then check the body actually answers it.
-     Works for pages at positions ~8–15. At positions 1–3 with falling
-     clicks, an AI Overview is probably answering above you and a rewrite
-     won't help.
+     Works for pages at positions ~5–15 (sources say 5 or 8 as the lower
+     bound), where Google already finds the page relevant. At positions 1–3
+     with falling clicks, an AI Overview is probably answering above you and
+     a rewrite won't help. Leave any page edited in the last ~60 days alone
+     — Google hasn't re-read it yet. A weekly check of the three pages with
+     the most impressions in that band is enough.
   2. **Regroup** into topic clusters with a hub page and in-body links
      between members. Slow; compounds.
   3. **Conflict:** one consultant reports cutting 15–20% of zero-click pages
@@ -305,6 +315,12 @@ operationalise Google's guidance:
   organic visits a month", `https://x.com/NicholasDulait/status/2107767940971991254`.
 - Borja (Distribb), "My Chief of SEO Backlinks",
   `https://x.com/borjafat/status/2106860317481525608`.
+- Nicholas Dulait (ChatSEO), "Ultimate Claude Opus 5.5 Starter Pack For
+  SEO", `https://x.com/nicholasdulait/status/2110275229108818335` (read
+  2026-10-15) — reading the top three, `[CHECK]` markers, skipping
+  big-brand results, the 5–15 band and the 60-day rule. Its on-page
+  checklist repeats `overview.md` except "title under 60 characters" and
+  "FAQ markup", both rejected ([appearance.md](appearance.md)).
 - Rob Hoffman, "Best [product]" page structure,
   `https://x.com/RobHoffman_/status/2110083165306155141` (read 2026-10-14;
   agency post, one client case). Conversion-widget tips left out.

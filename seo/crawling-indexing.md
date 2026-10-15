@@ -19,6 +19,11 @@ pre-ship checklist are in [overview.md](overview.md).
   the site.
 - Check indexing with the `site:example.com` search operator or Search
   Console's URL Inspection tool before "fixing" anything.
+- **Triage the Page Indexing report, don't panic at it.** *(practitioner)*
+  Export "Why pages aren't indexed" and group the URLs by reason. Most of it
+  is normal — redirects, pages you chose to exclude, duplicates pointing to
+  their canonical. Only pages a customer should land on need a fix; check
+  each by hand before changing anything.
 
 ### robots.txt vs `noindex` — they are not interchangeable
 - **robots.txt controls crawling, not indexing.** A disallowed URL can still be
@@ -183,6 +188,8 @@ Google Search Central, `https://developers.google.com/search/docs/` (read 2026-0
 `crawling-indexing/javascript/javascript-seo-basics` ·
 `specialty/international/managing-multi-regional-sites` (ccTLD point re-read
 2026-10-12; practitioner confirmation from Nicholas Dulait, ChatSEO,
-`https://x.com/nicholasdulait/status/2108212094214529135`).
+`https://x.com/nicholasdulait/status/2108212094214529135`). Indexing-report
+triage: Nicholas Dulait, "Ultimate Claude Opus 5.5 Starter Pack For SEO",
+`https://x.com/nicholasdulait/status/2110275229108818335` (read 2026-10-15).
 
 Google updates these pages; re-read them when this file is more than a year old.

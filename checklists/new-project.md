@@ -99,6 +99,8 @@ project beyond writing code.
 - [ ] A standards file where every rejected draft leaves a one-line reason.
 - [ ] Client data: training on chats switched off before any client file
       goes in.
+- [ ] Spend control: one API key per person, spend alerts before the
+      invoice.
 
 ## Brand
 

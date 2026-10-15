@@ -59,6 +59,10 @@ A company SHOULD run both, with different jobs:
   struggling with, what you're building. A brand that only wins reads as
   scripted. Showing your face widens the formats you can use and builds
   trust faster; faceless brands are harder to grow.
+- **Fuel for the founder account:** once a month, list the questions buyers
+  raised most on last month's sales calls, in their words; each one becomes
+  a post. The same transcripts feed outbound copy
+  ([outbound.md](outbound.md)).
 
 ## Original insight is the moat
 
@@ -195,6 +199,10 @@ Ryan (@ryangrowthh), "How to Be a World-Class Head of Content",
 positioning, founder and brand accounts, funnel and pillars, owned channels,
 community. Personal experience with organic content, no data; budget
 figures, tool lists and company examples left out.
+
+Alex Vacca (Frontal), "The Exact Tech Stack For Running an AI-Native GTM
+Agency", `https://x.com/itsalexvacca/status/2110415145587581023` (read
+2026-10-15) — founder posts from sales-call questions.
 
 Greg Isenberg, "Marketing Engineers: 100x More Experiments with AI agents",
 `https://x.com/gregisenberg/status/2108188646973313195` (read 2026-10-12) —

@@ -22,11 +22,11 @@ against its recheck window (a year by default; files can say six months).*
 | SEO | [seo/local.md](seo/local.md) | Local businesses: map pack vs results vs AI, profile, reviews, citations, site structure, regulated industries, measuring |
 | Marketing | [marketing/agents.md](marketing/agents.md) | Marketing agents: context additions, campaign measurement, which agents in what order, weekly loop |
 | Marketing | [marketing/content.md](marketing/content.md) | Brand and content: positioning, founder vs brand accounts, original insight, packaging, funnel and pillars, channels, community, content team |
-| Marketing | [marketing/outbound.md](marketing/outbound.md) | Outbound as a system: ICP and market, signals, qualify before enriching, deliverability, the email, replies, weekly tests |
-| AI | [ai/agents.md](ai/agents.md) | Working with agents: context file, task shape, classifying at volume, guardrails, failure modes, long-running goals, rollout |
+| Marketing | [marketing/outbound.md](marketing/outbound.md) | Outbound as a system: offer, ICP and market, signals, qualify before enriching, deliverability, the email, replies, weekly tests, LinkedIn terms |
+| AI | [ai/agents.md](ai/agents.md) | Working with agents: context file, task shape, classifying at volume, automation vs agent, guardrails and spend, failure modes, long-running goals, rollout |
 | AI | [ai/agent-workflows.md](ai/agent-workflows.md) | Multi-agent workflows: graph design, contracts, barriers vs pipelines, verification, convergence, cost |
 | Development | [development/web-performance.md](development/web-performance.md) | Web performance: how to measure, what to check (images, code, database, network), running it with agents |
-| Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: context additions, the ten jobs on real records, audit lens, rollout |
+| Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: one folder per client, context additions, the ten jobs on real records, audit lens, rollout |
 | Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project: SEO, performance, agents, brand |
 
 ## Structure

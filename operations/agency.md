@@ -1,8 +1,8 @@
 # Operations — running a studio with AI
 
 How a small agency or studio uses AI to run delivery and finances the same
-way every week: single-job tasks that read records you already keep, and a
-person who checks every output. The setup — context file, task shape,
+way every week: one folder per client, single-job tasks that read records
+you already keep, and a person who checks every output. The setup — context file, task shape,
 guardrails, rollout — is in [ai/agents.md](../ai/agents.md); this file adds
 what is specific to studio operations.
 
@@ -37,6 +37,41 @@ On top of the general context file ([ai/agents.md](../ai/agents.md#context-befor
 **The audit lens:** strategy, client management, delivery, team and people,
 quality and performance, recruiting and hiring, operations, financials.
 
+## Client work: one folder per client
+
+How a small team runs the same system for many clients *(practitioner — a
+GTM agency's layout; the principle fits any client work)*:
+
+```
+clients/
+  _template/              copied for every new client
+  acme/
+    CLAUDE.md             standards, tone, rules, guardrails, permissions
+    context.md            ICP, positioning, offer
+    do-not-contact.csv    customers, competitors, churned accounts
+    logs/                 what the agent changed, and why
+    results/
+      worked/             angles, pages, campaigns that worked
+      went-nowhere/       and the ones that didn't
+```
+
+- **Every new client starts from `_template`**, so the first piece of work
+  starts from everything already learned. Lessons from one client go back
+  into the template.
+- The agent opens inside the client's folder, so it reads that client's
+  rules first and nobody re-explains the client.
+- **Permissions per tool are written in the client's file** — e.g. CRM: read
+  everything, write drafts only; sending tools: stage, launch needs
+  approval; chat: post to the agent channel, never message a client
+  directly ([ai/agents.md](../ai/agents.md#guardrails-live-in-the-tools-not-the-prompt)).
+- **The working system stays with the client:** build inside their own CRM
+  and tools, not yours.
+- **Report weekly** on a live dashboard (health of the setup, engagement,
+  results, best segments), and hold a review at about day 90 before
+  deciding to scale.
+- Write the rules down where a person and an agent can both read them;
+  rules in one person's head leave with them.
+
 ## The jobs
 
 Each is one task in the shape from [ai/agents.md](../ai/agents.md#writing-a-task).
@@ -64,6 +99,11 @@ Call summaries are high-volume and simple; the audit is the heaviest job.
 - Time saved only sticks when the people saving it see the benefit.
 
 ## Sources
+
+Alex Vacca (Frontal), "The Exact Tech Stack For Running an AI-Native GTM
+Agency", `https://x.com/itsalexvacca/status/2110415145587581023` (read
+2026-10-15) — one folder per client, template, permissions per tool,
+reporting and day-90 review.
 
 Kyle Hunt, "How to use Claude for agency operations so well it feels
 illegal (full guide)", `https://x.com/huntkyle/status/2108604316432945232`
