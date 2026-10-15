@@ -13,13 +13,17 @@ consensus (read 2026-10-12), not vendor documentation.
 
 ## Context file additions
 
-On top of the general context file ([ai/agents.md](../ai/agents.md#context-before-agents)):
+On top of the general context file
+([ai/agents.md](../ai/agents.md#context-before-agents)):
 
-- the brand's positioning answers ([content.md](content.md#positioning-comes-first));
+- the brand's positioning answers
+  ([content.md](content.md#positioning-comes-first));
 - failed campaigns, one line each with why ("the free audit attracted
   companies too small to afford us");
 - the latest customer-language report, so every agent writes in the
-  customers' words.
+  customers' words;
+- competitors, switching forces, the anti-persona and words to avoid
+  ([research.md](research.md#competitor-research)).
 
 ## Data and measurement
 
@@ -35,7 +39,8 @@ On top of the general context file ([ai/agents.md](../ai/agents.md#context-befor
   "video_final_7 won".
 - **Decide the evidence bar before launching**: how much spend, how many
   days, what counts as a win. Without it, 200 tests are 200 inconclusive
-  results.
+  results. Test rules: [conversion.md](conversion.md#experiments); ad
+  thresholds: [content.md](content.md#testing-creative).
 - Wire results through to retention and refunds; cheap customers who churn
   in 60 days look great on an acquisition dashboard.
 
@@ -83,5 +88,10 @@ basic SQL, shipping a page, git, test cases, knowing what a run costs.
 Greg Isenberg, "Marketing Engineers: 100x More Experiments with AI agents",
 `https://x.com/gregisenberg/status/2108188646973313195` (read 2026-10-12).
 
-All practitioner opinion; the tools named in the source change monthly and
-are deliberately left out.
+`coreyhaines31/marketingskills` (MIT),
+`https://github.com/coreyhaines31/marketingskills` (read 2026-10-15) —
+`product-marketing` (context additions).
+
+All practitioner opinion; the tools named in the sources change monthly and
+are deliberately left out. Re-read when this file is more than six months
+old.

@@ -93,8 +93,16 @@ once and never returned; completeness alone moves a profile.
   photos and one to three posts a week about the services you want more of.
   AI can draft a month of posts from real news and services; a human checks
   them.
-- **Questions:** post the questions customers ask on first contact, with
-  short clear answers, yourself.
+- **Conflict:** posting frequency. Practitioners here recommend one to three
+  posts a week; another practitioner source warns not to claim a ranking
+  benefit from posting frequency. Post when there is something real to say.
+- **Questions:** Google retired the profile's Q&A (API shut down
+  2025-11-03; the public section replaced by an AI "Ask" feature from
+  December 2025, per trade reports). Answer the questions customers ask on
+  first contact on the website instead.
+- If you serve customers at their location and hide your address on the
+  profile, DON'T publish that hidden address in structured data to qualify
+  for anything.
 
 ## Reviews
 
@@ -116,7 +124,8 @@ once and never returned; completeness alone moves a profile.
 - Build reviews on the industry's own platforms too, not only Google
   (legal, medical and aesthetics each have their own); AI assistants read
   them ([ai-search.md](ai-search.md)).
-- DON'T buy or script reviews.
+- DON'T buy or script reviews, and DON'T ask only happy customers —
+  invite every real customer neutrally (platform policies).
 
 ## Citations and links
 
@@ -130,7 +139,7 @@ once and never returned; completeness alone moves a profile.
 - Good local links: professional associations, the chamber of commerce,
   local news, sponsorships of local events, a guest piece for a local
   publication on a question you answer every week. DON'T buy links
-  ([content.md](content.md#earning-links-practitioner-method)).
+  ([links.md](links.md#earning-links-practitioner-method)).
 
 ## The website
 
@@ -219,5 +228,14 @@ Nicholas Dulait (ChatSEO), "How to use Claude Opus 5.5 for SEO", Module 10,
 `https://x.com/nicholasdulait/status/2108212094214529135` (read 2026-10-12).
 Numeric targets (photo counts, service counts, thresholds, timelines) and
 client results are theirs, not Google's; the results are left out.
+
+Q&A retirement: trade reports, e.g.
+`https://ppc.land/google-discontinues-business-profile-q-a-api-effective-november-3/`
+(read 2026-10-15). Review gating, posting-frequency caution and the
+service-area note: `coreyhaines31/marketingskills` (MIT),
+`https://github.com/coreyhaines31/marketingskills`, shared via
+`https://x.com/chrissev/status/2110394539953606870` (read 2026-10-15) —
+`seo-audit/references/local-seo-*.md`,
+`referrals/references/review-platform-rules.md`.
 
 Google updates these pages; re-read them when this file is more than a year old.

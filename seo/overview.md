@@ -14,7 +14,8 @@ pages (read 2026-10-06), Google Business Profile help (read 2026-10-12), and
 web.dev's Core Web Vitals page and a Pew Research study of AI-summary clicks
 (read 2026-10-14).
 On top of that, sections marked *practitioner* hold methods from SEO
-consultants (read 2026-10-12); they never override Google's documentation and
+consultants and the `marketingskills` repo (read 2026-10-12 to 2026-10-15); they
+never override Google's documentation and
 their numbers stay theirs. Where Google says something is optional or not
 worth worrying about, these files say so too — do not upgrade a "nice to
 have" into a rule.
@@ -32,10 +33,11 @@ effect. **DON'T** = actively harmful. **Skip** = effort Google says is wasted.
 | File | What it covers |
 |---|---|
 | [overview.md](overview.md) | Ground truth, eligibility, spam policies, page experience, promotion, what to skip, monitoring, pre-ship checklist |
-| [crawling-indexing.md](crawling-indexing.md) | Discovery, robots.txt and `noindex`, sitemaps, canonicals, redirects, status codes, JavaScript sites, URLs, international sites |
-| [content.md](content.md) | Helpful content, E-E-A-T, AI-generated content, keyword research and choosing pages (incl. comparison pages), ads and interstitials, links and earning them, images |
+| [crawling-indexing.md](crawling-indexing.md) | Discovery, robots.txt and `noindex`, sitemaps, canonicals and pagination, redirects and migrations, status codes, JavaScript sites, URLs, international sites |
+| [content.md](content.md) | Helpful content, E-E-A-T, AI-generated content, keyword research and choosing pages (incl. comparison and programmatic pages), ads and interstitials, images |
+| [links.md](links.md) | Writing links (anchors, `rel` values) and earning them without link spam |
 | [appearance.md](appearance.md) | How pages look in results: titles, snippets, video, structured data (incl. FAQ and review markup) |
-| [ai-search.md](ai-search.md) | Google's AI features, AI crawler tokens (Google, OpenAI), how assistants pick sources |
+| [ai-search.md](ai-search.md) | Google's AI features, AI crawler tokens (Google, OpenAI, others), how assistants pick sources, measuring citations |
 | [local.md](local.md) | Local businesses: map pack vs results vs AI, profile, reviews, citations, site structure, regulated industries, measuring |
 
 ---

@@ -15,19 +15,29 @@ against its recheck window (a year by default; files can say six months).*
 | Topic | File | What it covers |
 |---|---|---|
 | SEO | [seo/overview.md](seo/overview.md) | Start here: ground truth, eligibility, spam policies, page experience, what to skip, monitoring, pre-ship checklist |
-| SEO | [seo/crawling-indexing.md](seo/crawling-indexing.md) | robots.txt, `noindex`, sitemaps, canonicals, redirects, JavaScript sites, URLs, international sites |
-| SEO | [seo/content.md](seo/content.md) | Helpful content, E-E-A-T, AI content, keyword research and choosing pages, links and earning them, images |
-| SEO | [seo/appearance.md](seo/appearance.md) | How pages look in results: titles, snippets, video, structured data |
-| SEO | [seo/ai-search.md](seo/ai-search.md) | Google's AI features; AI search and training crawlers; how assistants pick sources |
+| SEO | [seo/crawling-indexing.md](seo/crawling-indexing.md) | robots.txt, `noindex`, sitemaps, canonicals and pagination, redirects and migrations, JavaScript sites, URLs, international sites |
+| SEO | [seo/content.md](seo/content.md) | Helpful content, E-E-A-T, AI content, keyword research and choosing pages (comparison, programmatic), ads and interstitials, images |
+| SEO | [seo/links.md](seo/links.md) | Writing links and earning them without link spam |
+| SEO | [seo/appearance.md](seo/appearance.md) | How pages look in results: titles, snippets, video, structured data (incl. retired features) |
+| SEO | [seo/ai-search.md](seo/ai-search.md) | Google's AI features; AI crawler tokens; how assistants pick sources; measuring citations |
 | SEO | [seo/local.md](seo/local.md) | Local businesses: map pack vs results vs AI, profile, reviews, citations, site structure, regulated industries, measuring |
+| Marketing | [marketing/content.md](marketing/content.md) | Brand and content: positioning, founder vs brand accounts, copy rules, funnel and pillars, channels, creators, community, testing creative, content team |
+| Marketing | [marketing/research.md](marketing/research.md) | Customer interviews, reviews, confidence in findings, competitor research, win-loss |
+| Marketing | [marketing/conversion.md](marketing/conversion.md) | Pages, forms and signup, popups, pricing pages, experiments, analytics and attribution |
+| Marketing | [marketing/outbound.md](marketing/outbound.md) | Outbound as a system: law baseline, offer, ICP, signals, qualify before enriching, deliverability, the email, replies, weekly tests, first customers |
 | Marketing | [marketing/agents.md](marketing/agents.md) | Marketing agents: context additions, campaign measurement, which agents in what order, weekly loop |
-| Marketing | [marketing/content.md](marketing/content.md) | Brand and content: positioning, founder vs brand accounts, original insight, packaging, funnel and pillars, channels, community, content team |
-| Marketing | [marketing/outbound.md](marketing/outbound.md) | Outbound as a system: offer, ICP and market, signals, qualify before enriching, deliverability, the email, replies, weekly tests, LinkedIn terms |
-| AI | [ai/agents.md](ai/agents.md) | Working with agents: context file, task shape, classifying at volume, automation vs agent, guardrails and spend, failure modes, long-running goals, rollout |
+| Product | [product/strategy.md](product/strategy.md) | Validating ideas, product-market fit, retention benchmarks, pricing, north star |
+| Product | [product/growth.md](product/growth.md) | Activation, onboarding, upgrade prompts, lifecycle email and WhatsApp, cancellation and dunning, referrals |
+| Product | [product/marketplaces.md](product/marketplaces.md) | Two-sided products: which side first, launch, fill rate and other metrics, take rates, leakage and trust |
+| Design | [design/frontend.md](design/frontend.md) | Public pages that look decided: process, copy on the page, type, colour, layout, imagery, motion, states, AI tells, critique |
+| Development | [development/web-performance.md](development/web-performance.md) | Web performance: how to measure, what to check, running it with agents |
+| AI | [ai/agents.md](ai/agents.md) | Working with agents: context file, tasks, classifying at volume, automation vs agent, guardrails, failure modes, coding with agents, writing skills, goals and loops, rollout |
+| AI | [ai/evals.md](ai/evals.md) | Evaluating LLM features: error analysis, code checks and model judges, golden sets, shipping AI features |
 | AI | [ai/agent-workflows.md](ai/agent-workflows.md) | Multi-agent workflows: graph design, contracts, barriers vs pipelines, verification, convergence, cost |
-| Development | [development/web-performance.md](development/web-performance.md) | Web performance: how to measure, what to check (images, code, database, network), running it with agents |
-| Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: one folder per client, context additions, the ten jobs on real records, audit lens, rollout |
-| Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project: SEO, performance, agents, brand |
+| AI | [ai/skill-libraries.md](ai/skill-libraries.md) | External skill repos read in full, and which of their skills to load |
+| Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: one folder per client, the ten jobs on real records, audit lens, hiring |
+| Operations | [operations/product-process.md](operations/product-process.md) | Specs, scope and time budgets, prototypes, decisions, writing so others can act |
+| Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project: SEO, performance, design, product, measurement, AI features, agents, brand |
 
 ## Structure
 
@@ -37,7 +47,7 @@ brain/
 ├── CLAUDE.md              ← how new articles get folded in
 ├── build.py               ← regenerates brain-map.svg (standard library only)
 ├── brain-map.svg          ← generated; shown above
-├── <topic>/               ← one folder per domain (seo, marketing, ai, development, operations…)
+├── <topic>/               ← one folder per domain (seo, marketing, product, design, development, ai, operations…)
 │   └── <subtopic>.md      ← split a topic only when one file gets too long
 └── checklists/
     └── new-project.md     ← the "starting something" file

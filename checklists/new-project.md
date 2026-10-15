@@ -84,6 +84,55 @@ From [development/web-performance.md](../development/web-performance.md).
       paginated; heavy work in background jobs; server next to the database.
 - [ ] Main flows clicked through on a throttled low-end phone.
 
+## Design
+
+From [design/frontend.md](../design/frontend.md). Public pages.
+
+- [ ] Copy deck written in full before markup; missing facts marked `TBD`.
+- [ ] Contrast: body ≥ 4.5:1, large text ≥ 3:1, including muted text.
+- [ ] Animations only on `transform`/`opacity`, inside
+      `prefers-reduced-motion: no-preference`; content visible without JS.
+- [ ] Every data view has loading, empty and error states; labels above
+      inputs.
+- [ ] Checked at 1440, 768 and 390 px; touch targets ≥ 44 px.
+- [ ] Pictures: own or properly licensed and credited; never a found picture
+      presented as the client's.
+
+## Measurement and conversion
+
+From [marketing/conversion.md](../marketing/conversion.md).
+
+- [ ] A tracking plan before code: `object_action` event names, no personal
+      data in properties, consent handled where required.
+- [ ] Conversions fire on confirmed submission; every form submitted once at
+      launch; checked in in-app browsers.
+- [ ] Internal traffic filtered; GA4 retention set to 14 months.
+- [ ] Prices in HTML text; "How did you hear about us?" at conversion.
+
+## Product
+
+From [product/](../product/strategy.md). For the studio's own products.
+
+- [ ] Activation event defined from data, and a monthly cohort retention
+      view.
+- [ ] PMF survey once there are ~100 reachable active users.
+- [ ] Cancellation is one visible path; failed-payment retries and dunning
+      on, if there is billing.
+- [ ] Marketplaces: fill rate, time to match and activated supply tracked
+      from day one ([product/marketplaces.md](../product/marketplaces.md)).
+
+## AI features
+
+From [ai/evals.md](../ai/evals.md). For products with an LLM inside.
+
+- [ ] Full traces logged (prompt, context, tools, output).
+- [ ] A reference set of 20–100 examples before launch; a golden set that
+      gains one case per significant bug; run on every prompt, code or
+      model change.
+- [ ] Model judges are binary, one failure mode each, validated against
+      expert labels.
+- [ ] A person can take over; first release to a small cohort.
+
 ## Agents
 
 From [ai/agents.md](../ai/agents.md). Skip if no agent does work on the

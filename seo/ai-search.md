@@ -1,8 +1,8 @@
 # SEO — AI search features and AI crawlers
 
 How Google's AI Overviews and AI Mode pick pages, which robots.txt tokens
-control AI search and AI training crawlers, and what practitioners observe
-about how assistants choose sources.
+control AI search and AI training crawlers, what practitioners observe about
+how assistants choose sources, and how to measure citations.
 
 **Tags:** **MUST** = required for eligibility or a spam-policy line.
 **SHOULD** = best practice with real effect. **DON'T** = actively harmful.
@@ -10,6 +10,8 @@ about how assistants choose sources.
 pre-ship checklist are in [overview.md](overview.md).
 
 ---
+
+## Google's AI features and AI crawlers
 
 - **AI summaries take clicks.** Pew Research tracked 68,879 Google searches
   by 900 US adults in 2025: when an AI summary appeared, people clicked a
@@ -38,6 +40,13 @@ pre-ship checklist are in [overview.md](overview.md).
     and it is not used to decide what appears in search.
   - A blocked page can still show as a link and title. To keep it out, use
     `noindex` and allow crawling, as with Google.
+- **Other engines' tokens** (vendor documentation as summarised by a
+  practitioner source): Anthropic uses `Claude-SearchBot` (search),
+  `Claude-User` (fetches a user asked for) and `ClaudeBot` (training);
+  Perplexity uses `PerplexityBot` (search) and `Perplexity-User`, which
+  generally ignores `robots.txt`. Decide each by purpose, as with OpenAI.
+- **Check the CDN and firewall too.** Many block AI crawlers by default,
+  whatever `robots.txt` says.
 - **DON'T** add a blanket "block AI bots" robots.txt group. Blocking search
   crawlers (`Googlebot`, `OAI-SearchBot`) costs visibility. Blocking training
   crawlers (`GPTBot`, `Google-Extended`) is a business decision for the site
@@ -46,7 +55,8 @@ pre-ship checklist are in [overview.md](overview.md).
 ## How AI assistants pick sources (practitioner observations)
 
 Not documented by any vendor. From people who log ChatGPT answers at scale
-(French data, 2026; read 2026-10-12). Expect it to age within months.
+and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
+2026-10-15). Expect it to age within months.
 
 - **Two kinds of answer.** With citations, the assistant searched the web.
   Without, it answered from training data, which lags the web by roughly a
@@ -58,6 +68,11 @@ Not documented by any vendor. From people who log ChatGPT answers at scale
   "[competitor] alternative", sometimes `site:` on authority domains, and in
   both the user's language and English. The pages ranking for those queries
   — mostly roundups and comparisons — are what gets read.
+- **Conflict:** after a ChatGPT model update in August 2026, one vendor's
+  data (Peec AI) shows listicles falling from about 16% to 8% of ChatGPT
+  citations, comparison pages from about 9% to 6%, and fan-out queries
+  shifting towards `site:` and "official" searches. The roundup-centred
+  picture above may already be dated — re-check before investing in it.
 - So the lever is being **named in the pages the engines already cite**:
   third-party "best of" lists, comparison pages, review platforms, Reddit
   threads. A list on your own site with yourself first has been observed to
@@ -80,12 +95,19 @@ Not documented by any vendor. From people who log ChatGPT answers at scale
   documentation): its search is reported to lean on Bing's index. Claim the
   Bing Places listing and verify the site in Bing Webmaster Tools — cheap
   insurance.
-- **Measure by hand.** Run ~10 buyer questions logged out, once a month, and
-  note whether you are cited and from which page. The ChatGPT API returns
-  different sources than the web app, so a dashboard built on it measures
-  something else.
 - Nothing above changes Google's position: no `llms.txt`, no special markup
   ([overview.md](overview.md#things-not-to-spend-time-on-skip)).
+
+## Measuring AI visibility (practitioner)
+
+- **Measure by hand.** Run ~10 buyer questions logged out, once a month, and
+  note whether you are cited and from which page.
+- Answers vary run to run: ask each question 3–5 times per engine in fresh
+  sessions and record a rate with its sample ("3/5").
+- Report the ladder separately — cited, mentioned, recommended, recommended
+  against — not one "visibility" number.
+- The ChatGPT API returns different sources than the web app, so a
+  dashboard built on it measures something else.
 
 ## Sources
 
@@ -114,4 +136,14 @@ Most Valuable SEO Article Ever Written",
 `https://x.com/bowtiedbills/status/2109881300890816850` (read 2026-10-14) —
 what feeds the answers, Bing.
 
-AI tooling moves fast; re-read these pages when this file is more than a year old.
+Other crawler tokens, CDN blocking, measurement and the August 2026
+shift: `coreyhaines31/marketingskills` (MIT),
+`https://github.com/coreyhaines31/marketingskills`, shared via
+`https://x.com/chrissev/status/2110394539953606870` (read 2026-10-15) —
+`ai-seo/references/platform-ranking-factors.md`,
+`agent-readiness.md`, `format-volatility.md`,
+`citations-vs-recommendations.md`. Its schema-for-AI and `llms.txt` advice is
+not adopted (contradicts Google).
+
+AI tooling moves fast; re-read these pages when this file is more than six
+months old.

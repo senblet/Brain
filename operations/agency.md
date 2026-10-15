@@ -2,13 +2,16 @@
 
 How a small agency or studio uses AI to run delivery and finances the same
 way every week: one folder per client, single-job tasks that read records
-you already keep, and a person who checks every output. The setup — context file, task shape,
-guardrails, rollout — is in [ai/agents.md](../ai/agents.md); this file adds
-what is specific to studio operations.
+you already keep, a person who checks every output, and hiring by paid
+trial. Specs, scope and decisions are in
+[product-process.md](product-process.md). The setup — context file, task
+shape, guardrails, rollout — is in [ai/agents.md](../ai/agents.md); this
+file adds what is specific to studio operations.
 
-**Tags:** as in the [README](../README.md#how-notes-are-written). One
-practitioner source (an agency-operations consultant, read 2026-10-12); his
-client figures are anecdotes and are left out.
+**Tags:** as in the [README](../README.md#how-notes-are-written).
+Practitioner sources (an agency-operations consultant, a GTM agency,
+`lenny-skills`), read 2026-10-12 to 2026-10-15; their client figures are
+anecdotes and are left out.
 
 ---
 
@@ -25,7 +28,8 @@ client figures are anecdotes and are left out.
 
 ## Context file additions
 
-On top of the general context file ([ai/agents.md](../ai/agents.md#context-before-agents)):
+On top of the general context file
+([ai/agents.md](../ai/agents.md#context-before-agents)):
 
 - team roles and who leads what;
 - the delivery process, from signed contract to first report;
@@ -82,7 +86,7 @@ Each is one task in the shape from [ai/agents.md](../ai/agents.md#writing-a-task
 | Brief check | One brief + top revision causes | Missing fields, the questions the maker would have to ask, a fixed brief with `[ASK CLIENT]` where only the client knows | Someone could finish the work from the brief alone — test: "what do you need to complete this without messaging anyone?" |
 | Call summary | One client-call transcript | 5-line summary, decisions, action items (task, owner, due date, the line it came from), risks | Every action item has an owner and date or says "no owner"; no invented dates |
 | QA before sending | A draft + its source data + forbidden patterns | Flagged lines (line, problem, source or "not in the data"), then a clean version | Every number matched to a source or flagged |
-| First-pass audit | Discovery transcripts + numbers on file | Biggest constraint, then each audit-lens area scored 1–5 with quotes | Every area scored or "not in the data". Human confirms every call |
+| First-pass audit | Discovery transcripts + numbers on file | Biggest constraint, then each audit-lens area marked working / broken / not in the data, with quotes | Every area marked. Human confirms every call |
 | Content ideas | Call transcripts | Up to 5 ideas per call, each with the quote it came from | Nothing that wasn't said on the call |
 | Sales call review | Sales call transcripts | 3 things to improve, tied to the moment, with what to say next time | Exactly 3; nothing about the prospect beyond the transcript |
 | Hourly rate & utilisation | 30 days of revenue by client, hours by person and client, available hours, targets | Effective rate per client (revenue ÷ hours), utilisation per person, flags below target, the maths on every row | Every client and person has a row or "not tracked"; never estimate hours |
@@ -98,7 +102,19 @@ Call summaries are high-volume and simple; the audit is the heaviest job.
 - Every error the QA pass catches becomes a line in the context file.
 - Time saved only sticks when the people saving it see the benefit.
 
+## Hiring
+
+- **Hire through a paid work trial** on representative, not shippable,
+  work. Scope it too big to finish, so how they prioritise shows, and have
+  them present the result. (Linear and 37signals pay for multi-day trials,
+  per the source.)
+
 ## Sources
+
+`refoundai/lenny-skills` (MIT), `https://github.com/refoundai/lenny-skills`,
+shared via `https://x.com/chrissev/status/2110394539953606870` (read
+2026-10-15) — `interviewing-evaluating-candidates` (paid work trials; Karri
+Saarinen).
 
 Alex Vacca (Frontal), "The Exact Tech Stack For Running an AI-Native GTM
 Agency", `https://x.com/itsalexvacca/status/2110415145587581023` (read
@@ -109,3 +125,5 @@ Kyle Hunt, "How to use Claude for agency operations so well it feels
 illegal (full guide)", `https://x.com/huntkyle/status/2108604316432945232`
 (read 2026-10-12). Sells an agency-operations programme; the prompts and
 rules are kept, the revenue and client figures are not.
+
+Re-read when this file is more than a year old.

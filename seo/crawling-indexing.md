@@ -19,6 +19,10 @@ pre-ship checklist are in [overview.md](overview.md).
   the site.
 - Check indexing with the `site:example.com` search operator or Search
   Console's URL Inspection tool before "fixing" anything.
+- **Skip crawl-budget work** unless the site has about a million pages, or
+  tens of thousands that change daily (Google's guidance as summarised).
+- *(practitioner)* Request indexing once per new URL; asking again doesn't
+  speed it up. Still not indexed after a few weeks: diagnose, don't resubmit.
 - **Triage the Page Indexing report, don't panic at it.** *(practitioner)*
   Export "Why pages aren't indexed" and group the URLs by reason. Most of it
   is normal — redirects, pages you chose to exclude, duplicates pointing to
@@ -81,6 +85,9 @@ pre-ship checklist are in [overview.md](overview.md).
   certificate, insecure dependencies, HTTPS→HTTP redirects, a canonical pointing
   to HTTP, or a certificate for the wrong host. Redirect HTTP→HTTPS; HSTS helps.
 - Pick one host variant (`www` or apex) and 301 the others to it.
+- **Pagination:** each paginated page has its own self-referencing
+  canonical — never canonicalise page 2+ to page 1. Skip `rel="next/prev"`;
+  Google stopped using it in 2019.
 
 ### Redirects
 - **Permanent** (`301`, `308`, instant `meta refresh`): the target shows in
@@ -92,6 +99,21 @@ pre-ship checklist are in [overview.md](overview.md).
   (a friendly 404 page is fine), never a `200` "not found" (a *soft 404*).
 - Whole-site moves: redirects + updated sitemap + Search Console's Change of
   Address tool.
+
+### Site migrations *(practitioner)*
+- Before the move: crawl and save every URL with its title, meta
+  description, canonical, `<h1>` and status; export the top pages from
+  Search Console. Keep URLs unchanged wherever possible.
+- **MUST map old URLs to new ones one to one with `301`s** — never everything
+  to the home page — and deploy the redirects at the moment of the switch.
+- After: keep the old sitemap available briefly; check Search Console for
+  `404`s daily for two weeks, then weekly; update internal links rather than
+  leaning on redirects.
+- A section served on a subpath through a reverse proxy: canonical, sitemap
+  and Open Graph URLs point at the main domain; keep the origin host out of
+  the index (host-scoped auth or `X-Robots-Tag`) and make sure that
+  `noindex` never reaches production. `robots.txt` alone doesn't keep the
+  origin out.
 
 ### HTTP status codes
 - Use meaningful codes: `404` for pages that don't exist, `401` for pages
@@ -148,6 +170,10 @@ recommended** — it is faster for users and crawlers alike.
 - Avoid **infinite URL spaces**: additive filters, sort/referral parameters,
   endless calendars (`nofollow` future-date links), and parent-relative links
   that compound (`../../x`) — use **root-relative** links.
+- **One trailing-slash form**, used everywhere — links, canonicals,
+  `hreflang`, sitemaps — with the other form `301`ed to it.
+- *(practitioner)* Keep dates out of article slugs, and DON'T change a slug
+  to update a year or number — change the title, keep the URL.
 - **Group related pages in directories.** It matters most above a few thousand
   URLs (Google learns change frequency per directory). Don't reorganise a
   working small site just for this.
@@ -160,6 +186,17 @@ recommended** — it is faster for users and crawlers alike.
 - Annotate language/region variants with **`hreflang`** (tags, headers or
   sitemap) and keep variants reciprocal. Use `rel="canonical"` + `hreflang` for
   same-language regional duplicates.
+- **MUST:** each `hreflang` set lists the page itself and every variant;
+  codes are ISO 639-1 language plus optional ISO 3166-1 region (`en-GB`, never
+  `en-UK`; a region alone is invalid). Add `x-default` when unmatched users
+  need a fallback (optional).
+- **DON'T canonicalise one language version to another** — the canonical
+  must sit inside the `hreflang` set, or Google ignores the annotations.
+- Translate the main content, not just the navigation; boilerplate-only
+  translations are clustered as duplicates.
+- With many locales, put `hreflang` in sitemaps; mind the 50 MB file cap
+  (a few thousand URLs per file). For Bing, also set `<html lang>` — it
+  treats `hreflang` as a weak signal *(practitioner)*.
 - **Don't auto-redirect by guessed language or IP**; link to the other versions
   and let users switch. Don't adapt content by IP — Google crawls mostly from
   the US and won't see the variants.
@@ -177,7 +214,8 @@ recommended** — it is faster for users and crawlers alike.
 
 ## Sources
 
-Google Search Central, `https://developers.google.com/search/docs/` (read 2026-09-22):
+Google Search Central, `https://developers.google.com/search/docs/` (read
+2026-09-22):
 `fundamentals/seo-starter-guide` · `crawling-indexing/sitemaps/overview` ·
 `crawling-indexing/sitemaps/build-sitemap` ·
 `crawling-indexing/control-what-you-share` · `crawling-indexing/robots/intro` ·
@@ -191,5 +229,15 @@ Google Search Central, `https://developers.google.com/search/docs/` (read 2026-0
 `https://x.com/nicholasdulait/status/2108212094214529135`). Indexing-report
 triage: Nicholas Dulait, "Ultimate Claude Opus 5.5 Starter Pack For SEO",
 `https://x.com/nicholasdulait/status/2110275229108818335` (read 2026-10-15).
+
+Migrations, pagination, trailing slashes, slugs, `hreflang` details and
+crawl budget: `coreyhaines31/marketingskills` (MIT),
+`https://github.com/coreyhaines31/marketingskills`, shared via
+`https://x.com/chrissev/status/2110394539953606870` (read 2026-10-15) —
+`site-architecture`
+(`references/platforms-and-migration.md`) and
+`seo-audit/references/international-seo.md`, which cite Google's
+documentation and staff. Its breadcrumb and links-per-1,000-words rules are
+not adopted (they contradict Google).
 
 Google updates these pages; re-read them when this file is more than a year old.

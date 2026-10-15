@@ -27,6 +27,13 @@ pre-ship checklist are in [overview.md](overview.md).
 - Google may rewrite the title link from `<h1>`, `og:title`, prominent text,
   anchor text or `WebSite` structured data when the `<title>` is half-empty,
   obsolete, inaccurate or boilerplate.
+- *(practitioner)* Shape: the query + a reason to click + the brand (brand
+  last unless it is well known). DON'T promise "free", a year or a number
+  the page doesn't deliver.
+- *(practitioner)* **Low click-through at positions 1–5:** change only the
+  title and description, one page at a time, with the baseline recorded;
+  judge after 3–4 weeks. If Google keeps rewriting the title, tighten it and
+  align it with the `<h1>`.
 
 ### Meta description — the snippet
 - Snippets come **mainly from page content**; the meta description is used when
@@ -76,6 +83,13 @@ text-result image, rich attributes. Most are automatic; favicon, site name
 - Duplicate pages carry the same markup as their canonical. Link related items
   with `@id`; include the type that represents the page's main purpose.
 - Don't block marked-up pages with robots.txt or `noindex`.
+- **Check Google's search gallery before promising a rich result.** Valid
+  schema.org markup isn't eligibility. Also retired: HowTo rich results
+  (2023) and the sitelinks search box (`WebSite` `SearchAction`, 2024) —
+  keep `WebSite` for the site name.
+- Detect markup in the **rendered** page (Rich Results Test, URL Inspection);
+  JSON-LD injected by JavaScript doesn't show in a raw fetch, so "no schema"
+  from `curl` proves nothing.
 - **FAQ markup: Skip.** Google limited FAQ rich results to well-known
   government and health sites in 2023 and stopped showing them entirely in
   2026. An FAQ section is still useful to readers; the markup earns nothing.
@@ -101,7 +115,8 @@ text-result image, rich attributes. Most are automatic; favicon, site name
 
 ## Sources
 
-Google Search Central, `https://developers.google.com/search/docs/` (read 2026-09-22):
+Google Search Central, `https://developers.google.com/search/docs/` (read
+2026-09-22):
 `fundamentals/seo-starter-guide` · `appearance/title-link` ·
 `appearance/snippet` · `appearance/visual-elements-gallery` · `appearance/video` ·
 `appearance/structured-data/intro-structured-data` ·
@@ -110,5 +125,12 @@ Google Search Central, `https://developers.google.com/search/docs/` (read 2026-0
 `appearance/structured-data/organization`. FAQ and review-snippet pages:
 `appearance/structured-data/faqpage` · `appearance/structured-data/review-snippet`
 (read 2026-10-14).
+
+Title practice, retired features and rendered-markup checks:
+`coreyhaines31/marketingskills` (MIT),
+`https://github.com/coreyhaines31/marketingskills`, shared via
+`https://x.com/chrissev/status/2110394539953606870` (read 2026-10-15) —
+`schema`, `seo-audit/references/title-tags.md` and `rankings-push.md`. Its
+title and description character limits are not adopted.
 
 Google updates these pages; re-read them when this file is more than a year old.
