@@ -53,6 +53,13 @@ substantial changes**; adding or deleting content in bulk to seem "fresh"
 - **Who:** make authorship self-evident. Bylines where readers expect them,
   leading to author or About pages with background. Don't invent authors or
   reviewers.
+- *(practitioner)* **The cheap trust floor** — a few lines for a crawler to
+  check, so missing them sorts a site with the junk: an About page (who,
+  where from, the team), a legal-notice or contact page with the company
+  name and address linked from the footer, an author box under every
+  article linking to the writer's real profiles, `Organization` structured
+  data sitewide and `Person` for each author. An afternoon's work; facts
+  come from the owner, never invented.
 - **How:** explain how content was produced. If automation or AI substantially
   generated it, disclose that where a reader would reasonably wonder, with
   background on how and why it was used.
@@ -84,7 +91,9 @@ substantial changes**; adding or deleting content in bulk to seem "fresh"
     human, or are blocked in code.
 - E-commerce: AI images need IPTC `DigitalSourceType` =
   `TrainedAlgorithmicMedia`; AI product titles/descriptions must be labelled as
-  AI-generated (Merchant Center policy).
+  AI-generated (Merchant Center policy). **Decided:** DON'T strip metadata
+  from AI images — a practitioner checklist recommends it, but it removes the
+  disclosure the policy requires.
 
 ### Keywords and keyword research
 - Think about the words readers actually search — beginners and experts use
@@ -135,7 +144,10 @@ applies to the three sections after it.
   Fix an existing pair by choosing one owner page, merging the useful parts
   of the other into it, and `301`ing the other.
 - **Information-gain test:** write one sentence on what the piece adds that
-  none of the top results have. If you can't, don't write it.
+  none of the top results have. If you can't, don't write it. Then two
+  questions: if you landed here from Google, would you read it? Is it more
+  useful than the nine results next to it? A no to either is not fixed by
+  publishing faster.
 - **Secondary keywords.** Take the page ranking first and list every other
   query that URL ranks for — Google already treats those as one page. Cover
   them on one URL, and let the title cover the main two.
@@ -220,14 +232,26 @@ applies to the three sections after it.
   dropping self-ranked lists for third-party ones
   ([ai-search.md](ai-search.md#how-ai-assistants-pick-sources-practitioner-observations)).
   Both are single observations on different engines; honest placement
-  satisfies both and the reader. Spend the effort on being named in other
-  people's lists.
+  satisfies both and the reader. A later report from the same circle (one
+  agency, no numbers) says self-ranking worked for six months to a year,
+  then declined, and that LLMs cite every tool on such a list except the
+  author's — more weight for the decision. Spend the effort on being named
+  in other people's lists.
+- **Every loophole has a timer.** Tactics that bend the truth — city pages
+  with only the name swapped, ranking yourself first — work until search
+  engines catch up, then fade (practitioners report both declining since
+  2023). Assume six to twelve months, and rewrite when the window closes.
+
 ### Cadence (practitioner)
 
 - **Hold a cadence.** Pick a publishing rate and keep it; a burst of 30 pages
-  then silence looks like generated content. Practitioners cap a new site at
-  roughly one page a day. The ranking effect of volatility itself is their
-  guess, not documented.
+  then silence looks like generated content. **A new domain: three or four
+  pages a week at most, each one a person would read, until Google starts
+  sending clicks on its own** — one consultant's own site took about a year.
+  **Decided:** the same source earlier put the cap at "roughly one page a
+  day"; its later, more specific number wins, and it fits a small team
+  better. The ranking effect of volatility itself is their guess, not
+  documented.
 
 ## Ads and interstitials
 - Ads must not become distracting or stop users from reading.
@@ -287,6 +311,16 @@ operationalise Google's guidance:
 `seo-audit/references/rankings-push.md`, `content-strategy`,
   `programmatic-seo`, `competitors`. Their keyword-in-URL, word-count,
   subfolder-authority and FAQ-schema claims are not adopted.
+- Nicholas Dulait (ChatSEO), "Claude is killing your SEO",
+  `https://x.com/nicholasdulait/status/2109909279452868684` (read
+  2026-10-19) — the two-question test, loophole timers, new-domain cadence, the trust floor.
+  Mostly Paul's and Antoine's experience; no numbers given.
+- Connor Showler, "The Complete Checklist for On-Page SEO",
+  `https://x.com/connorshowler/status/2111150132397818312` (read
+  2026-10-19). Mostly rejected: character limits, never-skip-heading-levels,
+  FAQ and HowTo schema, keywords in alt text and slugs, quarterly date
+  refreshes and stripping AI-image metadata all contradict Google's
+  documentation or this brain's decisions.
 - Rob Hoffman, "Best [product]" page structure,
   `https://x.com/RobHoffman_/status/2110083165306155141` (read 2026-10-14;
   agency post, one client case). Conversion-widget tips left out.

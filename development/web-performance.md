@@ -26,7 +26,9 @@ separate.
 ## What to check
 
 ### Images and fonts
-- Every image in WebP or AVIF, sized to how large it actually displays.
+- Every image in WebP or AVIF, sized to how large it actually displays,
+  with explicit `width` and `height` attributes so the layout doesn't jump
+  while it loads (CLS).
 - Lazy-load images and video below the fold; load the main image at the top
   of the page first.
 - One or two fonts, loaded the way the framework recommends.
@@ -87,5 +89,7 @@ Voxyz (@Voxyz_ai), "Claude Code tip: before you ship a vibe-coded site…",
 `https://x.com/voxyz_ai/status/2110083153930920113` (read 2026-10-14).
 Practitioner list, no measurements behind it; the items are standard
 practice. Thresholds from web.dev via [seo/overview.md](../seo/overview.md).
+Explicit image dimensions: Connor Showler,
+`https://x.com/connorshowler/status/2111150132397818312` (read 2026-10-19).
 
 Re-read when this file is more than a year old.

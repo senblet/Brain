@@ -27,6 +27,8 @@ entirely behind a login.
 - [ ] Sitemap generated from the site's own data, with honest `<lastmod>`
       (optional under ~500 well-linked pages).
 - [ ] `Organization` + `WebSite` structured data on the home page.
+- [ ] Trust floor: About page, legal notice or contact page linked from the
+      footer, author boxes with `Person` data on articles.
 - [ ] Mobile-friendly; no full-page interstitials.
 
 **At launch**

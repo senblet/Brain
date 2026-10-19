@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="1196" viewBox="0 0 880 1196" role="img" aria-label="Brain map: 23 files · 7 topics · 8 decisions where sources disagreed · next recheck 2027-04-05">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="1178" viewBox="0 0 880 1178" role="img" aria-label="Brain map: 23 files · 7 topics · 11 decisions where sources disagreed · next recheck 2027-04-05">
 <style>
     text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #1f2328; }
     .h1 { font-size: 22px; font-weight: 700; }
@@ -26,9 +26,9 @@
       a:hover .card { stroke: #4493f8; }
     }
 </style>
-<rect width="880" height="1196" rx="12" class="bg"/>
+<rect width="880" height="1178" rx="12" class="bg"/>
 <text x="24" y="44" class="h1">brain</text>
-<text x="94" y="44" class="muted">23 files · 7 topics · 8 decisions where sources disagreed · next recheck 2027-04-05</text>
+<text x="94" y="44" class="muted">23 files · 7 topics · 11 decisions where sources disagreed · next recheck 2027-04-05</text>
 <text x="24" y="90" class="topic">SEO</text>
 <a href="seo/ai-search.md"><g>
 <rect x="144" y="68" width="228" height="64" rx="8" class="card"/>
@@ -49,8 +49,8 @@
 <rect x="620" y="68" width="228" height="64" rx="8" class="card"/>
 <rect x="620" y="68" width="5" height="64" rx="2" class="s-fresh"/>
 <text x="636" y="90" class="name">content</text>
-<text x="836" y="90" class="badge" text-anchor="end">2 decided</text>
-<text x="636" y="108" class="small">22 cited · read 2026-09-22</text>
+<text x="836" y="90" class="badge" text-anchor="end">4 decided</text>
+<text x="636" y="108" class="small">24 cited · read 2026-09-22</text>
 <text x="636" y="123" class="small t-fresh">recheck by 2027-09-22</text>
 </g></a>
 <a href="seo/crawling-indexing.md"><g>
@@ -117,7 +117,7 @@
 <rect x="382" y="372" width="228" height="64" rx="8" class="card"/>
 <rect x="382" y="372" width="5" height="64" rx="2" class="s-fresh"/>
 <text x="398" y="394" class="name">research</text>
-<text x="398" y="412" class="small">13 cited · read 2026-10-15</text>
+<text x="398" y="412" class="small">14 cited · read 2026-10-15</text>
 <text x="398" y="427" class="small t-fresh">recheck by 2027-10-15</text>
 </g></a>
 <text x="24" y="476" class="topic">AI</text>
@@ -132,7 +132,8 @@
 <rect x="382" y="454" width="228" height="64" rx="8" class="card"/>
 <rect x="382" y="454" width="5" height="64" rx="2" class="s-fresh"/>
 <text x="398" y="476" class="name">agents</text>
-<text x="398" y="494" class="small">20 cited · read 2026-10-12</text>
+<text x="598" y="476" class="badge" text-anchor="end">1 decided</text>
+<text x="398" y="494" class="small">21 cited · read 2026-10-12</text>
 <text x="398" y="509" class="small t-fresh">recheck by 2027-04-12</text>
 </g></a>
 <a href="ai/evals.md"><g>
@@ -176,7 +177,7 @@
 <rect x="144" y="692" width="228" height="64" rx="8" class="card"/>
 <rect x="144" y="692" width="5" height="64" rx="2" class="s-fresh"/>
 <text x="160" y="714" class="name">agency</text>
-<text x="160" y="732" class="small">6 cited · read 2026-10-12</text>
+<text x="160" y="732" class="small">7 cited · read 2026-10-12</text>
 <text x="160" y="747" class="small t-fresh">recheck by 2027-10-12</text>
 </g></a>
 <a href="operations/product-process.md"><g>
@@ -199,28 +200,27 @@
 <rect x="144" y="856" width="228" height="64" rx="8" class="card"/>
 <rect x="144" y="856" width="5" height="64" rx="2" class="s-fresh"/>
 <text x="160" y="878" class="name">web-performance</text>
-<text x="160" y="896" class="small">1 cited · read 2026-10-14</text>
+<text x="160" y="896" class="small">2 cited · read 2026-10-14</text>
 <text x="160" y="911" class="small t-fresh">recheck by 2027-10-14</text>
 </g></a>
 <line x1="24" y1="944" x2="856" y2="944" class="rule"/>
 <text x="24" y="968" class="topic">Latest reads</text>
-<text x="144" y="968" class="small mono">2026-10-15</text>
-<text x="226" y="968" class="small">ai/agents · ai/evals · ai/skill-libraries · design/frontend · marketing/agents</text>
-<text x="226" y="986" class="small">marketing/content · marketing/conversion · marketing/outbound · marketing/research</text>
-<text x="226" y="1004" class="small">operations/agency · operations/product-process · product/growth · product/marketplaces</text>
-<text x="226" y="1022" class="small">product/strategy · seo/ai-search · seo/appearance · seo/content · seo/crawling-indexing</text>
-<text x="226" y="1040" class="small">seo/links · seo/local</text>
-<text x="144" y="1062" class="small mono">2026-10-14</text>
-<text x="226" y="1062" class="small">ai/agents · development/web-performance · marketing/outbound · seo/ai-search</text>
-<text x="226" y="1080" class="small">seo/appearance · seo/content · seo/local · seo/overview</text>
-<text x="144" y="1102" class="small mono">2026-10-12</text>
-<text x="226" y="1102" class="small">ai/agent-workflows · ai/agents · marketing/agents · marketing/content · marketing/outbound</text>
-<text x="226" y="1120" class="small">operations/agency · seo/ai-search · seo/content · seo/crawling-indexing · seo/links</text>
-<text x="226" y="1138" class="small">seo/local</text>
-<rect x="144" y="1163" width="10" height="10" rx="2" class="s-fresh"/>
-<text x="160" y="1172" class="small">fresh</text>
-<rect x="205.0" y="1163" width="10" height="10" rx="2" class="s-soon"/>
-<text x="221.0" y="1172" class="small">past half its recheck window</text>
-<rect x="399.4" y="1163" width="10" height="10" rx="2" class="s-due"/>
-<text x="415.4" y="1172" class="small">recheck due</text>
+<text x="144" y="968" class="small mono">2026-10-19</text>
+<text x="226" y="968" class="small">ai/agents · development/web-performance · marketing/research · operations/agency</text>
+<text x="226" y="986" class="small">seo/content</text>
+<text x="144" y="1008" class="small mono">2026-10-15</text>
+<text x="226" y="1008" class="small">ai/agents · ai/evals · ai/skill-libraries · design/frontend · marketing/agents</text>
+<text x="226" y="1026" class="small">marketing/content · marketing/conversion · marketing/outbound · marketing/research</text>
+<text x="226" y="1044" class="small">operations/agency · operations/product-process · product/growth · product/marketplaces</text>
+<text x="226" y="1062" class="small">product/strategy · seo/ai-search · seo/appearance · seo/content · seo/crawling-indexing</text>
+<text x="226" y="1080" class="small">seo/links · seo/local</text>
+<text x="144" y="1102" class="small mono">2026-10-14</text>
+<text x="226" y="1102" class="small">ai/agents · development/web-performance · marketing/outbound · seo/ai-search</text>
+<text x="226" y="1120" class="small">seo/appearance · seo/content · seo/local · seo/overview</text>
+<rect x="144" y="1145" width="10" height="10" rx="2" class="s-fresh"/>
+<text x="160" y="1154" class="small">fresh</text>
+<rect x="205.0" y="1145" width="10" height="10" rx="2" class="s-soon"/>
+<text x="221.0" y="1154" class="small">past half its recheck window</text>
+<rect x="399.4" y="1145" width="10" height="10" rx="2" class="s-due"/>
+<text x="415.4" y="1154" class="small">recheck due</text>
 </svg>

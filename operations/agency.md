@@ -91,6 +91,8 @@ Each is one task in the shape from [ai/agents.md](../ai/agents.md#writing-a-task
 | Sales call review | Sales call transcripts | 3 things to improve, tied to the moment, with what to say next time | Exactly 3; nothing about the prospect beyond the transcript |
 | Hourly rate & utilisation | 30 days of revenue by client, hours by person and client, available hours, targets | Effective rate per client (revenue ÷ hours), utilisation per person, flags below target, the maths on every row | Every client and person has a row or "not tracked"; never estimate hours |
 | Scope check | Contracted hours per client, hours logged, overage clause | Logged as % of contract; anyone 20%+ over flagged with the clause and what it would have billed | Every client checked or "not tracked" |
+| Budget pacing (ads clients) | Month-to-date spend per channel, monthly budgets, targets | Pace = spend ÷ (budget × day of month ÷ days in month); anything outside ±10% flagged with one proposed change (from, to, why) | Every client checked; no flags means no message; nothing changed until approved |
+| Weekly client report | This week and last from the ad platforms and the store | What happened (headline, numbers vs last week), why (daily trend, the ads behind it), what next (actions, client approvals marked) | Revenue and orders from the store, not the ad platforms; every other number names its source and dates |
 | Weekly ops review | Last week's tasks, hours, revisions, last contact date per client, targets | One page: shipped, at risk, clients not contacted in N days, numbers vs targets | One page; missing numbers stay "not tracked" |
 
 Call summaries are high-volume and simple; the audit is the heaviest job.
@@ -115,6 +117,10 @@ Call summaries are high-volume and simple; the audit is the heaviest job.
 shared via `https://x.com/chrissev/status/2110394539953606870` (read
 2026-10-15) — `interviewing-evaluating-candidates` (paid work trials; Karri
 Saarinen).
+
+undefinedKi, "How to build a one-person marketing agency with AI",
+`https://x.com/undefinedki/status/2111804964334883320` (read 2026-10-19;
+sponsored) — pacing and weekly-report jobs.
 
 Alex Vacca (Frontal), "The Exact Tech Stack For Running an AI-Native GTM
 Agency", `https://x.com/itsalexvacca/status/2110415145587581023` (read

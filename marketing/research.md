@@ -63,6 +63,10 @@ source attributes it.
   trial before using it publicly.
 - Save raw captures in dated folders and never overwrite them; one capture
   can't support "hasn't changed".
+- **Live ads are public:** the Meta Ad Library and Google Ads Transparency
+  Center show every ad a company is running — channels, angles, formats, and
+  how long the oldest have run (ads that run for months are usually
+  working). Use them before a pitch or a positioning decision.
 - **Competitors in three tiers:** same solution; different solution to the
   same problem; a conflicting approach or doing nothing (often the real
   alternative — a spreadsheet, a manual process).
@@ -95,5 +99,9 @@ source attributes it.
 `refoundai/lenny-skills` (MIT), `https://github.com/refoundai/lenny-skills`
 (read 2026-10-15): `customer-interviews`, `continuous-discovery` (Teresa
 Torres, Bob Moesta).
+
+undefinedKi, "How to build a one-person marketing agency with AI",
+`https://x.com/undefinedki/status/2111804964334883320` (read 2026-10-19) —
+public ad libraries for pitch research.
 
 Re-read when this file is more than a year old.

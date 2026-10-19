@@ -150,7 +150,7 @@ results somewhere the agent can read.
 
 - **Read-only to start.** Write access is earned, one tool at a time.
 - **Smallest permissions that do the job:** email draft-only, ads created
-  paused, budgets human.
+  paused, new budgets human.
 - **Approval inside the code:** the action waits on an approve button; a
   tool that can write or send is set to "needs approval".
 - **Plain code for exact rules:** spend caps, suppression lists, dedupe,
@@ -165,9 +165,25 @@ results somewhere the agent can read.
 
 - **A contract per agent:** sources, limits, what "done" means. An agent that
   reports "this source failed today" beats one that silently skips it.
-- **Agents never hit send, publish, price or pay.** A person reads every
-  output before it reaches a client — even a small error rate is too much
-  from the client's side.
+- **Who owns a task** — two questions: can it be undone, and does it need
+  judgement?
+
+  | | Routine | Judgement |
+  |---|---|---|
+  | **Reversible** | Agent alone (pulling data, drafts, audits, research) | Agent drafts options, a person chooses (which test, which angle) |
+  | **Irreversible** | Agent proposes, a person approves (new or large budget changes, sending a report) | Only a person (pricing, contracts, taking on or dropping a client) |
+
+- **Agents never send externally, publish, launch, price, or commit new
+  spend.** A person reads every output before it reaches a client — even a
+  small error rate is too much from the client's side.
+- **Autonomy grows on a record:** week one, drafts only; weeks two to four,
+  acts with approval; after that, small *reversible* changes inside limits
+  written in the project's rules (e.g. shifting budget between running
+  campaigns within ±10%). Anything irreversible stays behind approval for
+  good. **Decided:** this file earlier said agents never "pay" while its
+  scheduled-loop rule capped spend changes per run — the two disagreed. The
+  ramp resolves it: adjusting existing spend inside a written cap is allowed
+  after a record; new spend never is.
 - **Agents propose, people apply** for systems of record. An agent reads
   the CRM and posts the updates it wants; a person applies them. Same for
   launches and deletes: staged by the agent, approved by a person.
@@ -280,6 +296,10 @@ Work that runs on a schedule without anyone watching:
 - **MUST:** a documented kill switch; no raw personal data in its state or
   logs; spend changes capped per run (one source: ≤ 20%). Revenue or spend
   anomalies are flagged, never self-corrected.
+- **Report only exceptions.** No flags means no message; a person hears
+  only about what needs them.
+- Every run ends with one line in a log (date, target, result, note), so
+  the next run knows what happened; the output is a file, not a chat reply.
 - Delete loops whose output nobody acts on.
 
 ## Rollout and review
@@ -332,6 +352,11 @@ Voxyz (@Voxyz_ai), goal-loop template quoted in
 `https://x.com/voxyz_ai/status/2110083153930920113` (read 2026-10-14) —
 long-running goals. The post names a Claude Code `/goal` command; not
 verified here, so the pattern is written tool-neutral.
+
+undefinedKi, "How to build a one-person marketing agency with AI",
+`https://x.com/undefinedki/status/2111804964334883320` (read 2026-10-19;
+sponsored by an AI-employee product) — the ownership grid, the autonomy
+ramp, exceptions-only reporting, one log line per run.
 
 Alex Vacca (Frontal), "The Exact Tech Stack For Running an AI-Native GTM
 Agency", `https://x.com/itsalexvacca/status/2110415145587581023` (read

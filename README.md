@@ -32,7 +32,7 @@ Badges count the decisions a file records where sources disagreed.*
 | Product | [product/marketplaces.md](product/marketplaces.md) | Two-sided products: which side first, launch, fill rate and other metrics, take rates, leakage and trust |
 | Design | [design/frontend.md](design/frontend.md) | Public pages that look decided: process, copy on the page, type, colour, layout, imagery, motion, states, AI tells, critique |
 | Development | [development/web-performance.md](development/web-performance.md) | Web performance: how to measure, what to check, running it with agents |
-| AI | [ai/agents.md](ai/agents.md) | Working with agents: context file, tasks, classifying at volume, automation vs agent, guardrails, failure modes, coding with agents, writing skills, goals and loops, rollout |
+| AI | [ai/agents.md](ai/agents.md) | Working with agents: context file, tasks, classifying at volume, automation vs agent, who owns what, autonomy ramp, guardrails, failure modes, coding with agents, writing skills, goals and loops, rollout |
 | AI | [ai/evals.md](ai/evals.md) | Evaluating LLM features: error analysis, code checks and model judges, golden sets, shipping AI features |
 | AI | [ai/agent-workflows.md](ai/agent-workflows.md) | Multi-agent workflows: graph design, contracts, barriers vs pipelines, verification, convergence, cost |
 | AI | [ai/skill-libraries.md](ai/skill-libraries.md) | External skill repos read in full, and which of their skills to load |
