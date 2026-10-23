@@ -35,6 +35,8 @@ entirely behind a login.
 - [ ] Verify the site in Search Console and submit the sitemap.
 - [ ] Check key pages with URL Inspection and the Rich Results Test.
 - [ ] Performance pass — see the Performance section below.
+- [ ] Simulated first users walk landing → first success, fixes rerun to
+      prove them ([product/growth.md](../product/growth.md#before-launch-simulated-first-users)).
 
 **Content, if the site will publish pages for search**
 - [ ] First pages target commercial, specific queries; intent read off the

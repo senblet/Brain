@@ -28,7 +28,7 @@ Badges count the decisions a file records where sources disagreed.*
 | Marketing | [marketing/outbound.md](marketing/outbound.md) | Outbound as a system: law baseline, offer, ICP, signals, qualify before enriching, deliverability, the email, replies, weekly tests, first customers |
 | Marketing | [marketing/agents.md](marketing/agents.md) | Marketing agents: context additions, campaign measurement, which agents in what order, weekly loop |
 | Product | [product/strategy.md](product/strategy.md) | Validating ideas, product-market fit, retention benchmarks, pricing, north star |
-| Product | [product/growth.md](product/growth.md) | Activation, onboarding, upgrade prompts, lifecycle email and WhatsApp, cancellation and dunning, referrals |
+| Product | [product/growth.md](product/growth.md) | Activation, simulated first users before launch, onboarding, upgrade prompts, lifecycle email and WhatsApp, cancellation and dunning, referrals |
 | Product | [product/marketplaces.md](product/marketplaces.md) | Two-sided products: which side first, launch, fill rate and other metrics, take rates, leakage and trust |
 | Design | [design/frontend.md](design/frontend.md) | Public pages that look decided: process, copy on the page, type, colour, layout, imagery, motion, states, AI tells, critique |
 | Development | [development/web-performance.md](development/web-performance.md) | Web performance: how to measure, what to check, running it with agents |

@@ -45,6 +45,14 @@ pre-ship checklist are in [overview.md](overview.md).
   `Claude-User` (fetches a user asked for) and `ClaudeBot` (training);
   Perplexity uses `PerplexityBot` (search) and `Perplexity-User`, which
   generally ignores `robots.txt`. Decide each by purpose, as with OpenAI.
+- **DeepSeek** runs its own search index, open to developers since October
+  2026 through Search and Fetch APIs ($0.75 per 1,000 calls each). Its
+  documentation names no crawler, user agent or opt-out. One tester found
+  its Fetch API used a generic Firefox user agent with a Chinese
+  `Accept-Language`, came from Huawei Cloud (Hong Kong) addresses, didn't
+  run JavaScript, and returned pages that `robots.txt` disallowed — so
+  `robots.txt` can't be counted on to keep it out. Anything that must stay
+  private needs authentication, not a disallow line.
 - **Check the CDN and firewall too.** Many block AI crawlers by default,
   whatever `robots.txt` says.
 - **DON'T** add a blanket "block AI bots" robots.txt group. Blocking search
@@ -111,6 +119,15 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
   against — not one "visibility" number.
 - The ChatGPT API returns different sources than the web app, so a
   dashboard built on it measures something else.
+- **DeepSeek exposes its own scores.** Its Search API returns, per result,
+  an `authority` tier (0–4; 3 or more counts as highly authoritative) and a
+  `rerank_score` (0–3; 1.5 or more is high quality) — documented by
+  DeepSeek. A `site:yourdomain` query shows your tier cheaply. In one
+  tester's sample, authority was set **per host**, not per domain (a
+  subdomain scored differently), and user uploads on trusted hosts (spam
+  PDFs on a `.gov` site) inherited the top tier — so read the tier as a
+  property of where content sits, not of its quality. Pages without a
+  machine-readable date dropped out of date-filtered searches.
 
 ## Sources
 
@@ -129,6 +146,12 @@ Pew Research Center, "Google users are less likely to click on links when
 an AI summary appears in the results",
 `https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/`
 (read 2026-10-14).
+
+DeepSeek: `https://api-docs.deepseek.com/guides/search` (read
+2026-10-23); Suganthan Mohanadasan, "DeepSeek search API" tests,
+`https://suganthan.com/blog/deepseek-search-api/`, via
+`https://x.com/suganthan/status/2112111235818991962` (read 2026-10-23) —
+110 calls from one location; preliminary, his word.
 
 Practitioner observations: Nicholas Dulait (ChatSEO), "How to use Claude
 Opus 5.5 for SEO", Part 4,

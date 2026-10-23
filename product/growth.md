@@ -1,8 +1,8 @@
 # Product — activation and lifecycle
 
-What happens after signup: defining activation, onboarding, upgrade prompts,
-lifecycle email and messaging, cancellation and failed payments, and
-referrals. Signup forms and pages are in
+What happens after signup: defining activation, testing the first-use path
+before launch, onboarding, upgrade prompts, lifecycle email and messaging,
+cancellation and failed payments, and referrals. Signup forms and pages are in
 [marketing/conversion.md](../marketing/conversion.md); what to measure and
 how to test, there too.
 
@@ -26,6 +26,29 @@ cited data marked), and Meta's WhatsApp rules as reported by
   raise retention (method from Amplitude's documentation).
 - Benchmarks (Lenny's survey, 500+ responses): average activation 34%,
   median 25%; SaaS 36% / 30%.
+
+## Before launch: simulated first users
+
+Real users don't say why they left; simulated ones can show where they would
+have. Before a launch, or after a big change to the first-use path:
+
+- **Send several agent "first users" through the real app in a browser**,
+  each from the landing page to the first success (the activation event),
+  screenshotting every moment they get confused, stuck or annoyed. Personas
+  that cover different failures: the impatient one (skims, clicks the first
+  button, quits at the first error); the sceptic (reads pricing, terms and
+  privacy first); the mobile user (375 px, slow connection); the
+  non-native speaker (follows only what the interface literally says); the
+  breaker (junk in forms, back mid-flow, double clicks).
+- **Merge into one list ranked by how many personas hit each problem**,
+  fix, then **rerun the same personas** to prove the fixes — the rerun is
+  the verify gate.
+- Each persona runs in its own context; the merge only sees their reports
+  ([ai/agent-workflows.md](../ai/agent-workflows.md#topologies)).
+- This finds friction and bugs, not demand. It doesn't replace activation
+  and retention data from real users.
+- In this setup the pattern is packaged as the `launch-qa` skill
+  (personas, merge, fix, rerun).
 
 ## Onboarding
 
@@ -92,6 +115,10 @@ as reported from Meta's documentation, October 2026; re-verify:
   real customer, neutrally (platform policies).
 
 ## Sources
+
+Simulated first users: RoundtableSpace, launch-QA prompt,
+`https://x.com/roundtablespace/status/2111717667228770611` (read
+2026-10-23).
 
 `refoundai/lenny-skills` (MIT), `https://github.com/refoundai/lenny-skills`,
 shared via `https://x.com/chrissev/status/2110394539953606870` (read
