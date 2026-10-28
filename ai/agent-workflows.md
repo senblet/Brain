@@ -78,6 +78,11 @@ finding before it reaches the answer.
 - **Judge panel:** N attempts from different angles, scored by parallel
   judges; build on the winner and graft the best of the runners-up. Beats
   iterating one attempt when the solution space is wide.
+- **The judge is never weaker than the finder.** If the agent that
+  proposes is stronger than the one that kills, bad findings win: put the
+  strongest model on the skeptic, and keep the finder's output to numbers
+  and sources, no adjectives that soften the judge (a keyword-research team
+  that runs scout → reader → skeptic → librarian works this way).
 - **Completeness critic:** a last agent that asks what was missed (a source
   unread, a claim unverified); its answer is the next round of work.
 - The studio's `claude-code-loop` template applies the same idea to code: the
@@ -135,6 +140,10 @@ Fast-moving; recheck against the current docs.
   the next.
 
 ## Sources
+
+VengeonsP (ChatSEO), "How to Build an AI Keyword Research Team with
+Claude Code", `https://x.com/vengeonsp/status/2115055296351555784` (read
+2026-10-28) — the judge-strength rule.
 
 0xCodez, "Graph Engineering with Claude: 14-Step roadmap",
 `https://x.com/0xCodez/status/2079165300625330317` (published 2026-07-20,

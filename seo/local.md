@@ -74,7 +74,9 @@ once and never returned; completeness alone moves a profile.
   possible, representative of the core business; skip any category redundant
   with a more specific one chosen; don't add one per product or service.
   Categories come from Google's fixed list — never invent one.
-  *(practitioner)* The primary category is the most important field: pick the
+  *(practitioner)* A profile ranks for one or two main searches; the rest of
+  a city's searches are won by pages on the site, one per service.
+  The primary category is the most important field: pick the
   specific one for what you most want to be found for ("Divorce lawyer", not
   "Lawyer"; "Dermatologist", not "Medical clinic"). Practitioners push for
   several more; Google's wording wins — add one only when it is genuinely a
@@ -220,6 +222,10 @@ are regulated *(practitioner, check local rules)*:
 Google Business Profile Help: `https://support.google.com/business/answer/7091`
 (local ranking factors) · `.../answer/3038177` (guidelines for representing
 your business) · `.../answer/7249669` (categories) — read 2026-10-12.
+
+One-search-per-profile note: ChadSE0 (ChatSEO),
+`https://x.com/chadse0/status/2115054790002491723` (read
+2026-10-28).
 
 Practitioner method: BowTiedBills, "The Complete Guide To Using Claude In
 SEO", `https://x.com/BowTiedBills/status/2108032319114088824` (read

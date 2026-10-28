@@ -56,9 +56,13 @@ effect. **DON'T** = actively harmful. **Skip** = effort Google says is wasted.
   Google may choose differently.
 - Changes take hours to months to show. Wait **a few weeks** before judging an
   SEO change; iterate if needed. Not every change has a visible effect.
-  *(practitioner)* A dip right after a change is normal — give it up to ~2
-  months before reverting; a new domain takes roughly 6 months before
-  anything compounds.
+  *(practitioner)* **Judge a changed page at about 90 days, and don't edit
+  it again before then** — a second edit restarts the clock. A dip right
+  after a change is normal; don't revert in a panic. A new domain takes
+  roughly 6 months before anything compounds. **Decided:** earlier sources
+  said "up to ~2 months" and "leave pages edited in the last 60 days";
+  three later practitioners independently use 90 days, and the longer wait
+  costs nothing but patience.
 - The single biggest lever is **content people find compelling and useful**.
   Technical SEO removes obstacles; it does not create demand.
 
@@ -169,6 +173,16 @@ Violations can demote a page or remove a whole site. **MUST NOT:**
 
 ## Monitoring
 
+- *(practitioner)* **Audit the money pages first** — services, products,
+  booking. Can Google index them, is each aimed at one clear search, are
+  they in the sitemap, do internal links reach them? Ignore issues that
+  don't touch a money page. Most small sites get the technical basics right;
+  a deep technical audit in the first month is usually time taken from
+  pages and links. Large sites (hundreds of thousands of URLs) are the
+  exception.
+- *(practitioner)* An **average position** in Search Console means something
+  only when filtered to one page **and** one query; across a pattern or a
+  site it's a direction, not a place.
 - **Search Console:** verify ownership, check the Page Indexing report, submit
   the sitemap, watch the Performance report (queries, pages, countries). Use
   URL Inspection per page (live test, rendered HTML, request indexing).
@@ -217,6 +231,13 @@ Google Search Central, `https://developers.google.com/search/docs/`:
 `appearance/ranking-systems-guide` · `appearance/ai-features` ·
 `monitor-debug/search-console-start` (read 2026-09-22; `ai-features` read
 2026-10-05).
+
+Practitioner monitoring rules (money-page audits, average position, the
+90-day wait): ChadSE0 (ChatSEO), "Build a Profitable One-Person SEO Agency
+with AI", `https://x.com/chadse0/status/2115054790002491723`; VengeonsP
+(ChatSEO), "How to Build an AI Keyword
+Research Team with Claude Code",
+`https://x.com/vengeonsp/status/2115055296351555784` (both read 2026-10-28).
 
 web.dev, Core Web Vitals thresholds: `https://web.dev/articles/vitals`
 (read 2026-10-14).

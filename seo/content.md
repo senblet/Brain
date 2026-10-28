@@ -88,7 +88,10 @@ substantial changes**; adding or deleting content in bulk to seem "fresh"
     updating the sitemap. Put "update the sitemap and request indexing" in
     the process file the agent reads before every publish.
   - Deletes, redirects, `robots.txt` and canonical changes go through a
-    human, or are blocked in code.
+    human, or are blocked in code — and so does the **first page of a new
+    page type**, which becomes the template for the rest.
+  - *(practitioner)* After publishing, open the live URL and confirm the
+    change actually appeared.
 - E-commerce: AI images need IPTC `DigitalSourceType` =
   `TrainedAlgorithmicMedia`; AI product titles/descriptions must be labelled as
   AI-generated (Merchant Center policy). **Decided:** DON'T strip metadata
@@ -140,9 +143,13 @@ applies to the three sections after it.
 - **Cannibalisation check before writing.** Search Console → Performance →
   filter on the exact query → Pages tab. A page already gets clicks: improve
   it. Impressions but few clicks: it is in the top 10, improve it. Nothing:
-  create the page. Two pages on one query split the clicks and both lose.
-  Fix an existing pair by choosing one owner page, merging the useful parts
-  of the other into it, and `301`ing the other.
+  create the page. Two pages compete only when they share the same intent
+  **and** the same angle — then they split the clicks and both lose. Fix
+  such a pair by choosing one owner page, merging the useful parts of the
+  other into it, and `301`ing the other. **Decided:** one practitioner calls
+  cannibalisation "mostly a myth"; his own example (three phrasings of one
+  need → one page) is the rule above. Several pages on *different* angles
+  of a topic are fine and build authority on it.
 - **Information-gain test:** write one sentence on what the piece adds that
   none of the top results have. If you can't, don't write it. Then two
   questions: if you landed here from Google, would you read it? Is it more
@@ -160,21 +167,48 @@ applies to the three sections after it.
   the practical form of Google's "original information" self-check above.
   An agent drafting the page marks every fact it couldn't verify `[CHECK]`;
   a person clears every one before publishing.
-- **Skip results pages you can't win yet.** If the top 10 are all big
-  brands, mark the keyword "later" and pick one where sites your size
-  rank.
+- **Skip results pages you can't win yet.** Read page one — the top 10,
+  never more; results 11–30 add noise. If they are all big brands, mark the
+  keyword "later" and pick one where sites your size rank.
+  - **The title test:** does any page-one title contain the exact search?
+    If none does, that's an opening; if every one does, the fight is
+    between pages that did their homework, and you need more authority.
+  - **Authority caps the fight** *(practitioner bands, using a vendor
+    authority score)*: under ~20, long and neighbourhood searches; ~20–40,
+    service + city and mid-tail; above ~40, head terms. Under ~50 referring
+    domains almost nothing competitive is in reach — pick the right battles
+    while earning a few real links. Date the score; a "later" keyword can
+    become winnable months on.
+- **Priority = business value × demand × reachability**, never volume
+  alone. Every volume is an estimate, even from tools: use it to compare
+  keywords inside a pattern, never as a traffic promise. The real number is
+  the impressions you get once in the top 3.
+- **Verdicts, not lists.** Every candidate leaves research as **win now**
+  (it sells what you sell, and page one has a site no stronger than yours,
+  or you already sit at 5–20 with impressions), **later** (with a date to
+  look again) or **kill** (no buyer, or another page of yours already has
+  the intent — then improve that page), each with one line of reason. The
+  agent that finds keywords is never the one that judges them, and only a
+  person turns "later" into "win now".
+- **Keep a ledger** (`keywords.md`): date, pattern, keyword, verdict,
+  reason, page, and the position at +90 days with WORKED or FAILED. Never
+  delete a line. Research reads it first, so dead keywords aren't proposed
+  again; after a few months its top lines are what works on *this* site.
 ### Improving existing pages (practitioner)
 
 - **Fix existing pages before publishing more**, in this order:
   1. **Repoint** pages to the queries Google already shows them for (Search
      Console, Pages → Queries). Rewrite the H1, meta description and first
      100 words around that query, then check the body actually answers it.
-     Works for pages at positions ~5–15 (sources say 5 or 8 as the lower
-     bound), where Google already finds the page relevant. At positions 1–3
-     with falling clicks, an AI Overview is probably answering above you and
-     a rewrite won't help. Leave any page edited in the last ~60 days alone
-     — Google hasn't re-read it yet. A weekly check of the three pages with
-     the most impressions in that band is enough.
+     Works for pages at positions ~5–20 with impressions (sources put the
+     band at 5–15, 8–15 and 5–20), where Google already finds the page
+     relevant — many impressions on one query for one page is the strongest
+     quick win there is. At positions 1–3 with falling clicks, an AI
+     Overview is probably answering above you and a rewrite won't help.
+     Leave any page edited in the last ~90 days alone
+     ([overview.md](overview.md#ground-truth)). A weekly check of the three
+     pages with the most impressions in that band is enough. Compare
+     seasonal periods before calling a drop new.
   2. **Regroup** into topic clusters with a hub page and in-body links
      between members. Slow; compounds.
   3. **Prune on quality, never on count.** Delete or merge pages that have
@@ -250,8 +284,9 @@ applies to the three sections after it.
   sending clicks on its own** — one consultant's own site took about a year.
   **Decided:** the same source earlier put the cap at "roughly one page a
   day"; its later, more specific number wins, and it fits a small team
-  better. The ranking effect of volatility itself is their guess, not
-  documented.
+  better. One page a day stays the ceiling even for established sites (two
+  more practitioners). The ranking effect of volatility itself is their
+  guess, not documented.
 
 ## Ads and interstitials
 - Ads must not become distracting or stop users from reading.
@@ -313,7 +348,8 @@ operationalise Google's guidance:
   subfolder-authority and FAQ-schema claims are not adopted.
 - Nicholas Dulait (ChatSEO), "Claude is killing your SEO",
   `https://x.com/nicholasdulait/status/2109909279452868684` (read
-  2026-10-19) — the two-question test, loophole timers, new-domain cadence, the trust floor.
+  2026-10-19) — the two-question test, loophole timers, new-domain cadence, the
+  trust floor.
   Mostly Paul's and Antoine's experience; no numbers given.
 - Connor Showler, "The Complete Checklist for On-Page SEO",
   `https://x.com/connorshowler/status/2111150132397818312` (read
@@ -321,6 +357,19 @@ operationalise Google's guidance:
   FAQ and HowTo schema, keywords in alt text and slugs, quarterly date
   refreshes and stripping AI-image metadata all contradict Google's
   documentation or this brain's decisions.
+- ChadSE0 (ChatSEO), "Build a Profitable One-Person SEO Agency with AI",
+  `https://x.com/chadse0/status/2115054790002491723`, and VengeonsP (ChatSEO),
+  "How to Build an AI
+  Keyword Research Team with Claude Code",
+  `https://x.com/vengeonsp/status/2115055296351555784` (read
+  2026-10-28) — title test, authority bands, verdicts and ledger, priority
+  formula, cannibalisation by intent and angle, the 5–20 band. Both
+  promote ChatSEO; the "spam update of March 2026" claim is theirs and
+  unverified.
+- Borja (Distribb), "SEO MAXXING with Claude",
+  `https://x.com/borjafat/status/2115050945746739607` (read 2026-10-28) —
+  seasonal comparison, live-URL check;
+  the rest of its 197 tactics repeats this folder.
 - Rob Hoffman, "Best [product]" page structure,
   `https://x.com/RobHoffman_/status/2110083165306155141` (read 2026-10-14;
   agency post, one client case). Conversion-widget tips left out.

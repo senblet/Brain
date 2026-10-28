@@ -86,7 +86,8 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
   dated the day it is written.
 - So the lever is being **named in the pages the engines already cite**
   — at the time of writing: third-party "best of" lists, comparison pages,
-  review platforms, Reddit threads. A list on your own site with yourself first has been observed to
+  review platforms, Reddit threads. A list on your own site with yourself first
+  has been observed to
   stop being cited; a ranking on someone else's site counts more.
 - **Sources rotate** — one prompt draws on tens of sources over time, a
   different subset each month. A citation is a rotation you stay in, not a
@@ -119,6 +120,17 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
   against — not one "visibility" number.
 - The ChatGPT API returns different sources than the web app, so a
   dashboard built on it measures something else.
+- **The sources cited for competitors are your target list:** for each
+  answer that names a competitor and not you, note the cited pages; those
+  are the sites to be on. Keep the results in a dated log.
+- **DON'T read Google's Vertex AI Search docs as AI Mode's ranking
+  manual.** **Decided:** a widely shared post claims Google "leaked" how AI
+  search ranks because its enterprise Vertex AI Search (Discovery Engine)
+  documents signals and 500-token chunking. That is a product for
+  customers' own sites; Google documents no extra requirements for AI
+  Overviews or AI Mode, and the advice drawn from it (clear headings,
+  direct answers early) is already here. The post sells FAQ-schema and
+  backlink packages; neither is adopted.
 - **DeepSeek exposes its own scores.** Its Search API returns, per result,
   an `authority` tier (0–4; 3 or more counts as highly authoritative) and a
   `rerank_score` (0–3; 1.5 or more is high quality) — documented by
@@ -152,6 +164,13 @@ DeepSeek: `https://api-docs.deepseek.com/guides/search` (read
 `https://suganthan.com/blog/deepseek-search-api/`, via
 `https://x.com/suganthan/status/2112111235818991962` (read 2026-10-23) —
 110 calls from one location; preliminary, his word.
+
+Competitor-citation targets: ChadSE0 (ChatSEO),
+`https://x.com/chadse0/status/2115054790002491723` (read 2026-10-28). The Vertex
+AI Search claim: Alex
+Groberman (SEO Stuff), `https://x.com/alexgroberman/status/2012536184023462013`
+(read 2026-10-28), citing Metehan
+Yesilyurt's analysis; rejected as above.
 
 Practitioner observations: Nicholas Dulait (ChatSEO), "How to use Claude
 Opus 5.5 for SEO", Part 4,

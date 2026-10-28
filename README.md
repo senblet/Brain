@@ -36,7 +36,7 @@ Badges count the decisions a file records where sources disagreed.*
 | AI | [ai/evals.md](ai/evals.md) | Evaluating LLM features: error analysis, code checks and model judges, golden sets, shipping AI features |
 | AI | [ai/agent-workflows.md](ai/agent-workflows.md) | Multi-agent workflows: graph design, contracts, barriers vs pipelines, verification, convergence, cost |
 | AI | [ai/skill-libraries.md](ai/skill-libraries.md) | External skill repos read in full, and which of their skills to load |
-| Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: one folder per client, the ten jobs on real records, audit lens, hiring |
+| Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: niche, offer and proof, one folder per client, the ten jobs on real records, audit lens, hiring |
 | Operations | [operations/product-process.md](operations/product-process.md) | Specs, scope and time budgets, prototypes, decisions, writing so others can act |
 | Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project: SEO, performance, design, product, measurement, AI features, agents, brand |
 

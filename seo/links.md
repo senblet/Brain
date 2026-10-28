@@ -59,7 +59,9 @@ matter, judged over months.
 - **Give before asking:** a correction sheet for their page (old sentence,
   what changed, source, replacement sentence in their voice), reshot
   screenshots for an outdated tutorial, a diagram of a process they
-  describe in text. Send it without a link request. **Every claim on it MUST
+  describe in text, a short video demo for one section of their guide (ask
+  first, then send it with the credit wording ready). Send it without a link
+  request. **Every claim on it MUST
   be verified** — one wrong "correction" ends the relationship, and an agent
   will confidently write one it never checked.
 - Pace outreach: a handful a day, from a separate sending domain, with one
@@ -70,7 +72,23 @@ tool (cloned in a week) beats an infographic. Profiles on authority domains
 (one review platform, Reddit, YouTube, LinkedIn articles) rank where your
 site can't. A statistics roundup on your topic earned backlinks well out of
 proportion in one vendor study (Foundation Inc., 2026, B2B SaaS); pair your
-own research with one.
+own research with one. Make research citable: explain the sample and
+method, write each finding as a complete sentence someone can quote, and
+keep the URL stable when the numbers change.
+
+**Answer journalist requests** (query services such as Qwoted): lead with a
+direct answer, add an original number or first-hand example, link the
+research page so the reporter can check it; log requests so nobody is
+pitched twice.
+
+**Publishing on platforms that rank** (LinkedIn articles, Medium, YouTube,
+Reddit): fine when it is your own editorial work under your name, adapted
+to the platform, answering the question in the opening. **Decided:**
+practitioners call this "parasite SEO"; Google's site reputation abuse
+policy targets content placed on a host *mainly to borrow its ranking
+signals*, and excludes user-generated content and editorial work. So: your
+own articles and answers, yes; paid placements in unrelated sections of
+someone else's site, no.
 
 **Directories:** judge by real traffic, not authority scores. Verify a
 listing's link by inspecting the actual `<a>` and its `rel` (there is no
@@ -85,6 +103,18 @@ you include them if they had nothing to offer back?
 on both sides; a compliant one carries `sponsored`/`nofollow` and passes
 nothing. "€7 placements for AI citations" and "safe dofollow" are the same
 violation with a nicer name.
+
+**Compare pages, not domains.** For a target search, count referring
+domains to the top three *pages* — often a dozen even when their domains
+have thousands — and where those links come from (local press,
+directories, suppliers, associations). List real sites that link to one of
+the top three and not to you, free ones first. Stay inside the range they
+show: never more links or more exact-match anchors than they have.
+
+**Skip disavow files and "toxic link" cleaning.** Google says most sites
+never need to disavow: use it only with a considerable number of spammy
+links that have caused, or will likely cause, a manual action; otherwise it
+assesses links on its own.
 
 **Anchor footprint** (practitioner observation): from other sites, anchors
 are mostly the brand, the URL or plain words ("this study"). Exact-match
@@ -103,6 +133,20 @@ Earning links (practitioner, read 2026-10-12 — vendor-affiliated):
   `https://x.com/nicholasdulait/status/2108212094214529135`.
 - Borja (Distribb), "My Chief of SEO Backlinks",
   `https://x.com/borjafat/status/2106860317481525608`.
+
+Disavow: Google Search Console Help,
+`https://support.google.com/webmasters/answer/2648487`;
+site reputation abuse and link exchanges:
+`https://developers.google.com/search/docs/essentials/spam-policies` (both
+read 2026-10-28).
+
+Page-level link comparison: ChadSE0 (ChatSEO),
+`https://x.com/chadse0/status/2115054790002491723` (read 2026-10-28). Citable
+research, journalist requests,
+video give-first, platforms: Borja (Distribb), "SEO MAXXING with Claude",
+`https://x.com/borjafat/status/2115050945746739607` (read 2026-10-28); its
+link-exchange network is not adopted
+(Google lists excessive link exchanges as link spam).
 
 Directories and roundups: `coreyhaines31/marketingskills` (MIT),
 `https://github.com/coreyhaines31/marketingskills`, shared via

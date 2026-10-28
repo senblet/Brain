@@ -1,7 +1,8 @@
 # Operations — running a studio with AI
 
-How a small agency or studio uses AI to run delivery and finances the same
-way every week: one folder per client, single-job tasks that read records
+How a small agency or studio picks what it sells and to whom, and uses AI
+to run delivery and finances the same way every week: niche, offer and
+proof, one folder per client, single-job tasks that read records
 you already keep, a person who checks every output, and hiring by paid
 trial. Specs, scope and decisions are in
 [product-process.md](product-process.md). The setup — context file, task
@@ -9,8 +10,9 @@ shape, guardrails, rollout — is in [ai/agents.md](../ai/agents.md); this
 file adds what is specific to studio operations.
 
 **Tags:** as in the [README](../README.md#how-notes-are-written).
-Practitioner sources (an agency-operations consultant, a GTM agency,
-`lenny-skills`), read 2026-10-12 to 2026-10-15; their client figures are
+Practitioner sources (an agency-operations consultant, a GTM agency, an
+SEO freelancer turned tool-maker, `lenny-skills`), read 2026-10-12 to
+2026-10-28; their client figures are
 anecdotes and are left out.
 
 ---
@@ -25,6 +27,41 @@ anecdotes and are left out.
   the work last; the records usually point upstream (brief, onboarding).
 - **Arithmetic, not impressions.** Margin "felt" on a retainer and margin
   computed from logged hours routinely disagree by a lot.
+
+## Niche, offer and proof
+
+The agents do the hours; what a small studio sells is judgement, and
+judgement sharpens only inside one niche *(practitioner)*.
+
+- **One niche.** A good one earns a lot per customer, has people searching
+  for it every day with buying intent, and repeats across many cities or
+  segments. Check three things: is there demand you can see (a map pack,
+  searches), are others paying for ads on it, and do specialist agencies
+  already sell to it? All three means people already pay for this. The
+  tenth client in a niche is far easier than the first; a client outside it
+  starts from zero. **Say no** to off-niche work and refer it on — keep a
+  short list of people you trust for that.
+- **One offer, one sentence in the client's words**, about their world
+  ("I get your practice into the map pack for the treatments that pay
+  most"), not yours ("SEO services"). Around it: what you do, in their
+  words; a setup fee for the first month plus a monthly fee; and how you
+  will both know it works — calls, bookings, sales, never "rankings".
+- **Price on the client's maths**, not your hours: what one extra customer
+  is worth to them. Never per article or per hour — the client starts
+  counting articles. The setup fee also filters out clients who were never
+  going to stay.
+- **Proof before selling:** rank a page on a site you own, or do the job
+  for one client free and measure it. Screenshot everything from day one
+  (before and after); show only real data — in a niche, people talk, and
+  one faked screenshot ends you.
+- **Sell where the niche already talks** (its forums, groups, suppliers,
+  events): help first, then short messages with something useful about
+  *their* business, then referrals. Ten real conversations a week, not ten
+  thousand emails
+  ([marketing/outbound.md](../marketing/outbound.md#first-customers)).
+- **Promise time honestly.** A page needs about three months after a real
+  change ([seo/overview.md](../seo/overview.md#ground-truth)); "page one in
+  30 days" closes deals and loses clients in month two.
 
 ## Context file additions
 
@@ -92,7 +129,7 @@ Each is one task in the shape from [ai/agents.md](../ai/agents.md#writing-a-task
 | Hourly rate & utilisation | 30 days of revenue by client, hours by person and client, available hours, targets | Effective rate per client (revenue ÷ hours), utilisation per person, flags below target, the maths on every row | Every client and person has a row or "not tracked"; never estimate hours |
 | Scope check | Contracted hours per client, hours logged, overage clause | Logged as % of contract; anyone 20%+ over flagged with the clause and what it would have billed | Every client checked or "not tracked" |
 | Budget pacing (ads clients) | Month-to-date spend per channel, monthly budgets, targets | Pace = spend ÷ (budget × day of month ÷ days in month); anything outside ±10% flagged with one proposed change (from, to, why) | Every client checked; no flags means no message; nothing changed until approved |
-| Weekly client report | This week and last from the ad platforms and the store | What happened (headline, numbers vs last week), why (daily trend, the ads behind it), what next (actions, client approvals marked) | Revenue and orders from the store, not the ad platforms; every other number names its source and dates |
+| Weekly client report | This week and last from the ad platforms and the store | What happened (headline, numbers vs last week), why (daily trend, the ads behind it), what next (actions, client approvals marked); five lines on the first screen, results the client cares about (calls, bookings, sales) first, rankings last; a number that went down is said first, with why | Revenue and orders from the store, not the ad platforms; every other number names its source and dates |
 | Weekly ops review | Last week's tasks, hours, revisions, last contact date per client, targets | One page: shipped, at risk, clients not contacted in N days, numbers vs targets | One page; missing numbers stay "not tracked" |
 
 Call summaries are high-volume and simple; the audit is the heaviest job.
@@ -112,6 +149,12 @@ Call summaries are high-volume and simple; the audit is the heaviest job.
   per the source.)
 
 ## Sources
+
+ChadSE0 (ChatSEO), "Build a Profitable One-Person SEO Agency with AI
+(Complete 2026 Masterclass)", `https://x.com/chadse0/status/2115054790002491723`
+(read 2026-10-28) — niche,
+offer, pricing, proof, selling, report format. Promotes ChatSEO; the
+founder anecdotes are left out.
 
 `refoundai/lenny-skills` (MIT), `https://github.com/refoundai/lenny-skills`,
 shared via `https://x.com/chrissev/status/2110394539953606870` (read
