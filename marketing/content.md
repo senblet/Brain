@@ -19,7 +19,13 @@ brain.
 
 A brand needs market fit the way a product does: a specific audience
 instantly understands what you stand for, wants more of it, and can't easily
-get it elsewhere. Most brands stand next to fifty similar competitors and
+get it elsewhere. A brand is **future demand**: most of your audience isn't
+buying this month, and the brand decides whom they think of when they are.
+Direct-response work captures current demand; both are needed, and only
+the second is easy to measure. A brand also moves the business maths —
+more reach and warmer leads lower acquisition cost; trust raises what
+customers pay and how long they stay. Most brands stand next to fifty similar
+competitors and
 wonder why nobody notices. Before any content, SHOULD answer in writing:
 
 - **What do we stand for?** The idea, belief or promise the brand is built on.
@@ -30,6 +36,9 @@ wonder why nobody notices. Before any content, SHOULD answer in writing:
   ("I learn something every time"), early, belonging, confident, inspired,
   rebellious.
 - **How do they like to consume content** (format, platform, length)?
+- **What must we be associated with**, so that when they have the problem
+  they think of us first? A brand teaches those associations on purpose;
+  without that, the audience makes them for you.
 
 Then:
 
@@ -48,8 +57,17 @@ Then:
   practitioners' but comes from mass-market brands with ad budgets; a
   three-person studio with niche products grows by being the obvious choice
   for one kind of buyer. Revisit if a product reaches a mass market.
+- **Narrow on the buyer and the transformation, not on the topic.**
+  **Decided:** one copywriter argues against "niching" — talk about anything
+  that helps the audience get from where they are to where they want to be.
+  That fits the narrow rule: the *who* and the *outcome* stay narrow; the
+  topics can range across everything on the way there, and the pillars sit
+  inside that path.
 - **Make the audience the hero.** Every piece answers: what does the reader
-  get for their attention?
+  get for their attention? Content earns influence three ways *(practitioner
+  framework)*: showing you can do what they want (skill, results, network),
+  giving step-by-step directions that work — trust is belief with evidence —
+  and showing you share their beliefs and values.
 - **Same story everywhere.** Format changes per channel; the story, the
   product's use and the feeling don't.
 - **Names:** suggestive beats descriptive — a descriptive name boxes you in
@@ -146,6 +164,66 @@ The single home for copy tells — page, email, ad and post copy all use it.
 - **Posts:** no one-sentence-per-line "broetry", no engagement bait ("Agree?",
   "Let that sink in"), no emoji bullets.
 
+### Thinking before writing
+
+Copy is the thinking, then the words *(practitioner method)*. Before any
+page, post or ad, answer six questions:
+
+1. **People** — exactly who. The same product needs a different message for
+   each kind of buyer (a first-time runner fears not finishing; a runner
+   over 40 fears injury). Map their daily reality, frustrations, fears and
+   goals, in their own words from calls and reviews; don't start writing
+   until there is almost too much to say.
+2. **Positioning** — why you over anyone else. Often a fact everyone in the
+   category has and nobody says; the first to say it owns it. AI won't find
+   these; you have to look.
+3. **Promise** — the outcome, not the feature. Ask "so what?" until the
+   answer is about who the customer becomes.
+4. **Proof** — what you could *point at* if you couldn't speak: logos, a
+   number, "400 clients, 11 years". Client results beat your own; proof
+   from people like the reader beats proof from anyone else.
+5. **Priority** — why now. Cost of staying put works best; scarcity and
+   deadlines only when real ([conversion.md](conversion.md#pricing-pages)).
+6. **Process** — how it works: the mechanism. "Most people believe X; it's
+   wrong because Y; the answer is Z."
+
+**Where the reader is** sets the language. Awareness runs unaware →
+problem-aware → solution-aware → product-aware → most aware: name the
+problem for the first, explain options for the next, show why yours is
+different, then just make the offer. **How crowded the market is** sets the
+claim: first in the market, state it; others copied it, make it bigger;
+claims worn out, introduce a mechanism; mechanism copied, improve it; nobody
+believes claims any more, lead with identity and a person. To find the
+stage, read 20 competitor ads in the public ad libraries and write down
+each claim; if they all say the same thing, you need a mechanism.
+
+A buyer needs three beliefs before buying: that the method works, that
+*they* can do it, and that it will work in their real life. Turn every
+unaddressed belief into an angle.
+
+### Writing it
+
+- **Clear, concise, concrete, conversational, with cadence.** Remove what's
+  unclear rather than adding explanation ("There's a fire downstairs. Open
+  the window."). Treat every word as costing money. Make it something the
+  reader can picture ("from 14 leads a month to 70", not "we help businesses
+  grow"). Write how the reader talks. Vary sentence length; read it aloud
+  and rewrite where you stumble.
+- **The hook carries most of the result.** It works when it promises a
+  benefit, applies to many readers, gives a reason to listen to you, and
+  looks easy to read and act on. **Describe a moment, not a category**:
+  "Do you turn the brightness down when you open your bank app?" beats "Are
+  you broke?" Before shipping a hook: is it a callout or an open loop? Would
+  the client say it aloud to a friend? Would a stranger with no context
+  understand it? Is it free of insider words? Can you picture it?
+- **Body:** what → why → how for teaching; "but … therefore …" for stories
+  (tension, not "and then … and then").
+- **One call to action:** who it's for, what to do, by when, how. Several
+  options lower the chance of any.
+- **Tell the truth.** Change reality until the claim is true; never stretch
+  the claim. Admitting a real weakness ("I can't dance; I can write") makes
+  the strength believable.
+
 ## Funnel and pillars
 
 Every piece of organic content has **one job**: reach new people, build
@@ -191,8 +269,13 @@ trust, or convert.
 - **X specifically:** its ranking (published code) scores replies, shares by
   DM, follows and profile clicks separately and subtracts predicted mutes and
   blocks — write for those; space original posts apart (reported).
-- **Repurpose.** Study what worked and repackage it across formats and
-  platforms instead of starting every piece from zero.
+- **Repurpose from a hall of fame.** Save every post that beats your
+  average (title, link, date, reposted yet?). Then, *(practitioner)*:
+  **repost** winners after about 90 days — most of the audience never saw
+  them; **repurpose** the idea for each platform, reformatted, not pasted;
+  **remix** it — the same idea in a new form, or the same form with a new
+  idea. Text-only platforms test the *idea* cleanly, with no visual to
+  confound the result.
 
 ## Community
 
@@ -243,7 +326,17 @@ An audience follows you; a community belongs to something. To build one:
   the concept (one practitioner's threshold, from Poisson arithmetic — 2×
   misses about one good ad in eight). Keep ~20% of budget for tests.
 - DON'T edit a running ad — it resets learning; launch a new one beside it.
-  Raise budgets by at most ~20% every few days.
+  Raise budgets by at most ~20% every few days, and don't rebuild campaigns
+  often — give delivery time to learn.
+- **Optimise for lifetime gross profit, not cost per lead.** In one
+  practitioner's test, the cheap-lead campaign brought buyers worth about a
+  tenth of the dearer one (their numbers).
+- **Build variations from parts:** one ad = a title, about five hooks, one
+  body, a few calls to action, combined; double down on the branch that
+  works. Plan enough distinct variations that creative doesn't tire as
+  spend grows. On broad targeting, **the copy does the targeting** — say who
+  it's for and the platform finds them *(practitioner; the platform's
+  mechanics are not documented here)*.
 - AI actors are fine for testing scripts; pay a real person to run the
   winner — it performs better and keeps platform labelling rules simple.
 - **UGC creators:** pick by views ÷ followers on recent videos, not by
@@ -290,6 +383,14 @@ Agency", `https://x.com/itsalexvacca/status/2110415145587581023` (read
 Greg Isenberg, "Marketing Engineers: 100x More Experiments with AI agents",
 `https://x.com/gregisenberg/status/2108188646973313195` (read 2026-10-12) —
 channels and testing creative.
+
+Jay Yang, "The 2027 Marketing Playbook",
+`https://x.com/jayyanginspires/status/2116534636188729593` (read 2026-11-04) —
+future demand, associations, the six questions, awareness and market
+stages, beliefs, writing rules, hooks, the hall of fame, ad structure and
+lifetime gross profit. Sells a content agency; his claim that Meta wants
+"50 conversions in 14 days" to stop learning could not be checked against
+Meta's documentation and is left out.
 
 `coreyhaines31/marketingskills` (MIT),
 `https://github.com/coreyhaines31/marketingskills`, shared via

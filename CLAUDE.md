@@ -6,8 +6,11 @@ links; your job is to fold what's worth keeping into the right file. Read
 
 ## Ingesting a new source
 
-1. **Read the whole source.** Skip filler, opinion without evidence, and
-   anything already covered. A social post earns a place only if it adds a
+1. **Read the whole source.** For X posts and articles, `python3
+   read_post.py <url> …` prints everything, embedded blocks included;
+   images are listed as URLs to open. Skip filler, opinion without
+   evidence, and anything already covered. A social post earns a place only if
+   it adds a
    rule no file has, or points to a repo or primary source; if it mostly
    repeats the brain, say so and stop — the brain grows by decisions, not
    by volume.

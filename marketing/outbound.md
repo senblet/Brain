@@ -67,6 +67,11 @@ offer makes yes easy. Three that work *(practitioner)*:
 - **A guarantee** that removes the risk (e.g. another month free if the
   agreed number isn't met).
 
+An offer has three levers — **speed** (how fast the result comes), **ease**
+(how little the buyer has to do) and **risk** (how sure they can be it
+works). Improve the weakest one first; copy can only communicate the value
+the offer already has.
+
 One agency changed only the offer — from "a call to discuss AI automation"
 to "a free automation built for your business, demoed on the first call" —
 and went from almost nothing to booked calls with the same list and copy
@@ -290,7 +295,8 @@ verified first" — see
 - *(practitioner)* A short qualifying phone call before booking — fit,
   objections — raises the share of booked calls that close.
 - An agent may draft replies from the company's context; a human approves
-  every send ([ai/agents.md](../ai/agents.md#guardrails-live-in-the-tools-not-the-prompt)).
+  every send
+  ([ai/agents.md](../ai/agents.md#guardrails-live-in-the-tools-not-the-prompt)).
   **Decided:** some agencies let agents send low-tier first touches alone
   within caps; rejected here — one wrong email to a stranger costs more
   than the minutes saved, and the review queue is where the next angle is
@@ -345,6 +351,8 @@ this; they don't replace that judgement.
   — ICP from closed deals, market mapping, pain segments, suppression,
   verification, the gift email, reply routing, weekly tests. Sells the
   service; vendor names left out.
+- Jay Yang, `https://x.com/jayyanginspires/status/2116534636188729593` (read
+  2026-11-04) — the three offer levers.
 - Dra (Eaglerev), "our $1M cold outbound system… (FULL COURSE)",
   `https://x.com/draprints/status/2110208663608606775` (read 2026-10-15) —
   offer types, diagnose order, signals, short message, reply-speed figures,

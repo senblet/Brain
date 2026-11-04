@@ -37,7 +37,9 @@ judgement sharpens only inside one niche *(practitioner)*.
   for it every day with buying intent, and repeats across many cities or
   segments. Check three things: is there demand you can see (a map pack,
   searches), are others paying for ads on it, and do specialist agencies
-  already sell to it? All three means people already pay for this. The
+  already sell to it? All three means people already pay for this. Two more
+filters: a group inside the market nobody is speaking to, and buyers who
+already know they have the problem — educating a market is expensive. The
   tenth client in a niche is far easier than the first; a client outside it
   starts from zero. **Say no** to off-niche work and refer it on — keep a
   short list of people you trust for that.
@@ -149,6 +151,10 @@ Call summaries are high-volume and simple; the audit is the heaviest job.
   per the source.)
 
 ## Sources
+
+Jay Yang, "The 2027 Marketing Playbook",
+`https://x.com/jayyanginspires/status/2116534636188729593` (read
+2026-11-04) — the two extra niche filters.
 
 ChadSE0 (ChatSEO), "Build a Profitable One-Person SEO Agency with AI
 (Complete 2026 Masterclass)", `https://x.com/chadse0/status/2115054790002491723`

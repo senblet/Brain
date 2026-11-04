@@ -22,7 +22,7 @@ Badges count the decisions a file records where sources disagreed.*
 | SEO | [seo/appearance.md](seo/appearance.md) | How pages look in results: titles, snippets, video, structured data (incl. retired features) |
 | SEO | [seo/ai-search.md](seo/ai-search.md) | Google's AI features; AI crawler tokens; how assistants pick sources; measuring citations |
 | SEO | [seo/local.md](seo/local.md) | Local businesses: map pack vs results vs AI, profile, reviews, citations, site structure, regulated industries, measuring |
-| Marketing | [marketing/content.md](marketing/content.md) | Brand and content: positioning, founder vs brand accounts, copy rules, funnel and pillars, channels, creators, community, testing creative, content team |
+| Marketing | [marketing/content.md](marketing/content.md) | Brand and content: future demand and positioning, founder vs brand accounts, copy thinking and writing, hooks, funnel and pillars, channels, creators, community, testing creative, content team |
 | Marketing | [marketing/research.md](marketing/research.md) | Customer interviews, reviews, confidence in findings, competitor research, win-loss |
 | Marketing | [marketing/conversion.md](marketing/conversion.md) | Pages, forms and signup, popups, pricing pages, experiments, analytics and attribution |
 | Marketing | [marketing/outbound.md](marketing/outbound.md) | Outbound as a system: law baseline, offer, ICP, signals, qualify before enriching, deliverability, the email, replies, weekly tests, first customers |
@@ -31,11 +31,12 @@ Badges count the decisions a file records where sources disagreed.*
 | Product | [product/growth.md](product/growth.md) | Activation, simulated first users before launch, onboarding, upgrade prompts, lifecycle email and WhatsApp, cancellation and dunning, referrals |
 | Product | [product/marketplaces.md](product/marketplaces.md) | Two-sided products: which side first, launch, fill rate and other metrics, take rates, leakage and trust |
 | Design | [design/frontend.md](design/frontend.md) | Public pages that look decided: process, copy on the page, type, colour, layout, imagery, motion, states, AI tells, critique |
+| Development | [development/video-with-code.md](development/video-with-code.md) | Films made by agents writing code: render(t) pages, frame capture, one timeline for sound, review loop, licences |
 | Development | [development/web-performance.md](development/web-performance.md) | Web performance: how to measure, what to check, running it with agents |
 | AI | [ai/agents.md](ai/agents.md) | Working with agents: context file, tasks, classifying at volume, automation vs agent, who owns what, autonomy ramp, guardrails, failure modes, coding with agents, writing skills, goals and loops, rollout |
 | AI | [ai/evals.md](ai/evals.md) | Evaluating LLM features: error analysis, code checks and model judges, golden sets, shipping AI features |
 | AI | [ai/agent-workflows.md](ai/agent-workflows.md) | Multi-agent workflows: graph design, contracts, barriers vs pipelines, verification, convergence, cost |
-| AI | [ai/skill-libraries.md](ai/skill-libraries.md) | External skill repos read in full, and which of their skills to load |
+| AI | [ai/skill-libraries.md](ai/skill-libraries.md) | External skill and video repos read in full, and which to use |
 | Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: niche, offer and proof, one folder per client, the ten jobs on real records, audit lens, hiring |
 | Operations | [operations/product-process.md](operations/product-process.md) | Specs, scope and time budgets, prototypes, decisions, writing so others can act |
 | Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project: SEO, performance, design, product, measurement, AI features, agents, brand |
@@ -93,6 +94,7 @@ brain/
 ├── README.md              ← this index
 ├── CLAUDE.md              ← how new articles get folded in
 ├── build.py               ← regenerates brain-map.svg (standard library only)
+├── read_post.py           ← prints an X post or article in full, for reading a source
 ├── brain-map.svg          ← generated; shown above
 ├── <topic>/               ← one folder per domain (seo, marketing, product, design, development, ai, operations…)
 │   └── <subtopic>.md      ← split a topic only when one file gets too long

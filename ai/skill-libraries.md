@@ -1,7 +1,8 @@
 # AI — external skill libraries
 
-Public skill repositories that have been read in full, and which of their
-skills are worth loading for the studio's work. The rules worth keeping are
+Public skill and example repositories that have been read in full, and which
+of them are worth loading or studying for the studio's work. The rules worth
+keeping are
 already folded into the topic files; this file only records the verdict on
 each skill, so nobody has to re-read the repos to decide. How to write good
 skills: [agents.md](agents.md#writing-skills).
@@ -60,6 +61,19 @@ five rounds; its rules are good habits, distilled into
 | **Don't load** | `minimalist-skill` (its muted text fails AA contrast), `soft-skill`, `brutalist-skill`, `gpt-tasteskill`, `taste-skill-v1`, `taste-skill-v2-experimental` (fake client-logo walls) |
 | **Don't use** | `research/laziness/` — citations can't be verified; several are misattributed |
 
+## Video with code
+
+Several repos show films made by an agent writing code instead of using a
+video model; the method is in
+[development/video-with-code.md](../development/video-with-code.md).
+
+| Use | Repos |
+|---|---|
+| **Use as a library** | `lemomo-ai/lemo-opuscar` (MIT + CC BY 4.0) — 66 styles, a render/voice/music/mix toolkit and the clearest technique notes; heavy installs (hundreds of MB), tuned for Claude Opus |
+| **Starter** | `JohnHeibel/ClaudeAnimationBase` (MIT) — hand-painted character animation in p5.js + p5.brush; slow on machines without a GPU |
+| **Study only** | `mexicat/pdoom-video` (MIT) — a full engine with lyric alignment and motion blur; `Vincentwei1021/mg-styles-15` (MIT) — 15 styles with prompts and AI-jury review; `JohnHeibel/PDoomVideo` (**no licence** — read, don't copy) |
+| **Prompt galleries** | `yihui-dev/awesome-opus5-5-videos` (MIT), `athemeroy/awesome-claude-5-5-videos` (CC BY 4.0), `joeseesun/opus-video-prompts` (**no licence**, Chinese) — prompts and examples, no method |
+
 ## Sources
 
 - `https://github.com/coreyhaines31/marketingskills` and
@@ -67,6 +81,8 @@ five rounds; its rules are good habits, distilled into
   `https://x.com/chrissev/status/2110394539953606870` (read 2026-10-15).
 - `https://github.com/Leonxlnx/taste-skill`, shared via
   `https://x.com/lexnlin/status/2110122115240432021` (read 2026-10-15).
+- The eight video repos above, shared via
+  `https://x.com/rodmanai/status/2117540681556328773` (read 2026-11-04).
 
 Skill libraries change weekly; re-read when this file is more than six
 months old.
