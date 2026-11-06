@@ -209,6 +209,20 @@ applies to the three sections after it.
      ([overview.md](overview.md#ground-truth)). A weekly check of the three
      pages with the most impressions in that band is enough. Compare
      seasonal periods before calling a drop new.
+     - SHOULD pull the page's queries from **Bing Webmaster Tools** too.
+       It can show query data for pages where Search Console shows none;
+       treat Bing-only queries as real demand. Merge both lists and group
+       close variants into clusters.
+     - Classify each cluster against the page: **covered well**, **covered
+       weakly** (in passing, buried, vague), **not covered**, or **wrong
+       intent**. Weak and missing clusters with impressions get a section,
+       table or FAQ block, shaped by what the results page shows for that
+       query. Wrong-intent clusters don't go on this page: run the
+       [cannibalisation check](#choosing-what-to-write-practitioner-method)
+       and give them their own page if nothing owns them.
+     - High impressions with low click-through is a title and description
+       problem, not a body problem
+       ([appearance.md](appearance.md#title-title--the-title-link)).
   2. **Regroup** into topic clusters with a hub page and in-body links
      between members. Slow; compounds.
   3. **Prune on quality, never on count.** Delete or merge pages that have
@@ -376,5 +390,9 @@ operationalise Google's guidance:
 - BowTiedBills, "The Most Valuable SEO Article Ever Written",
   `https://x.com/bowtiedbills/status/2109881300890816850` (read 2026-10-14)
   — YMYL author and reviewer details.
+- Andrei Saioc (SEO agency owner), Bing Webmaster Tools query-gap method,
+  `https://x.com/asaio87/status/2118634208411185175` (read 2026-11-06) —
+  Bing as a second query source, coverage classes per query cluster. His
+  full prompt repeats the rules above; one practitioner, no numbers given.
 
 Google updates these pages; re-read them when this file is more than a year old.
