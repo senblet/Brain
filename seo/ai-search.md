@@ -106,7 +106,8 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
 - **Bing matters for ChatGPT** (practitioner, not confirmed by OpenAI's
   documentation): its search is reported to lean on Bing's index. Claim the
   Bing Places listing and verify the site in Bing Webmaster Tools — cheap
-  insurance.
+  insurance. Its query data also fills gaps in Search Console
+  ([content.md](content.md#improving-existing-pages-practitioner)).
 - Nothing above changes Google's position: no `llms.txt`, no special markup
   ([overview.md](overview.md#things-not-to-spend-time-on-skip)).
 

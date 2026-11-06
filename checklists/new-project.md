@@ -32,7 +32,8 @@ entirely behind a login.
 - [ ] Mobile-friendly; no full-page interstitials.
 
 **At launch**
-- [ ] Verify the site in Search Console and submit the sitemap.
+- [ ] Verify the site in Search Console and Bing Webmaster Tools; submit
+      the sitemap.
 - [ ] Check key pages with URL Inspection and the Rich Results Test.
 - [ ] Performance pass — see the Performance section below.
 - [ ] Simulated first users walk landing → first success, fixes rerun to
@@ -68,7 +69,9 @@ entirely behind a login.
 
 **Ongoing**
 - [ ] Monthly look at Search Console (indexing, performance, Core Web Vitals).
-- [ ] Monthly: repoint pages to the queries Google already shows them for.
+- [ ] Monthly: repoint pages to the queries Google already shows them for,
+      adding Bing Webmaster Tools queries
+      ([seo/content.md](../seo/content.md#improving-existing-pages-practitioner)).
 - [ ] Monthly, if AI referrals matter: ~10 buyer questions by hand, logged
       out; note which pages get cited and whether you're in them.
 - [ ] Don't judge a change too early — see "Ground truth" in

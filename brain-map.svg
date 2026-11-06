@@ -50,7 +50,7 @@
 <rect x="620" y="68" width="5" height="64" rx="2" class="s-fresh"/>
 <text x="636" y="90" class="name">content</text>
 <text x="836" y="90" class="badge" text-anchor="end">5 decided</text>
-<text x="636" y="108" class="small">27 cited · read 2026-09-22</text>
+<text x="636" y="108" class="small">28 cited · read 2026-09-22</text>
 <text x="636" y="123" class="small t-fresh">recheck by 2027-09-22</text>
 </g></a>
 <a href="seo/crawling-indexing.md"><g>
@@ -214,13 +214,13 @@
 </g></a>
 <line x1="24" y1="944" x2="856" y2="944" class="rule"/>
 <text x="24" y="968" class="topic">Latest reads</text>
-<text x="144" y="968" class="small mono">2026-11-04</text>
-<text x="226" y="968" class="small">ai/skill-libraries · marketing/content · marketing/outbound · operations/agency</text>
-<text x="144" y="990" class="small mono">2026-10-28</text>
-<text x="226" y="990" class="small">ai/agent-workflows · operations/agency · seo/ai-search · seo/content · seo/links · seo/local</text>
-<text x="226" y="1008" class="small">seo/overview</text>
-<text x="144" y="1030" class="small mono">2026-10-23</text>
-<text x="226" y="1030" class="small">product/growth · seo/ai-search</text>
+<text x="144" y="968" class="small mono">2026-11-06</text>
+<text x="226" y="968" class="small">seo/content</text>
+<text x="144" y="990" class="small mono">2026-11-04</text>
+<text x="226" y="990" class="small">ai/skill-libraries · marketing/content · marketing/outbound · operations/agency</text>
+<text x="144" y="1012" class="small mono">2026-10-28</text>
+<text x="226" y="1012" class="small">ai/agent-workflows · operations/agency · seo/ai-search · seo/content · seo/links · seo/local</text>
+<text x="226" y="1030" class="small">seo/overview</text>
 <rect x="144" y="1055" width="10" height="10" rx="2" class="s-fresh"/>
 <text x="160" y="1064" class="small">fresh</text>
 <rect x="205.0" y="1055" width="10" height="10" rx="2" class="s-soon"/>
