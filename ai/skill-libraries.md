@@ -1,9 +1,8 @@
 # AI — external skill libraries
 
-Public skill and example repositories that have been read in full, and which
-of them are worth loading or studying for the studio's work. The rules worth
-keeping are
-already folded into the topic files; this file only records the verdict on
+Public skill and example repositories that have been read (in full unless
+the section says otherwise), and which of them are worth loading or studying
+for the studio's work. The rules worth keeping are already folded into the topic files; this file only records the verdict on
 each skill, so nobody has to re-read the repos to decide. How to write good
 skills: [agents.md](agents.md#writing-skills).
 
@@ -61,6 +60,40 @@ five rounds; its rules are good habits, distilled into
 | **Don't load** | `minimalist-skill` (its muted text fails AA contrast), `soft-skill`, `brutalist-skill`, `gpt-tasteskill`, `taste-skill-v1`, `taste-skill-v2-experimental` (fake client-logo walls) |
 | **Don't use** | `research/laziness/` — citations can't be verified; several are misattributed |
 
+## `garrytan/gstack` — a coding sprint in slash commands
+
+MIT, Garry Tan (YC). About 60 Claude Code skills that run a sprint in
+order — think, plan, build, review, test, ship — each writing a file the
+next one reads (`/office-hours` writes a design doc that `/plan-ceo-review`
+and `/autoplan` read). Read in full: README, `docs/why-gstack.md`,
+`office-hours`, `write-skill`, the agents digest; the other skills are
+judged from their README entries. The useful rules are in
+[agents.md](agents.md) (the skill edit ladder under *Writing skills*, the
+reuse ladder under *Coding with agents*) and
+[product/strategy.md](../product/strategy.md#validating-an-idea) (the
+office-hours questions).
+
+| Use | Skills |
+|---|---|
+| **Try first** | The README's own quick start, then stop: `/office-hours` on a new idea, `/review` on a branch, `/qa` on a staging URL |
+| **Reference only** | `agents-digest/gstack-AGENTS.md` (2 KB of rules, no install), `write-skill` |
+| **Skip for now** | `/autoplan`, `/captain` and running 10–15 sprints in parallel (built for one founder running many agents), `/design-shotgun` (needs GPT Image), the iOS skills, GBrain, `/pair-agent` (opens an ngrok tunnel) |
+
+**Before installing:**
+- It is a heavy install: Bun 1.4.2+, compiled binaries built on your
+  machine, hooks registered in Claude Code, its own browser. Install on one
+  machine and try the three skills before team mode.
+- **MUST** turn off outside reviews on client code
+  (`gstack-config set codex_reviews disabled`): they are on by default and
+  send code to OpenAI Codex under your login. The update check is also on
+  by default (`gstack-config set update_check false`).
+- DON'T accept the install prompt's `CLAUDE.md` line banning Claude in
+  Chrome without deciding that for the project.
+- DON'T use `--team` with `required` on a shared repo until everyone has
+  tried it: it blocks teammates who don't have gstack.
+- The productivity numbers (~810× his 2013 pace in "logical lines") are the
+  author's own measurement, not evidence for us.
+
 ## Video with code
 
 Several repos show films made by an agent writing code instead of using a
@@ -83,6 +116,8 @@ video model; the method is in
   `https://x.com/lexnlin/status/2110122115240432021` (read 2026-10-15).
 - The eight video repos above, shared via
   `https://x.com/rodmanai/status/2117540681556328773` (read 2026-11-04).
+- `https://github.com/garrytan/gstack` (v1.98), shared via
+  `https://x.com/marcusyul/status/2118740439209848950` (read 2026-11-07).
 
 Skill libraries change weekly; re-read when this file is more than six
 months old.

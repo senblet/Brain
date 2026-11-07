@@ -32,6 +32,15 @@ directional.
   people asked to hire them).
 - Build only if it visibly shrinks the user's workflow or gives them a
   "superpower" — same time, twice the output (Oji Udezue).
+- **Ask what they do today.** What the users do now to solve it, even
+  badly, and what that workaround costs them in hours or money. "Nothing
+  exists" usually means the problem isn't painful enough.
+- **Name the person.** One real human with a role and a consequence if the
+  problem stays unsolved. "SMBs" or "marketing teams" is a filter, not a
+  customer.
+- **Watch one person use it without helping.** What surprised you? Surveys
+  and demo calls don't count; a user doing something the product wasn't
+  built for is often the real product.
 - Name the **why now**: the specific shift in technology, regulation or
   behaviour that makes this possible today (Mike Maples Jr).
 - Love-it-or-hate-it reactions beat polite liking; lukewarm means
@@ -129,5 +138,11 @@ named where the skill attributes them; several sell what they advise on.
 `https://github.com/coreyhaines31/marketingskills` (read 2026-10-15):
 `pricing` (value metric, first price, price rises), `offers` (discounts),
 `onboarding/references/activation-models.md` (ChartMogul trial data).
+
+`garrytan/gstack` (MIT), `https://github.com/garrytan/gstack`, shared via
+`https://x.com/marcusyul/status/2118740439209848950` (read 2026-11-07):
+`office-hours` "six forcing questions" — status quo, the named person,
+watching a user. Its other questions are already covered above. Author's
+opinion (YC's president), not data.
 
 Re-read when this file is more than a year old.
