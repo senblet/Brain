@@ -225,6 +225,11 @@ results somewhere the agent can read.
 - **Plan in a file.** Turn the exploration into a `plan.md` in the repo: a
   summary, the key decisions, tasks with a status the agent updates as it
   goes. Agree on it, then execute against it; it keeps long runs on course.
+- **Reuse before writing.** Stop at the first that holds: a helper already
+  in the repo, the standard library, a platform feature (CSS over JS, a
+  database constraint over app code), an installed dependency. DON'T add a
+  dependency for what a few lines cover. Fix bugs at the root, in the shared
+  function, not with a guard in every caller.
 - **Tasks, not problems:** a defined scope and a quick way to test. "Re-
   architect the codebase" is not a task. Work in small loops — specify a
   piece, it writes it, review, specify the next; a wrong large refactor
@@ -257,6 +262,18 @@ Patterns worth copying from well-built skill libraries:
   doesn't cover.
 - **One home for shared rules** (a banned-phrases list, say), linked from
   the skills that use it rather than copied into each.
+- **Changing a skill, stop at the first step that works:**
+  1. Fix it below the skill: a clearer error, a flag, a check or a test in
+     the tool. Prose is for judgment calls.
+  2. Add a line only with evidence it helps. If a fresh session already
+     does it right without the line, add nothing.
+  3. Edit the line that already covers the idea instead of appending.
+  4. Put it on the lowest level that reaches the agent in time:
+     description (every session) → skill file (every use) → reference file
+     (some cases) → the tool's `--help` and error messages.
+  5. Write the rule, not the story; the incident goes in the commit message.
+- **SHOULD** record the skill's size before and after a change; a skill
+  that keeps growing gets cut back instead of added to.
 - **Each skill has a few evals** — a prompt, the expected behaviour, checks —
   kept out of what ships, and actually run when the skill changes.
 - Vetted external libraries and which of their skills to use:
@@ -382,5 +399,11 @@ design (`AGENTS.md`, `product-marketing`, `evals/`), fetched content as data,
 audit scoring (`ads/references/audit-guardrails.md`), research in two steps
 (`prospecting/references/account-research.md`), scheduled loops
 (`marketing-loops`).
+
+`garrytan/gstack` (MIT), `https://github.com/garrytan/gstack` (v1.98,
+shared via `https://x.com/marcusyul/status/2118740439209848950`, read
+2026-11-07) — `write-skill` (the edit ladder, levels, size check) and
+`agents-digest/gstack-AGENTS.md` (the reuse ladder). Verdict on the library:
+[skill-libraries.md](skill-libraries.md#garrytangstack--a-coding-sprint-in-slash-commands).
 
 All practitioner opinion; re-read when this file is more than six months old.
