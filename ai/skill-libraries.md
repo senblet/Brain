@@ -2,12 +2,12 @@
 
 Public skill and example repositories that have been read (in full unless
 the section says otherwise), and which of them are worth loading or studying
-for the studio's work. The rules worth keeping are already folded into the topic files; this file only records the verdict on
-each skill, so nobody has to re-read the repos to decide. How to write good
+for the studio's work. The rules worth keeping are already folded into the
+topic files; this file only records the verdict on each skill, so nobody has to re-read the repos to decide. How to write good
 skills: [agents.md](agents.md#writing-skills).
 
 **Tags:** as in the [README](../README.md#how-notes-are-written). Verdicts
-are from a full read on the date given; skills change, so recheck before
+are from a read on the date given; skills change, so recheck before
 relying on one.
 
 **Loading rules:**
