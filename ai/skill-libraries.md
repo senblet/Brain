@@ -95,6 +95,16 @@ office-hours questions).
 - The productivity numbers (~810× his 2013 pace in "logical lines") are the
   author's own measurement, not evidence for us.
 
+## Model routing
+
+`Rajvardhman05/claude-model-router` (MIT, one `SKILL.md`, read
+2026-11-10): a skill loaded before spawning subagents that picks each one's
+model, condensed from the claude.dev model guide. **Load with one fix:** move
+"well-scoped edits against a clear spec → sonnet" out of its delegation
+table — edits stay on the main model
+([models.md](models.md#mixing-models)). It doesn't change the built-in
+Explore subagent; add the `Explore` file from that section too.
+
 ## Video with code
 
 Several repos show films made by an agent writing code instead of using a

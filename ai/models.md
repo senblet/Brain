@@ -77,6 +77,10 @@ effort past `high`.
 
 ## Mixing models
 
+- **Route by delegation; don't switch the main session's model mid-task.**
+  The session keeps its model; cheaper work goes to subagents, each with its
+  own `model:`. Switching the main model throws away the prompt cache and,
+  moving down a tier, the earlier reasoning.
 - **Small models for reading, the main model for edits and judgement.** Put
   subagents that search, read logs or run tests on Haiku or Sonnet (set
   `model:` in the subagent definition, or a default for all subagents).
@@ -85,9 +89,37 @@ effort past `high`.
   says to put verbose reading on small models. Both hold — mechanical
   reading with checkable output is the case to be confident about;
   judgement, synthesis and code edits stay on the main model.
+- **Don't delegate** one dependent chain of steps, work that fits easily in
+  the current context, or a handful of tool calls — coordination costs more
+  than it saves. Delegate verbose reading (logs, wide file sweeps) and
+  genuinely parallel work, and ask for a short summary back.
+- **Small models only where a mistake is cheap to spot.** If a wrong answer
+  would pass unnoticed (a judgement call, a subtle edit), keep it on the
+  main model. **Decided:** a popular routing skill sends "well-scoped edits
+  against a clear spec" to Sonnet subagents; the guide keeps code edits on
+  the main model when delegating and warns the `opusplan` alias does the
+  reverse. Rejected — Sonnet is fine as a *session* model for well-scoped
+  coding (table above), not as a delegate for edits.
 - **The built-in Explore subagent runs on the session's model**; to keep
-  exploration cheap, define your own `Explore` subagent with
-  `model: haiku`.
+  exploration cheap, define your own. Drop this into a project's
+  `.claude/agents/Explore.md`, or `~/.claude/agents/` for every project:
+
+  ```markdown
+  ---
+  name: Explore
+  description: Finds files, code, and usages across the repo and reports
+    where things are. Use for any search or "where/how is X done" question
+    before reading or editing code.
+  tools: Read, Grep, Glob, Bash
+  model: haiku
+  ---
+  Search, don't edit. Return a short report: the files and line numbers
+  that answer the question, one line each on what is there, and anything
+  you could not find. No code changes, no long quotes.
+  ```
+
+  The same pattern fits a test or log reader: read-only tools, `model:
+  haiku`, report only what failed and where.
 - **Many cheap workers under one strong lead** pay off on broad, splittable
   work (an Opus lead with up to 25 Sonnet workers cost about a third less
   than Opus alone on a large code search, same score); skip it for one
@@ -131,6 +163,9 @@ Addy Osmani, "Which Claude model should you build with? Fable, Opus, Sonnet,
 or Haiku", claude.dev (2026-11-09),
 `https://claude.dev/blog/which-claude-model-should-you-build-with`, via
 `https://x.com/claudedevs/status/2119898687803621427` (read 2026-11-10;
-key passages checked verbatim).
+key passages checked verbatim). Delegation rules and the edit decision:
+`Rajvardhman05/claude-model-router` (MIT),
+`https://github.com/Rajvardhman05/claude-model-router` (read 2026-11-10), a
+skill that condenses the same guide.
 
 Re-read when this file is more than six months old.
