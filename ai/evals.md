@@ -64,7 +64,8 @@ course. Splits and sizes are theirs.
   fail the build on a regression. A pass means no known failure came back —
   not that the output is good.
 - **Before swapping models**, run the same set through the new model and
-  compare.
+  compare, and check the API changes that break on migration
+  ([models.md](models.md#migrating-an-api-product)).
 - In production: log full traces; run validated judges on samples
   asynchronously; every new failure joins the golden set.
 - Synchronous guardrails only for critical failures — mostly fast

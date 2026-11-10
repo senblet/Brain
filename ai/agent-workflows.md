@@ -114,9 +114,9 @@ finding before it reaches the answer.
 - Subagents inherit the session model unless overridden, so a large run
   bills entirely at the session tier. Check the model before a big run.
 - Tier only where you are confident: bounded, repetitive nodes (extract a
-  field, classify) can run on a cheaper model or lower effort; synthesis and
-  adjudication keep the strong one. Claude Code's own guidance is to leave
-  the override off unless sure.
+  field, classify, read logs, search files) can run on a cheaper model or
+  lower effort; synthesis and adjudication keep the strong one. Details and
+  measurements: [models.md](models.md#mixing-models).
 - Topology is the biggest latency lever; model choice is the biggest cost
   lever. Neither changes the graph's shape.
 

@@ -86,8 +86,9 @@ TERMINATION: stop when every item is covered or marked "not in the data";
   top — under version control, so every change has a history. Work you repeat
   becomes a reusable, versioned skill rather than a prompt pasted again.
 - High-volume, simple jobs run fine on a small model; judgement-heavy ones
-  (audits, synthesis) and coding get the strongest — a stronger model often
-  costs less overall because it needs fewer corrections.
+  (audits, synthesis) get the strongest — a stronger model often costs less
+  overall because it needs fewer corrections. Which model and effort for
+  which work, and when to raise effort instead: [models.md](models.md).
 - **Research in two steps:** facts first, each with its URL and date; then
   the angle or conclusion, written only from those facts. "Nothing found" is
   a valid answer.
