@@ -18,6 +18,11 @@ pre-ship checklist are in [overview.md](overview.md).
   regular result in 8% of visits, against 15% without one, and clicked a link
   inside the summary in 1%. Expect fewer clicks on question searches;
   buying and local searches are less affected.
+- **B2B buyers start with AI.** G2's survey of 1,076 B2B software decision
+  makers (March 2026): 51% now start their research with an AI chatbot more
+  often than with Google (29% a year earlier); 85% think more highly of a
+  vendor that AI includes in its answer; 69% ended up choosing a different
+  vendor than they planned. (A widely shared "55%" is a misquote.)
 - **Google's AI Overviews and AI Mode have no extra requirements.** A page is
   eligible as a supporting link if it is indexed and can be shown in Search
   with a snippet. Everything in the other SEO files applies; no special
@@ -98,6 +103,25 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
   a year; check which engine and which threads your buyers' questions
   actually surface before investing. On Reddit, say who you are in the
   first line and include where your product is the wrong choice.
+- **A page an assistant can quote** *(practitioner; one Italian B2B SaaS
+  built this way, results not yet shown)*: headings that are complete claims
+  and make sense lifted out alone ("X raises conversion by 8% on average"),
+  each followed by two or three factual sentences; an FAQ answering what
+  buyers ask before choosing (price, time to go live, integrations, error
+  rate); **public, specific prices**, so an assistant can quote them; a
+  "category alternative vs us" comparison; and company facts (legal name,
+  location, founder, offer) in structured data. Every number on such a page
+  needs its source and date — an unsourced claim gives nobody anything to
+  cite. **Decided:** the same site uses `FAQPage` markup and a full-content
+  `llms.txt`; both stay Skip — Google documents no benefit
+  ([overview.md](overview.md#things-not-to-spend-time-on-skip)) and nothing
+  shows another engine uses them. Its 80 planned pages for near-zero-volume
+  queries are unbuilt and unproven, so the cadence and unique-content rules
+  in [content.md](content.md#cadence-practitioner) stand.
+- **Fix how directories describe you.** Old or wrong descriptions on tool
+  directories and review sites (a mis-filed category, a previous company
+  name) are what assistants repeat; correcting them can matter more than
+  new pages.
 - **What feeds the answers** (practitioner): pages that answer each
   question in the first one or two sentences of a section, then go deeper;
   identical facts (hours, services, address) everywhere the business
@@ -114,7 +138,11 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
 ## Measuring AI visibility (practitioner)
 
 - **Measure by hand.** Run ~10 buyer questions logged out, once a month, and
-  note whether you are cited and from which page.
+  note whether you are cited and from which page. Cover the question types
+  buyers ask: best providers, you vs a named competitor, how to solve the
+  problem, cost. Put the results next to incoming leads for the same month;
+  site changes take months to show, off-site presence longer (one agency's
+  experience).
 - Answers vary run to run: ask each question 3–5 times per engine in fresh
   sessions and record a rate with its sample ("3/5").
 - Report the ladder separately — cited, mentioned, recommended, recommended
@@ -172,6 +200,18 @@ AI Search claim: Alex
 Groberman (SEO Stuff), `https://x.com/alexgroberman/status/2012536184023462013`
 (read 2026-10-28), citing Metehan
 Yesilyurt's analysis; rejected as above.
+
+G2, "The Answer Economy" (2026-04-15),
+`https://company.g2.com/news/g2-research-the-answer-economy` and
+`https://learn.g2.com/g2-2026-ai-search-insight-report` (read 2026-11-10).
+
+Quotable-page anatomy and directory consistency: orygo.ai homepage and
+`llms.txt` as live examples, `https://orygo.ai/it` (read 2026-11-10), via
+Davide Petruzzi's post
+`https://it.linkedin.com/posts/davidepetruzzi_geo-canale-super-underrated-per-b2b-saas-activity-7525906658267381760-rUnY`
+(read 2026-11-10). Audit question types: Hanami srl, "Visibilità nelle
+risposte AI", `https://hanamisrl.com/servizi/visibilita-risposte-ai/` (read
+2026-11-10).
 
 Practitioner observations: Nicholas Dulait (ChatSEO), "How to use Claude
 Opus 5.5 for SEO", Part 4,

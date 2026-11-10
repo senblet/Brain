@@ -324,7 +324,12 @@ verified first" — see
 **Sold by hand.** The founder sells the first 20–30, asks for money
 explicitly, and personalises every message; scaled outbound comes after
 (Pete Kazanjy, Jason Lemkin). Channel order for the first ones: personal
-network → places buyers gather → cold outreach.
+network → places buyers gather → cold outreach. **Build the day's list the
+same morning** — decide which companies to target today, assemble the list
+in minutes (store directories, tech-stack lookups and maps listings work for
+e-commerce and local targets), then spend the day on one-to-one messages.
+List-building is the time sink to automate first; one founder built his own
+tool for it.
 
 ## Where AI fits
 
@@ -372,6 +377,9 @@ this; they don't replace that judgement.
   options and case-study follow-ups are not adopted.
 - `refoundai/lenny-skills` (MIT), `https://github.com/refoundai/lenny-skills`
   (read 2026-10-15) — `founder-sales`, `first-b2b-customers`, `defining-icp`.
+- Davide Petruzzi (OrygoAI), public LinkedIn posts on founder-led outreach
+  (2026-09-23) and daily list building (2026-09-14),
+  `https://it.linkedin.com/in/davidepetruzzi` (read 2026-11-10).
 - LinkedIn User Agreement, `https://www.linkedin.com/legal/user-agreement`,
   §2.2 and §8.2 (read 2026-10-15).
 

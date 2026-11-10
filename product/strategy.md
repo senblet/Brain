@@ -30,6 +30,10 @@ directional.
 - **Try to get paid before building.** Send an invoice for early access, or
   deliver the service by hand first (Vanta wrote reports manually until
   people asked to hire them).
+- **If a launch brings signups but not buyers, interview them and close the
+  door.** One founder's LinkedIn launch brought ~100 signups and one
+  purchase; he interviewed them, concluded the product wasn't ready, shut
+  open access and kept building with a few users privately.
 - Build only if it visibly shrinks the user's workflow or gives them a
   "superpower" — same time, twice the output (Oji Udezue).
 - **Ask what they do today.** What the users do now to solve it, even
@@ -97,6 +101,11 @@ acquisition doesn't lift the cap (Jason Cohen).
   freemium unless you have a large audience, minutes-to-value, low cost to
   serve and free users who bring others (Bobby Pinero). Most freemium SaaS
   also offers a 7–30 day trial of paid (~90% of ~50 products, Lenny).
+- **AI products: price per unit of work, and show the breakdown.** Charge
+  per reply, report or task rather than per seat, and let customers see what
+  each unit cost (tokens, tools, credits). It can leave money on the table;
+  it removes the main objection to paying for an agent *(practitioner, one
+  B2B AI SaaS)*. Relevant wherever a product sells model output.
 - **Card up front?** Decide on visitor-to-paid, not trial-to-paid: card-required
   trials convert far better per trial but get fewer trials (ChartMogul 2026,
   200 B2B products — observational).
@@ -144,5 +153,11 @@ named where the skill attributes them; several sell what they advise on.
 `office-hours` "six forcing questions" — status quo, the named person,
 watching a user. Its other questions are already covered above. Author's
 opinion (YC's president), not data.
+
+Davide Petruzzi (OrygoAI), public LinkedIn posts on per-unit pricing and
+cost transparency (2026-09-22) and on closing a launch
+(2026-09-18), `https://it.linkedin.com/in/davidepetruzzi`, and
+`https://orygo.ai/it` (read 2026-11-10). His revenue figures are his own and
+left out.
 
 Re-read when this file is more than a year old.
