@@ -35,6 +35,10 @@ entirely behind a login.
 - [ ] Verify the site in Search Console and Bing Webmaster Tools; submit
       the sitemap.
 - [ ] Check key pages with URL Inspection and the Rich Results Test.
+- [ ] Read the **live** `robots.txt` and `curl -A` each search crawler
+      (`OAI-SearchBot`, `Claude-SearchBot`, `PerplexityBot`, `Bingbot`):
+      each must get `200`. The CDN can add rules or challenge bots
+      ([seo/ai-search.md](../seo/ai-search.md#googles-ai-features-and-ai-crawlers)).
 - [ ] Performance pass — see the Performance section below.
 - [ ] Simulated first users walk landing → first success, fixes rerun to
       prove them ([product/growth.md](../product/growth.md#before-launch-simulated-first-users)).

@@ -157,7 +157,9 @@ applies to the three sections after it.
   publishing faster.
 - **Secondary keywords.** Take the page ranking first and list every other
   query that URL ranks for — Google already treats those as one page. Cover
-  them on one URL, and let the title cover the main two.
+  them on one URL, and let the title cover the main two. Before a page
+  exists *(practitioner rule of thumb)*: two keywords belong on one page
+  when they share four or more of their top 10 results.
 - **Build what the top 3 almost build, plus one thing they don't have.**
   Read the top three: every section all three have, your page needs; what
   only one has, decide if it's worth it; then add one element none of them
@@ -202,11 +204,16 @@ applies to the three sections after it.
      100 words around that query, then check the body actually answers it.
      Works for pages at positions ~5–20 with impressions (sources put the
      band at 5–15, 8–15 and 5–20), where Google already finds the page
-     relevant — many impressions on one query for one page is the strongest
-     quick win there is. At positions 1–3 with falling clicks, an AI
+     relevant (another puts it at 10–30) — many impressions on one query
+     for one page is the strongest quick win there is. Pull three months of
+     queries, not seven days. At positions 1–3 with falling clicks, an AI
      Overview is probably answering above you and a rewrite won't help.
      Leave any page edited in the last ~90 days alone
-     ([overview.md](overview.md#ground-truth)). A weekly check of the three
+     ([overview.md](overview.md#ground-truth)). **Decided:** one
+     practitioner re-pulls queries 7–14 days after requesting indexing and
+     edits again; that judges a change before Google's own weeks-to-months
+     window, and a second source in the same week says wait two to three
+     months, so the 90 days stand. A weekly check of the three
      pages with the most impressions in that band is enough. Compare
      seasonal periods before calling a drop new.
      - SHOULD pull the page's queries from **Bing Webmaster Tools** too.
@@ -394,5 +401,13 @@ operationalise Google's guidance:
   `https://x.com/asaio87/status/2118634208411185175` (read 2026-11-06) —
   Bing as a second query source, coverage classes per query cluster. His
   full prompt repeats the rules above; one practitioner, no numbers given.
+  His "more clicks from the pages you already have" thread,
+  `https://x.com/asaio87/status/2119171723849245031` (read 2026-11-11) —
+  the 10–30 band and three months of data; the rest repeats this section,
+  and its 7–14-day loop is rejected above.
+- TheoAGI, "The only SEO/GEO article you need",
+  `https://x.com/theoagi/status/2120163220312699025` (read 2026-11-11) —
+  the four-of-ten overlap test (credited to @NicholasDulait) and the
+  two-to-three-month wait; the rest repeats this file.
 
 Google updates these pages; re-read them when this file is more than a year old.
