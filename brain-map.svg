@@ -157,7 +157,7 @@
 <rect x="382" y="528" width="228" height="64" rx="8" class="card"/>
 <rect x="382" y="528" width="5" height="64" rx="2" class="s-fresh"/>
 <text x="398" y="550" class="name">research</text>
-<text x="398" y="568" class="small">14 cited · read 2026-10-15</text>
+<text x="398" y="568" class="small">15 cited · read 2026-10-15</text>
 <text x="398" y="583" class="small t-fresh">recheck by 2027-10-15</text>
 </g></a>
 <text x="24" y="632" class="topic">Product</text>
@@ -222,12 +222,12 @@
 </g></a>
 <line x1="24" y1="944" x2="856" y2="944" class="rule"/>
 <text x="24" y="968" class="topic">Latest reads</text>
-<text x="144" y="968" class="small mono">2026-11-10</text>
-<text x="226" y="968" class="small">ai/models · marketing/outbound · product/strategy · seo/ai-search</text>
-<text x="144" y="990" class="small mono">2026-11-07</text>
-<text x="226" y="990" class="small">ai/agents · ai/skill-libraries · product/strategy</text>
-<text x="144" y="1012" class="small mono">2026-11-06</text>
-<text x="226" y="1012" class="small">seo/content</text>
+<text x="144" y="968" class="small mono">2026-11-11</text>
+<text x="226" y="968" class="small">marketing/research</text>
+<text x="144" y="990" class="small mono">2026-11-10</text>
+<text x="226" y="990" class="small">ai/models · marketing/outbound · product/strategy · seo/ai-search</text>
+<text x="144" y="1012" class="small mono">2026-11-07</text>
+<text x="226" y="1012" class="small">ai/agents · ai/skill-libraries · product/strategy</text>
 <rect x="144" y="1037" width="10" height="10" rx="2" class="s-fresh"/>
 <text x="160" y="1046" class="small">fresh</text>
 <rect x="205.0" y="1037" width="10" height="10" rx="2" class="s-soon"/>

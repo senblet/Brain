@@ -66,7 +66,19 @@ source attributes it.
 - **Live ads are public:** the Meta Ad Library and Google Ads Transparency
   Center show every ad a company is running — channels, angles, formats, and
   how long the oldest have run (ads that run for months are usually
-  working). Use them before a pitch or a positioning decision.
+  working). Use them before a pitch or a positioning decision. SHOULD also
+  open the LinkedIn Ad Library for B2B competitors: for ads marked as shown
+  in the EU it lists the targeting (locations, job functions, company size).
+  *(practitioner)*
+- **Cheap signals, no tools needed** *(practitioner)*:
+  - `view-source:` on their site, then search: `AW-` is Google Ads,
+    `linkedin_partner_id` is LinkedIn retargeting, `6sense` or `demandbase`
+    is account-based ads. Read it as "tag present", not "campaign running".
+  - Their careers page: search "paid", "growth", "demand gen". Job posts
+    name the channels and tools, sometimes the budget.
+  - Their pricing page in the Wayback Machine (`web.archive.org`) gives
+    dated price history; a free page-change monitor on it catches the next
+    change. Both are captures: date them as above.
 - **Competitors in three tiers:** same solution; different solution to the
   same problem; a conflicting approach or doing nothing (often the real
   alternative — a spreadsheet, a manual process).
@@ -103,5 +115,11 @@ Torres, Bob Moesta).
 undefinedKi, "How to build a one-person marketing agency with AI",
 `https://x.com/undefinedki/status/2111804964334883320` (read 2026-10-19) —
 public ad libraries for pitch research.
+
+Waqas (@googlewaqas), competitor-research checklist,
+`https://x.com/googlewaqas/status/2120187476870377926` (read 2026-11-11) —
+LinkedIn Ad Library EU targeting, tracking tags in page source, careers
+pages, pricing history. Ends in a sales pitch; the claim that companies
+raise prices on a pattern was left out as unsupported.
 
 Re-read when this file is more than a year old.
