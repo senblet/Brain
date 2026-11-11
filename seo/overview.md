@@ -190,6 +190,10 @@ Violations can demote a page or remove a whole site. **MUST NOT:**
   Security Issues, rich result reports, Core Web Vitals. Monthly checks plus
   after significant changes are enough; Google emails new issues.
 - **Tools:** Rich Results Test, PageSpeed Insights, URL Inspection.
+- *(practitioner)* **Snapshot the key pages before every deploy** and
+  compare after. Four changes quietly kill a site: a page turns `noindex`,
+  a canonical points elsewhere, a `200` becomes a `404`, `robots.txt`
+  blocks everything. An agent never makes those four on its own.
 - **Measure changes:** compare before/after on stable pages over months
   ([how long to wait](#ground-truth)).
 - **AI traffic:** AI Overviews and AI Mode are counted in the Performance
@@ -237,7 +241,9 @@ Practitioner monitoring rules (money-page audits, average position, the
 with AI", `https://x.com/chadse0/status/2115054790002491723`; VengeonsP
 (ChatSEO), "How to Build an AI Keyword
 Research Team with Claude Code",
-`https://x.com/vengeonsp/status/2115055296351555784` (both read 2026-10-28).
+`https://x.com/vengeonsp/status/2115055296351555784` (both read 2026-10-28). The pre-deploy snapshot:
+TheoAGI, "The only SEO/GEO article you need",
+`https://x.com/theoagi/status/2120163220312699025` (read 2026-11-11).
 
 web.dev, Core Web Vitals thresholds: `https://web.dev/articles/vitals`
 (read 2026-10-14).

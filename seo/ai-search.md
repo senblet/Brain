@@ -59,7 +59,16 @@ pre-ship checklist are in [overview.md](overview.md).
   `robots.txt` can't be counted on to keep it out. Anything that must stay
   private needs authentication, not a disallow line.
 - **Check the CDN and firewall too.** Many block AI crawlers by default,
-  whatever `robots.txt` says.
+  whatever `robots.txt` says. Read the **live** `robots.txt`, not the one
+  in the repo: with Bot Preference Sync on and any AI policy set to Block,
+  Cloudflare prepends its own rules (look for `# BEGIN Cloudflare Managed
+  content`). Cloudflare's Bot Fight Mode can challenge API and bot traffic
+  and **can't be skipped with WAF custom rules or Page Rules** — if it is
+  on, check its events (Service = Bot Fight Mode) after launch.
+  *(practitioner)* `curl -A "OAI-SearchBot" -s -o /dev/null -w
+  "%{http_code}" https://site/` catches blocks by user-agent string; a
+  `200` doesn't prove the real crawler gets through, since bot rules can
+  check IP addresses too. The CDN's security log is the proof.
 - **DON'T** add a blanket "block AI bots" robots.txt group. Blocking search
   crawlers (`Googlebot`, `OAI-SearchBot`) costs visibility. Blocking training
   crawlers (`GPTBot`, `Google-Extended`) is a business decision for the site
@@ -80,7 +89,12 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
   prompt was phrased: "best [category] [year] [country]", "[brand] reviews",
   "[competitor] alternative", sometimes `site:` on authority domains, and in
   both the user's language and English. The pages ranking for those queries
-  — mostly roundups and comparisons — are what gets read.
+  — mostly roundups and comparisons — are what gets read. You can read
+  them: open the "searching" step in ChatGPT or Claude; each query is a
+  page you need or a site you need to be on. **Decided:** a later
+  practitioner synthesis says "about ten" hidden searches per question;
+  it gives no data, so the 2–5 from logged answers stands. The number
+  matters less than reading the actual queries.
 - **The page types rotate; the method doesn't.** After a ChatGPT model
   update in August 2026, one vendor's data (Peec AI) shows listicles
   falling from about 16% to 8% of ChatGPT citations, comparison pages from
@@ -93,7 +107,10 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
   — at the time of writing: third-party "best of" lists, comparison pages,
   review platforms, Reddit threads. A list on your own site with yourself first
   has been observed to
-  stop being cited; a ranking on someone else's site counts more.
+  stop being cited; a ranking on someone else's site counts more. In one
+  vendor's dataset (44,070 citations, 10 brands), 85% went to third-party
+  pages and under 4% to the brand's own site — but the brands whose own
+  site did get cited were named far more often. You need both.
 - **Sources rotate** — one prompt draws on tens of sources over time, a
   different subset each month. A citation is a rotation you stay in, not a
   rank you hold. Refresh the lists you appear in yearly (year in the title).
@@ -102,7 +119,9 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
 - **Reddit's share varies by engine** and has moved by several times within
   a year; check which engine and which threads your buyers' questions
   actually surface before investing. On Reddit, say who you are in the
-  first line and include where your product is the wrong choice.
+  first line and include where your product is the wrong choice; at most
+  one answer that mentions your company per subreddit per week
+  *(practitioner)*.
 - **A page an assistant can quote** *(practitioner; one Italian B2B SaaS
   built this way, results not yet shown)*: headings that are complete claims
   and make sense lifted out alone ("X raises conversion by 8% on average"),
@@ -121,7 +140,10 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
 - **Fix how directories describe you.** Old or wrong descriptions on tool
   directories and review sites (a mis-filed category, a previous company
   name) are what assistants repeat; correcting them can matter more than
-  new pages.
+  new pages. *(practitioner)* Keep a dated fact sheet (price, plans,
+  platforms), ask the engines about you, and trace each wrong claim to the
+  page it came from; fix it there. Call it fixed only when it has been gone
+  two monthly checks in a row.
 - **What feeds the answers** (practitioner): pages that answer each
   question in the first one or two sentences of a section, then go deeper;
   identical facts (hours, services, address) everywhere the business
@@ -130,7 +152,8 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
 - **Bing matters for ChatGPT** (practitioner, not confirmed by OpenAI's
   documentation): its search is reported to lean on Bing's index. Claim the
   Bing Places listing and verify the site in Bing Webmaster Tools — cheap
-  insurance. Its query data also fills gaps in Search Console
+  insurance: import from Search Console, submit the sitemap, turn on
+  IndexNow. Its query data also fills gaps in Search Console
   ([content.md](content.md#improving-existing-pages-practitioner)).
 - Nothing above changes Google's position: no `llms.txt`, no special markup
   ([overview.md](overview.md#things-not-to-spend-time-on-skip)).
@@ -142,9 +165,19 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
   buyers ask: best providers, you vs a named competitor, how to solve the
   problem, cost. Put the results next to incoming leads for the same month;
   site changes take months to show, off-site presence longer (one agency's
-  experience).
+  experience). Take the questions from the inbox, sales calls and reviews,
+  not from imagination; mark any you guessed until a real one replaces it.
+  "People also ask" lists and tool prompt datasets are not what your buyers
+  type; never present them as such.
 - Answers vary run to run: ask each question 3–5 times per engine in fresh
-  sessions and record a rate with its sample ("3/5").
+  sessions and record a rate with its sample ("3/5"). **Decided:** a later
+  synthesis runs 15–30 questions twice per engine; two runs can't show a
+  rate, so 3–5 runs stand, and the question count follows how many real
+  buyer questions you have.
+- Under about 100 AI visits a month, report counts, not percentages.
+- **Bing Webmaster Tools' AI Performance report** lists the queries where
+  Bing's AI answers (Copilot) cited your site — the closest thing to free,
+  first-party citation data (practitioner).
 - Report the ladder separately — cited, mentioned, recommended, recommended
   against — not one "visibility" number.
 - The ChatGPT API returns different sources than the web app, so a
@@ -200,6 +233,22 @@ AI Search claim: Alex
 Groberman (SEO Stuff), `https://x.com/alexgroberman/status/2012536184023462013`
 (read 2026-10-28), citing Metehan
 Yesilyurt's analysis; rejected as above.
+
+Live robots.txt and curl test, reading the fan-out queries, the
+44,070-citation dataset, the fact-sheet method, Reddit cadence, IndexNow,
+the AI Performance report and counts under 100 visits: TheoAGI, "The only
+SEO/GEO article you need",
+`https://x.com/theoagi/status/2120163220312699025` (read 2026-11-11) — a
+Claude-made synthesis of 66 practitioner articles, 48 skills and 14 repos,
+crediting @denohawari, @VengeonsP, @alexteillet, @louisfoweraker and
+i365dev/awesome-seo. Mostly repeats this folder; its numbers are the
+original authors', not re-checked.
+
+Cloudflare: `https://developers.cloudflare.com/bots/get-started/bot-fight-mode/`
+and `https://developers.cloudflare.com/bots/additional-configurations/managed-robots-txt/`
+(read 2026-11-11). The managed-block marker check comes from
+`zubair-trabzada/geo-seo-claude`; the "People also ask" caution from
+`every-app/open-seo` (both read 2026-11-11).
 
 G2, "The Answer Economy" (2026-04-15),
 `https://company.g2.com/news/g2-research-the-answer-economy` and

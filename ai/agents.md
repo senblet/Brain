@@ -153,7 +153,9 @@ results somewhere the agent can read.
 - **Smallest permissions that do the job:** email draft-only, ads created
   paused, new budgets human.
 - **Approval inside the code:** the action waits on an approve button; a
-  tool that can write or send is set to "needs approval".
+  tool that can write or send is set to "needs approval". The approval
+  screen shows the object, its current value, the proposed value, the
+  impact and how to roll back, and the yes applies to that exact summary.
 - **Plain code for exact rules:** spend caps, suppression lists, dedupe,
   "never delete a page over N words". The model handles judgement only.
 - **A permission list, written before the first task:**
@@ -348,6 +350,9 @@ Work that runs on a schedule without anyone watching:
   or the agent's contract.
 
 ## Sources
+
+Approval summary: `nowork-studio/notfair-plugin`, `docs/safety.md`,
+`https://github.com/nowork-studio/notfair-plugin` (read 2026-11-11).
 
 Greg Isenberg, "Marketing Engineers: 100x More Experiments with AI agents",
 `https://x.com/gregisenberg/status/2108188646973313195` (read 2026-10-12) —

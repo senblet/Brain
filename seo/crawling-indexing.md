@@ -44,6 +44,13 @@ pre-ship checklist are in [overview.md](overview.md).
   spaces (search results, calendars, filter combinations), and keeping
   images/video/audio out of results.
 - DON'T block resources Google needs to understand the page.
+- **A crawler follows one group only:** the one with the most specific
+  matching `User-agent`; every other group is ignored. Adding a
+  `User-agent: GPTBot` group means GPTBot no longer reads the `*` rules —
+  repeat any `*` rule it should still follow inside its own group.
+- **If `robots.txt` returns a `5xx`,** Google stops crawling the site for 12
+  hours, then uses the last good copy for up to 30 days. A broken
+  `robots.txt` stops crawling; a missing one (`404`) means no restrictions.
 - Combining crawling and indexing rules can cancel them out — a `noindex` on a
   robots.txt-blocked page is never read.
 - AI crawlers have their own tokens, and blocking the wrong one removes the
@@ -98,7 +105,8 @@ pre-ship checklist are in [overview.md](overview.md).
 - Moving a page: `301` to its new home. Removed page: return a **real `404`**
   (a friendly 404 page is fine), never a `200` "not found" (a *soft 404*).
 - Whole-site moves: redirects + updated sitemap + Search Console's Change of
-  Address tool.
+  Address tool. **Keep the redirects as long as possible, generally at least
+  a year**, so signals and outside links transfer.
 
 ### Site migrations *(practitioner)*
 - Before the move: crawl and save every URL with its title, meta
@@ -120,6 +128,9 @@ pre-ship checklist are in [overview.md](overview.md).
   behind a login, `301`/`308` for moved pages, `5xx` only for real server errors
   (`500`s tell Google to slow down).
 - Pages that aren't `200` may skip rendering entirely.
+- **Googlebot reads only the first 2 MB** of an HTML or text file (64 MB of a
+  PDF); each CSS or JS file has its own limit. Keep the main content, links,
+  canonical and JSON-LD well inside it.
 
 ## JavaScript sites and SPAs
 
@@ -229,6 +240,13 @@ Google Search Central, `https://developers.google.com/search/docs/` (read
 `https://x.com/nicholasdulait/status/2108212094214529135`). Indexing-report
 triage: Nicholas Dulait, "Ultimate Claude Opus 5.5 Starter Pack For SEO",
 `https://x.com/nicholasdulait/status/2110275229108818335` (read 2026-10-15).
+
+Google crawling docs, `https://developers.google.com/crawling/docs/`:
+`robots-txt/robots-txt-spec` (group precedence, `5xx` handling) and
+`crawlers-fetchers/googlebot` (2 MB limit); and
+`https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes`
+(redirects for a year) — all read 2026-11-11, prompted by
+`AgriciDaniel/claude-seo` and `RomeoSEO/seo-skills`.
 
 Migrations, pagination, trailing slashes, slugs, `hreflang` details and
 crawl budget: `coreyhaines31/marketingskills` (MIT),
