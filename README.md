@@ -78,7 +78,9 @@ table says what each file covers.
    from CLAUDE.md, as that folder's intro says.
 6. Add the applicable items from Brain/checklists/new-project.md to this
    project's own checklist or CLAUDE.md, ticked or not, so the next
-   person sees what was done and what was skipped.
+   person sees what was done and what was skipped. Record the brain
+   commit you applied (`git -C ../Brain rev-parse --short HEAD`) and
+   today's date there too, so a later refresh knows where to start.
 7. Finish with a list of brain rules you deliberately did not apply and
    why. If a rule turned out to be wrong for a real project, say so
    plainly: that is feedback for the brain, not for the project.
@@ -87,6 +89,32 @@ table says what each file covers.
 The brain's rules are generic; the project's own `CLAUDE.md` wins on
 anything project-specific. Lessons that come back from step 7 go into the
 brain through the usual ingest steps.
+
+## Refreshing a project after a brain update
+
+Every ingest ends with a refresh verdict and a `Refresh: yes` or
+`Refresh: no` line in its commit message (see `CLAUDE.md`, step 13). When
+a verdict says yes and the project fits the profiles it names, paste this
+into a session in that project:
+
+```
+Refresh this project from the brain.
+
+The brain is at ../Brain (or https://github.com/senblet/Brain). Pull it
+first. Find the brain commit this project last applied, recorded in its
+checklist or CLAUDE.md; if none is recorded, use the date the brain was
+first applied here.
+
+1. List the brain commits since then that carry "Refresh: yes":
+   git -C ../Brain log <commit>..HEAD --grep "Refresh: yes"
+   Read each message and the rules it names.
+2. Skip any whose "Affects" profiles do not fit this project.
+3. If any of them changed seo/, re-copy the brain's seo/ folder over
+   docs/seo/ and show me the diff.
+4. Audit the project against the changed rules only, as in the apply
+   prompt, and give me a short plan. Wait for my go.
+5. When done, update the recorded brain commit and date.
+```
 
 ## Structure
 

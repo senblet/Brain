@@ -56,6 +56,32 @@ links; your job is to fold what's worth keeping into the right file. Read
    formats.
 12. **Commit** with a message naming the source and what changed
    (e.g. `seo: add INP guidance from web.dev article; supersedes FID notes`).
+   End the message with a `Refresh: yes` or `Refresh: no` line (step 13),
+   so a project can find what it missed with `git log --grep "Refresh: yes"`.
+13. **Give the refresh verdict.** Projects apply the brain once, with the
+   prompt in the README, and keep a copy of `seo/`; they do not see later
+   ingests. After every ingest, tell Riccardo whether projects that
+   already use the brain should pick this change up, in this form:
+
+   ```
+   Refresh needed: yes | no — <one sentence why>
+   Affects: <project profiles, e.g. public pages, sends cold email, LLM feature>
+   Rules: <file#anchor for each changed or new rule that drives the verdict>
+   Action: <re-copy seo/ | run the refresh prompt | nothing>
+   ```
+
+   Say **yes** when any of these is true:
+   - a MUST or DON'T was added, changed or removed;
+   - a `**Decided:**` reversed what the brain said before;
+   - an item was added to `checklists/new-project.md`;
+   - a rule in `seo/` changed (projects hold a copy, which is now stale).
+
+   Say **no** for new sources that confirm existing rules, SHOULD or Skip
+   nuance, wording and reorganising, practitioner numbers, a verdict on a
+   repo, or a new file no existing project profile needs yet. Profiles are
+   the ones in step 1 of the README prompt; if the change only matters to
+   a profile no project has, say which profile and keep it **no**. When
+   unsure, say **no** and name the rule: a refresh costs a full audit.
 
 ## Splitting files
 
