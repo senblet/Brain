@@ -59,12 +59,16 @@ pre-ship checklist are in [overview.md](overview.md).
   `robots.txt` can't be counted on to keep it out. Anything that must stay
   private needs authentication, not a disallow line.
 - **Check the CDN and firewall too.** Many block AI crawlers by default,
-  whatever `robots.txt` says. *(practitioner)* Read the **live**
-  `robots.txt`, not the one in the repo: Cloudflare can add its own block
-  of rules at the top. Test each search crawler with
-  `curl -A "OAI-SearchBot" -s -o /dev/null -w "%{http_code}" https://site/`;
-  anything but `200` is a problem. Cloudflare's Bot Fight Mode can
-  challenge legitimate crawlers, so check the security events after launch.
+  whatever `robots.txt` says. Read the **live** `robots.txt`, not the one
+  in the repo: with Bot Preference Sync on and any AI policy set to Block,
+  Cloudflare prepends its own rules (look for `# BEGIN Cloudflare Managed
+  content`). Cloudflare's Bot Fight Mode can challenge API and bot traffic
+  and **can't be skipped with WAF custom rules or Page Rules** — if it is
+  on, check its events (Service = Bot Fight Mode) after launch.
+  *(practitioner)* `curl -A "OAI-SearchBot" -s -o /dev/null -w
+  "%{http_code}" https://site/` catches blocks by user-agent string; a
+  `200` doesn't prove the real crawler gets through, since bot rules can
+  check IP addresses too. The CDN's security log is the proof.
 - **DON'T** add a blanket "block AI bots" robots.txt group. Blocking search
   crawlers (`Googlebot`, `OAI-SearchBot`) costs visibility. Blocking training
   crawlers (`GPTBot`, `Google-Extended`) is a business decision for the site
@@ -163,6 +167,8 @@ and from practitioner sources (mostly French data, 2026; read 2026-10-12 to
   site changes take months to show, off-site presence longer (one agency's
   experience). Take the questions from the inbox, sales calls and reviews,
   not from imagination; mark any you guessed until a real one replaces it.
+  "People also ask" lists and tool prompt datasets are not what your buyers
+  type; never present them as such.
 - Answers vary run to run: ask each question 3–5 times per engine in fresh
   sessions and record a rate with its sample ("3/5"). **Decided:** a later
   synthesis runs 15–30 questions twice per engine; two runs can't show a
@@ -237,6 +243,12 @@ Claude-made synthesis of 66 practitioner articles, 48 skills and 14 repos,
 crediting @denohawari, @VengeonsP, @alexteillet, @louisfoweraker and
 i365dev/awesome-seo. Mostly repeats this folder; its numbers are the
 original authors', not re-checked.
+
+Cloudflare: `https://developers.cloudflare.com/bots/get-started/bot-fight-mode/`
+and `https://developers.cloudflare.com/bots/additional-configurations/managed-robots-txt/`
+(read 2026-11-11). The managed-block marker check comes from
+`zubair-trabzada/geo-seo-claude`; the "People also ask" caution from
+`every-app/open-seo` (both read 2026-11-11).
 
 G2, "The Answer Economy" (2026-04-15),
 `https://company.g2.com/news/g2-research-the-answer-economy` and
