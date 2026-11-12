@@ -263,6 +263,8 @@ Patterns worth copying from well-built skill libraries:
   linked from the skill.
 - **Skills read the shared context file first** and ask only for what it
   doesn't cover.
+- **A skill that sets `model:` also sets `context: fork`**, or it breaks the
+  session's prompt cache ([models.md](models.md#keeping-the-prompt-cache-warm)).
 - **One home for shared rules** (a banned-phrases list, say), linked from
   the skills that use it rather than copied into each.
 - **Changing a skill, stop at the first step that works:**

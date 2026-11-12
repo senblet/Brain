@@ -1,8 +1,8 @@
 # AI — choosing a Claude model and effort
 
 Which model to build with, when to raise effort instead of switching, how to
-mix models across an agent and its subagents, and what breaks when you
-migrate. Applies to Claude Code sessions and to products that call the
+mix models across an agent and its subagents, how to keep a Claude Code
+session's prompt cache warm, and what breaks when you migrate. Applies to Claude Code sessions and to products that call the
 Claude API (`astro`, `fondoabierto`, `jarvis`). For agent practice in
 general, see [agents.md](agents.md); for testing a feature before and after
 a change, [evals.md](evals.md).
@@ -10,7 +10,8 @@ a change, [evals.md](evals.md).
 **Tags:** as in the [README](../README.md#how-notes-are-written). From a
 guide on claude.dev, linked from Anthropic's Claude developer account and
 pointing to Anthropic's own docs — treated as vendor documentation. Its
-benchmarks are the vendor's own; prices are as of the read date. **Models
+benchmarks are the vendor's own; prices are as of the read date. The
+prompt cache section is from Claude Code's own docs. **Models
 and prices change every few months: recheck before relying on a number.**
 
 ---
@@ -70,10 +71,99 @@ effort past `high`.
   cheaper subagents do the verbose reading.
 - **Switching models mid-session costs a cache rewrite** and can lose the
   earlier reasoning (a model reads only some other models' thinking).
-  Compact first, or start a fresh session from a written plan.
+  Compact first, or start a fresh session from a written plan. Other
+  cache breakers: [Keeping the prompt cache warm](#keeping-the-prompt-cache-warm).
 - Prices per million tokens, input / output, as read: Haiku 5.5 $0.10 /
   $0.50 (prompts ≤ 100K), Sonnet 5.5 $2 / $10, Opus 5.5 $4 / $20, Fable 5.2
   $8 / $40. All have a 1M context window.
+
+## Keeping the prompt cache warm
+
+Every message in Claude Code re-sends the whole conversation. The repeated
+part is billed at the cheap cached rate only while the prefix matches
+exactly and the cache hasn't expired; break it and the next request pays
+full input price for everything. On a long chat that one turn is where a
+plan limit goes (one practitioner's estimate on a 100k-token Opus chat:
+$0.02 cached against $0.80 rebuilt). A rebuild on a short chat is cheap.
+
+- **SHOULD pick model, effort and fast mode at launch and keep them**
+  (`claude --model opus`). Each model has its own cache, and so does each
+  speed: turning fast mode on later re-reads the whole chat at fast-mode
+  rates. Changing effort keeps the cache on the 5.5 models and Fable 5.1+
+  with an API key or subscription; on Bedrock, Google Cloud or a gateway it
+  is a full rebuild too. Need another model for one task? Use a subagent or
+  a new session. If you must switch, do it after a break, when the cache
+  has already expired.
+- **Hidden model switches:** a skill or command whose frontmatter sets
+  `model:` switches the main session for that turn, and the turn after it
+  rebuilds again. **SHOULD** give a skill a `model:` only together with
+  `context: fork`, which runs it in a subagent and leaves the main cache
+  alone. The `opusplan` alias switches model on every plan-mode toggle;
+  automatic model fallback is a switch too.
+- **Compact at a natural break, while the cache is warm.** A warm `/compact`
+  reads the history from cache; after a break past the cache lifetime it
+  re-reads all of it at full price. Say what to keep: `/compact keep
+  decisions, file paths, failing tests and open TODOs`. A wrong path is
+  better undone with `/rewind`, which returns to a prefix already cached.
+  `/clear` for a new task.
+- **Cache lifetime:** on a subscription within plan usage the main
+  conversation gets one hour; subagents, compaction and everything else
+  get five minutes, as does everything on an API key, a cloud provider or
+  usage credits. Each hit resets the timer. Set it with `promptCacheTtl`
+  and `subagentPromptCacheTtl` (`"5m"` or `"1h"`). Skip `1h` unless the work
+  has real gaps: a one-hour cache write costs 2× base input, a five-minute
+  one 1.25×. On the hour TTL, Claude Code may compact an idle long chat
+  just before the cache expires; `"idleCompaction": false` turns that off.
+- **Images:** past the per-request image limit, Claude Code drops the oldest
+  batch and rebuilds from the earliest changed message. Crop screenshots to
+  what matters; give a screenshot-heavy task its own session.
+- **Scope:** the cache belongs to one machine and one directory; parallel
+  sessions in the same directory share it. An upgrade usually changes the
+  system prompt, so the first session after it starts cold. Updates apply
+  only at launch; `DISABLE_AUTOUPDATER=1` in `env` lets you pick when.
+- **Tools:** with tool search on (the default on supported models), MCP
+  tools are deferred and connecting a server mid-session is safe. With it
+  off, a new MCP server or a deny rule on a whole tool (`"Bash"`) rebuilds
+  everything. **SHOULD** scope deny rules (`"Bash(rm -rf *)"`,
+  `"Bash(git push *)"`, `"Read(./.env)"`): they protect the same commands
+  and leave the tool list alone.
+- **Behind a gateway or custom `ANTHROPIC_BASE_URL`,** caching depends on the
+  gateway forwarding Claude Code's `cache_control` markers. The bad case is
+  silent: success responses, whole history billed uncached every turn.
+  **SHOULD** test once: run `claude -p "hello" --output-format json | jq
+  '.usage | {cache_read_input_tokens, cache_creation_input_tokens}'` twice;
+  the second run must show reads.
+- **Safe mid-session:** editing repo files, editing `CLAUDE.md` (keeps the
+  cache, but applies only after `/clear`, `/compact` or a restart),
+  permission mode, output style, invoking skills without `model:`,
+  `/recap`, `/rewind`, spawning a subagent.
+- **Watch it:** `/usage` shows a `Prompt cache (main)` line — hit ratio,
+  misses, warm or cold, and the likely cause of the last miss. A status line
+  script can read the same `prompt_cache` object:
+
+  ```bash
+  #!/bin/bash
+  # ~/.claude/statusline.sh — set "statusLine": {"type": "command",
+  # "command": "~/.claude/statusline.sh"} in settings.json
+  input=$(cat)
+  if [ "$(echo "$input" | jq '.prompt_cache != null')" = "true" ]; then
+    WARM=$(echo "$input" | jq -r '.prompt_cache.warm')
+    PCT=$(echo "$input" | jq -r '(.prompt_cache.hit_ratio // 0) * 100 | floor')
+    COLD_K=$(echo "$input" | jq -r '(.prompt_cache.recache_tokens_if_cold // 0) / 1000 | floor')
+    if [ "$WARM" = "true" ]; then echo "cache warm · ${PCT}% hits"
+    else echo "cache cold · next message re-reads ~${COLD_K}k tokens"; fi
+  else
+    echo "cache: waiting for first response"
+  fi
+  ```
+
+  To audit a setup, ask Claude Code to read the settings files, `.mcp.json`
+  and every `SKILL.md` and command file, and flag: skills or commands with
+  `model:` and no `context: fork`; whole-tool deny rules; a custom base URL
+  or gateway; anything that turns off tool search; the two TTL values.
+  Report a table, change nothing.
+- A warm cache doesn't make a bloated `CLAUDE.md` or an endless session free:
+  cached tokens still count. Keep context lean (above).
 
 ## Mixing models
 
@@ -166,6 +256,13 @@ or Haiku", claude.dev (2026-11-09),
 key passages checked verbatim). Delegation rules and the edit decision:
 `Rajvardhman05/claude-model-router` (MIT),
 `https://github.com/Rajvardhman05/claude-model-router` (read 2026-11-10), a
-skill that condenses the same guide.
+skill that condenses the same guide. Prompt cache: "How Claude Code uses
+prompt caching", `https://code.claude.com/docs/en/prompt-caching`, with the
+`prompt_cache` status line fields from
+`https://code.claude.com/docs/en/statusline` (read 2026-11-12), via
+@choopyplug1, "Claude Code Token Usage: How to Stop Burning Your Limit 40x
+Faster", `https://x.com/choopyplug1/status/2119833611499127166` (read
+2026-11-12; status line script, audit prompt and cost example from the
+post, every rule checked against the docs).
 
 Re-read when this file is more than six months old.

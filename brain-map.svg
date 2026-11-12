@@ -112,7 +112,7 @@
 <rect x="144" y="372" width="5" height="64" rx="2" class="s-fresh"/>
 <text x="160" y="394" class="name">models</text>
 <text x="360" y="394" class="badge" text-anchor="end">2 decided</text>
-<text x="160" y="412" class="small">4 cited · read 2026-11-10</text>
+<text x="160" y="412" class="small">8 cited · read 2026-11-10</text>
 <text x="160" y="427" class="small t-fresh">recheck by 2027-05-11</text>
 </g></a>
 <a href="ai/skill-libraries.md"><g>
@@ -222,13 +222,13 @@
 </g></a>
 <line x1="24" y1="944" x2="856" y2="944" class="rule"/>
 <text x="24" y="968" class="topic">Latest reads</text>
-<text x="144" y="968" class="small mono">2026-11-11</text>
-<text x="226" y="968" class="small">ai/agents · ai/skill-libraries · marketing/research · seo/ai-search · seo/content</text>
-<text x="226" y="986" class="small">seo/crawling-indexing · seo/overview</text>
-<text x="144" y="1008" class="small mono">2026-11-10</text>
-<text x="226" y="1008" class="small">ai/models · marketing/outbound · product/strategy · seo/ai-search</text>
-<text x="144" y="1030" class="small mono">2026-11-07</text>
-<text x="226" y="1030" class="small">ai/agents · ai/skill-libraries · product/strategy</text>
+<text x="144" y="968" class="small mono">2026-11-12</text>
+<text x="226" y="968" class="small">ai/models</text>
+<text x="144" y="990" class="small mono">2026-11-11</text>
+<text x="226" y="990" class="small">ai/agents · ai/skill-libraries · marketing/research · seo/ai-search · seo/content</text>
+<text x="226" y="1008" class="small">seo/crawling-indexing · seo/overview</text>
+<text x="144" y="1030" class="small mono">2026-11-10</text>
+<text x="226" y="1030" class="small">ai/models · marketing/outbound · product/strategy · seo/ai-search</text>
 <rect x="144" y="1055" width="10" height="10" rx="2" class="s-fresh"/>
 <text x="160" y="1064" class="small">fresh</text>
 <rect x="205.0" y="1055" width="10" height="10" rx="2" class="s-soon"/>
