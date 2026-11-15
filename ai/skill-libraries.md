@@ -95,6 +95,35 @@ office-hours questions).
 - The productivity numbers (~810× his 2013 pace in "logical lines") are the
   author's own measurement, not evidence for us.
 
+## `GoogleChrome/modern-web-guidance` — current web platform for frontend agents
+
+Apache-2.0; Chrome, Edge, Firefox and MDN teams; 1.0 announced 2026-11-13.
+A skill with 200+ expert-reviewed guides (CSS, HTML, JavaScript, accessibility,
+performance, forms, security) that an agent retrieves by task through a local
+vector search, each with Baseline fallbacks. Install:
+`npx modern-web-guidance@latest install` (`update` later). Listed agents:
+Claude Code, Codex, Cursor, Copilot, Antigravity, WebStorm, Kimi, Grok.
+Read through Google's announcement, the 1.0 post, the modernization page and
+the top-10 article; the repo README only in part. Not installed or tried
+here. The rules worth keeping are in
+[design/frontend.md](../design/frontend.md#native-components-apps-too).
+
+- **`legacy-scan`** (`npx modern-web-guidance legacy-scan <path> --json`)
+  runs local AST/DOM/CSS checks with no model calls; the agent then rejects
+  false positives, you review a plan, and only then does it refactor and
+  re-run tests. There is no `--fix`. It covers about 20% of the guides.
+  Google reports ~92% precision on what passes its pre-screen.
+- **Evidence is Google's own.** Its dashboard shows agents passing ~52% of
+  checks unguided and ~91% guided (2026-11-09, models not named); case
+  studies (MetaMask, WeTV, note inc.: 61% → 94% on 180 runs) are
+  self-reported, and the authors call themselves biased.
+
+**Verdict — Try on one house-stack frontend** (e.g. `deck-reps`, or the
+`vue-django-template` frontend): run `legacy-scan` first, read the plan, keep
+the install only if the guides change the output on the studio's own pages —
+our results beat Google's. Review any edits; the scan is read-only. DON'T
+rely on it without stating the browser targets.
+
 ## SEO skill libraries
 
 Nine repos from one practitioner's list (read 2026-11-11). Coverage is
@@ -213,6 +242,9 @@ video model; the method is in
   `https://x.com/rodmanai/status/2117540681556328773` (read 2026-11-04).
 - `https://github.com/garrytan/gstack` (v1.98), shared via
   `https://x.com/marcusyul/status/2118740439209848950` (read 2026-11-07).
+- `https://github.com/GoogleChrome/modern-web-guidance`, shared via
+  `https://x.com/ChromiumDev/status/2121339675667309047` (read 2026-11-15);
+  announcement and docs on `developer.chrome.com/blog/modern-web-guidance-v1`.
 - The nine SEO repos above, listed in TheoAGI's "The only SEO/GEO article
   you need", `https://x.com/theoagi/status/2120163220312699025` (read
   2026-11-11).

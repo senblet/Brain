@@ -1,8 +1,8 @@
 # Design — frontend
 
 Rules for public pages that look decided rather than generated: process,
-copy on the page, type, colour, layout, imagery, motion, states, the tells
-of AI-made pages, and how to critique. Written for pages agents help build.
+copy on the page, type, colour, layout, imagery, motion, states, native
+browser components, the tells of AI-made pages, and how to critique. Written for pages agents help build.
 For speed, see
 [development/web-performance.md](../development/web-performance.md).
 
@@ -89,6 +89,10 @@ keeps its lines, icons and labels — several rules below would hurt it.
   grounds differ in lightness, not only hue.
 - **Dark pages:** `color-scheme: dark`, a tinted deep ground and soft light
   ink (not `#fff` on `#000`), depth from a lighter surface, never a glow.
+- **Light and dark together:** SHOULD set `<meta name="color-scheme">` and
+  `color-scheme` in CSS, write role tokens with `light-dark()`, and make a
+  toggle three-state (system, light, dark) that syncs across tabs through
+  the `storage` event. [standard]
 - DON'T put text on a photo without a calm area or a neutral scrim; no
   colour washes over photos.
 
@@ -162,6 +166,36 @@ keeps its lines, icons and labels — several rules below would hurt it.
 - Buttons flat with one fill; square or fully round, chosen once; one radius
   scale for everything.
 
+## Native components (apps too)
+
+Agents tend to rebuild what the browser already ships. Chrome's Modern Web
+Guidance team lists these as the habits agents get wrong most; each
+replacement needs a Baseline check for the browsers you target. SHOULD:
+
+- **Modal or overlay:** `<dialog>` with `showModal()` for modals; the
+  `popover` attribute for menus, tooltips and pickers, animated with
+  `@starting-style` and `transition-behavior`. DON'T hand-build click-outside
+  handlers, `overflow: hidden` scroll locks or tab traps. Where a custom
+  overlay stays, put `inert` on the page behind it.
+- **Toolbars and tab lists:** one tab stop, arrow keys inside it (roving
+  `tabindex`), not every item as a tab stop.
+- **Form validation:** style errors with `:user-invalid` and keep
+  `aria-invalid` in step with the visible error. Format hints stay visible
+  above the field and linked with `aria-describedby`, not in the placeholder.
+  More form rules:
+  [marketing/conversion.md](../marketing/conversion.md#forms-and-signup).
+- **User or model-written HTML:** DON'T hand-roll a sanitizer. Use
+  `setHTML()` where supported, DOMPurify as the fallback, and a strict CSP
+  with nonces or hashes and `'strict-dynamic'`.
+- **Swipe and tab gestures:** CSS Scroll Snap and scroll-driven animations,
+  not `pointermove` or `touchmove` physics.
+
+The full list (also passkeys and runtime responsiveness) is in Chrome's
+"Top 10 things AI gets wrong in web development". Motion under reduced
+preference is already a MUST ([Motion](#motion)); layout shift from media
+and fonts is in
+[development/web-performance.md](../development/web-performance.md#images-and-fonts).
+
 ## Tells of an AI-made page
 
 DON'T, with how often each appears on top vs weak sites [study]:
@@ -201,5 +235,12 @@ older variants are judged in
 [ai/skill-libraries.md](../ai/skill-libraries.md); none are used for these
 rules.
 Its `research/laziness/` folder has unverifiable citations; not used.
+
+Chrome for Developers, "Top 10 things AI gets wrong in web development",
+`https://developer.chrome.com/blog/top-10-things-ai-gets-wrong-in-web-dev`,
+found through `https://x.com/ChromiumDev/status/2121339675667309047` (read
+2026-11-15) — the *Native components* section and the light-and-dark rule.
+Google's own list, from its own evals; the replacements are web-platform
+features, not measured gains.
 
 Re-read when this file is more than a year old.

@@ -30,14 +30,14 @@ Badges count the decisions a file records where sources disagreed.*
 | Product | [product/strategy.md](product/strategy.md) | Validating ideas, product-market fit, retention benchmarks, pricing, north star |
 | Product | [product/growth.md](product/growth.md) | Activation, simulated first users before launch, onboarding, upgrade prompts, lifecycle email and WhatsApp, cancellation and dunning, referrals |
 | Product | [product/marketplaces.md](product/marketplaces.md) | Two-sided products: which side first, launch, fill rate and other metrics, take rates, leakage and trust |
-| Design | [design/frontend.md](design/frontend.md) | Public pages that look decided: process, copy on the page, type, colour, layout, imagery, motion, states, AI tells, critique |
+| Design | [design/frontend.md](design/frontend.md) | Public pages that look decided: process, copy on the page, type, colour, layout, imagery, motion, states, native browser components, AI tells, critique |
 | Development | [development/video-with-code.md](development/video-with-code.md) | Films made by agents writing code: render(t) pages, frame capture, one timeline for sound, review loop, licences |
 | Development | [development/web-performance.md](development/web-performance.md) | Web performance: how to measure, what to check, running it with agents |
 | AI | [ai/agents.md](ai/agents.md) | Working with agents: context file, tasks, classifying at volume, automation vs agent, who owns what, autonomy ramp, guardrails, failure modes, coding with agents, writing skills, goals and loops, rollout |
 | AI | [ai/models.md](ai/models.md) | Choosing a Claude model and effort: defaults by task, escalation order, cost, keeping Claude Code's prompt cache warm, mixing models, migrating an API product |
 | AI | [ai/evals.md](ai/evals.md) | Evaluating LLM features: error analysis, code checks and model judges, golden sets, shipping AI features |
 | AI | [ai/agent-workflows.md](ai/agent-workflows.md) | Multi-agent workflows: graph design, contracts, barriers vs pipelines, verification, convergence, cost |
-| AI | [ai/skill-libraries.md](ai/skill-libraries.md) | External skill and video repos read, and which to use |
+| AI | [ai/skill-libraries.md](ai/skill-libraries.md) | External skill, web-platform and video repos read, and which to use |
 | Operations | [operations/agency.md](operations/agency.md) | Running a studio with AI: niche, offer and proof, one folder per client, the ten jobs on real records, audit lens, hiring |
 | Operations | [operations/product-process.md](operations/product-process.md) | Specs, scope and time budgets, prototypes, decisions, writing so others can act |
 | Checklist | [checklists/new-project.md](checklists/new-project.md) | What to set up when starting a new project: SEO, performance, design, product, measurement, AI features, agents, brand |

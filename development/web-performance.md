@@ -29,6 +29,10 @@ separate.
 - Every image in WebP or AVIF, sized to how large it actually displays,
   with explicit `width` and `height` attributes so the layout doesn't jump
   while it loads (CLS).
+- Give `<video>` and embeds the same: dimensions or `aspect-ratio`. A web
+  font swap reflows text; `font-size-adjust` limits it (check Baseline
+  support first). Use `dvh`/`svh`, not `vh`, for full-height blocks on
+  phones. *(Chrome, Modern Web Guidance)*
 - Lazy-load images and video below the fold; load the main image at the top
   of the page first.
 - One or two fonts, loaded the way the framework recommends.
@@ -91,5 +95,8 @@ Practitioner list, no measurements behind it; the items are standard
 practice. Thresholds from web.dev via [seo/overview.md](../seo/overview.md).
 Explicit image dimensions: Connor Showler,
 `https://x.com/connorshowler/status/2111150132397818312` (read 2026-10-19).
+Layout-shift items for video and fonts: Chrome, "Top 10 things AI gets wrong
+in web development" (read 2026-11-15, see
+[design/frontend.md](../design/frontend.md#sources)).
 
 Re-read when this file is more than a year old.
