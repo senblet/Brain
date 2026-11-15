@@ -9,7 +9,8 @@ parts of it. The rules for agents that classify or draft at volume are in
 
 **Tags:** as in the [README](../README.md#how-notes-are-written). Sending
 requirements come from Gmail's sender guidelines; reply-rate figures from
-one vendor's dataset; everything else is practitioner method from agencies
+vendor datasets (Gong, Saleshandy), which are correlations, not experiments;
+everything else is practitioner method from agencies
 that sell outbound (read 2026-10-12 to 2026-10-15). Their pipeline, salary
 and reply-rate claims are left out unless marked as theirs.
 
@@ -163,8 +164,9 @@ Order matters more than tools:
    half of the list you were always going to drop.
 
 Then pick two or three people per company — the decision maker plus one or
-two around them. By size (practitioner rule of thumb): owner or founder up
-to ~50 people; VP or director from ~50–500. Check the first batch of titles
+two around them. By size (practitioner rule of thumb, matched by Saleshandy's
+data): owner or founder up to ~50 people; VP, director or manager from
+~50–500; C-level from 500. Check the first batch of titles
 by hand — advisors and former VPs carry the same titles — and check the
 person still works there; a mailbox can stay live after someone leaves.
 
@@ -195,7 +197,8 @@ checked in the last week before it sends — B2B data decays about 2% a month
 - Verify every address twice, with two independent verifiers; the
   enrichment vendor's own check doesn't count. Valid → main campaign.
   Catch-all domains → only if the second verifier passes them, in their own
-  campaign. Invalid, disposable, unknown → removed.
+  campaign. Invalid, disposable, unknown → removed. Saleshandy's bounce
+  rates: 1.21% verified, 2.11% unverified, 10.58% for addresses flagged bad.
 - **Warm up for 2–4 weeks before the first send** (sources differ) — buy
   the domains on day one — and keep warm-up on permanently. Microsoft
   mailboxes take fewer sends a day than Google ones.
@@ -209,8 +212,13 @@ checked in the last week before it sends — B2B data decays about 2% a month
   complaints near 0.1% → pause.
 - **Choose the channel by account value.** Top-tier accounts (in the
   segment *and* with a live signal) get email plus a manual LinkedIn touch
-  and a researched first line; the rest get email only.
+  and a researched first line; the rest get email only. SHOULD add a phone
+  call for top-tier accounts: Saleshandy reports 2.5× the positive replies
+  of email alone, and 99% of sequences are still email-only. Check the
+  calling rules for the country first (see "The law" at the top).
 - Open tracking off; no link in the first email.
+- **Send time** *(Saleshandy; a default to test)*: Tuesday 9–10 AM in the
+  prospect's time zone. Skip Friday afternoon; nothing after 2 PM.
 
 ## The email
 
@@ -221,7 +229,14 @@ theirs, with real numbers; then one yes-or-no question ("Worth it for
 **Subject lines** *(vendor datasets: Gong, Lavender)*: 2–4 words,
 lowercase, looking like an internal email; no product pitch; no first name
 (−12% replies in one dataset — one LinkedIn agency reports the opposite for
-InMail, a different channel).
+InMail, a different channel). **Decided:** Saleshandy's 30-million-email
+chart says 5–7 words beat every other length; kept 2–4, because two datasets
+agree on it and the chart gives no method. Test both in the weekly
+one-change test ([below](#measure-and-test-weekly)).
+
+**One soft call to action.** SHOULD end with a single low-pressure ask.
+Saleshandy: 78% more positive replies than hard CTAs; Gong's −44% for asking
+for a meeting points the same way.
 
 **Relevance over personalisation.** Pasting someone's university into line
 one does nothing; a message obviously about their business, role and
@@ -261,13 +276,22 @@ Rules that follow (and agree with the gift approach):
   −47%). Some practitioner sequences put a case study in follow-up 2 or 3;
   the data says otherwise.
 
-**Sequence: short, and it ends with a breakup email.** Two or three emails,
-the last one closing the thread. **Decided:** Gong's 85-million-email data
-associates a breakup email with +89% replies; one agency sends two emails
-and no breakup, with no data. Correlational data beats an unsupported
-claim; change this only if the studio's own campaigns show otherwise.
+**Sequence: follow up, and end with a breakup email.** Plan 4–6 follow-ups
+over 20–21 days, the last one closing the thread. Saleshandy: 57% of positive
+replies came from follow-ups, and that is what its best sequences did.
+**Decided:** Gong's 85-million-email data associates a breakup email with
++89% replies, so it stays. Rejected: an earlier "two or three emails" limit
+and one agency's two emails with no breakup — both rest on practitioner
+claims with no data, against two large datasets. Every follow-up still
+restates the ask (see above), stops on any reply and respects the
+stop-loss rules; change this if the studio's own campaigns show otherwise.
 
-Keep each campaign to ~1,500–2,000 contacts so its result is readable.
+**Keep lists under ~200 prospects.** Saleshandy: nearly twice the reply rate
+of lists of 500+. **Decided:** replaces the earlier "~1,500–2,000 contacts
+per campaign for a readable result" — that figure was an agency habit with no
+data, and the studio's niche segments are small. A small list per pain
+segment also fits [Who goes first](#who-goes-first). Saleshandy's chart is a
+correlation (small lists are probably better targeted).
 
 **For services (the studio's own outbound) — the teardown play**
 *(practitioner)*: email 1 names one specific thing on their site and asks
@@ -306,6 +330,10 @@ verified first" — see
 
 - **Funnel maths:** reply → positive reply → meeting → show → close. Each
   ratio points at a different layer; a bad number tells you what to fix.
+- **Benchmarks** *(Saleshandy, 30.31 million cold emails; vendor data)*:
+  average reply rate 4.5%; the top 1% reach 15–30%; top campaigns book 2–3
+  meetings per 100 emails. Use them to judge a result, not as targets to
+  promise a client.
 - Report reply, interested, meeting and pipeline **by segment and persona**.
   The aggregate reply rate is the least useful number — one or two segments
   carry everything and the average hides which.
@@ -345,6 +373,10 @@ this; they don't replace that judgement.
 - Nick Abraham, chart of Gong / 30MPC "The Ultimate Cold Email Data Report",
   `https://x.com/NickAbraham12/status/2107832346795769865` (read 2026-10-12).
   Original report not read.
+- Nick Abraham, chart of Saleshandy's analysis of 30.31 million cold emails,
+  `https://x.com/NickAbraham12/status/2121618927830626692` (read 2026-11-15)
+  — benchmarks, list size, soft CTA, sequence length, send time, phone,
+  title by size. Chart only; original report and method not read.
 - Roman (Gojiberry), competitor-engagement playbook,
   `https://x.com/romanbuildsaas/status/2107909606991081563` (read 2026-10-12).
 - Christian (@coldemailchris, gtmu.io), "How To Master GTM Engineering (FULL
