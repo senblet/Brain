@@ -190,6 +190,8 @@ Violations can demote a page or remove a whole site. **MUST NOT:**
   Security Issues, rich result reports, Core Web Vitals. Monthly checks plus
   after significant changes are enough; Google emails new issues.
 - **Tools:** Rich Results Test, PageSpeed Insights, URL Inspection.
+- *(practitioner)* **After each launch, check branded searches:** filter the
+  Performance report by the brand name and compare with before.
 - *(practitioner)* **Snapshot the key pages before every deploy** and
   compare after. Four changes quietly kill a site: a page turns `noindex`,
   a canonical points elsewhere, a `200` becomes a `404`, `robots.txt`
@@ -244,6 +246,8 @@ Research Team with Claude Code",
 `https://x.com/vengeonsp/status/2115055296351555784` (both read 2026-10-28). The pre-deploy snapshot:
 TheoAGI, "The only SEO/GEO article you need",
 `https://x.com/theoagi/status/2120163220312699025` (read 2026-11-11).
+The branded-search check: Oleksii Sidorov,
+`https://x.com/acecreamu/status/2125234701912985928` (read 2026-11-26).
 
 web.dev, Core Web Vitals thresholds: `https://web.dev/articles/vitals`
 (read 2026-10-14).
