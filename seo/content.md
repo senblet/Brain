@@ -155,6 +155,17 @@ applies to the three sections after it.
   questions: if you landed here from Google, would you read it? Is it more
   useful than the nine results next to it? A no to either is not fixed by
   publishing faster.
+- **Mine your own question queries** *(practitioner)*. In Search Console →
+  Performance, set the date range to the last 16 months and filter queries
+  two ways: the custom regex `^(?:\S+\s+){7,}\S+$` (eight words or more),
+  and the question words (how, what, why — in the site's language). They
+  give real questions word for word. Judge each one like any other
+  candidate. If the page that ranks for a question doesn't answer it, answer
+  it in the first lines. **Decided:** the source reads many impressions and
+  few clicks as proof the question is unanswered; kept this file's rule that
+  low click-through on an answered query is a title and description problem
+  ([Improving existing pages](#improving-existing-pages-practitioner)),
+  because clicks alone can't show which it is — read the page first.
 - **Secondary keywords.** Take the page ranking first and list every other
   query that URL ranks for — Google already treats those as one page. Cover
   them on one URL, and let the title cover the main two. Before a page
@@ -409,5 +420,10 @@ operationalise Google's guidance:
   `https://x.com/theoagi/status/2120163220312699025` (read 2026-11-11) —
   the four-of-ten overlap test (credited to @NicholasDulait) and the
   two-to-three-month wait; the rest repeats this file.
+- Oleksii Sidorov, "48 SEO & GEO tricks", image carousel,
+  `https://x.com/acecreamu/status/2125234701912985928` (read 2026-11-26) —
+  question-query mining and the branded-search check. Promotes the author's
+  tool; its `llms.txt`, multi-platform keyword and test-page-on-other-hosts
+  advice is not adopted.
 
 Google updates these pages; re-read them when this file is more than a year old.
